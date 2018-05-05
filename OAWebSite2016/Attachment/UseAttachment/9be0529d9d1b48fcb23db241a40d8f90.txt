@@ -1,0 +1,9 @@
+质监局系统：
+http://61.183.152.58:9130/WebContent/login/login.jsp
+sj_gdc
+23456q
+
+特检院系统
+http://61.183.152.58:9130/hbses/login/login.jsp
+00157
+1

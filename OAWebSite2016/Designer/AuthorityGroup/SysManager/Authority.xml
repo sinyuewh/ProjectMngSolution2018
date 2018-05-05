@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AuthorityRoot>
+
+	<AuthorityGroup Text="项目管理" ID="XMGL">
+		<!--权限定义1-->
+		<Authority Text="项目管理">
+			<!--权限功能点-->
+			<AuthorityUnit Text="浏览"      ID="Tb_Project_READ" Value="0" ></AuthorityUnit>
+			<AuthorityUnit Text="添加"      ID="Tb_Project_ADD"   Value="1" ></AuthorityUnit>
+			<AuthorityUnit Text="修改"      ID="Tb_Project_EDIT" Value="2" ></AuthorityUnit>
+			<AuthorityUnit Text="删除"      ID="Tb_Project_DEL" Value="3" ></AuthorityUnit>
+
+			<AuthorityUnit Text="成员管理"      ID="Tb_Project_PERSON" Value="4" ></AuthorityUnit>
+			<AuthorityUnit Text="附件管理"      ID="Tb_Project_ATTACH" Value="5" ></AuthorityUnit>
+
+			<AuthorityUnit Text="项目立项"      ID="Tb_Project_SURE" Value="6" ></AuthorityUnit>
+			<AuthorityUnit Text="项目完成"      ID="Tb_Project_COMPLETE" Value="7" ></AuthorityUnit>
+			<AuthorityUnit Text="项目取消"      ID="Tb_Project_CANCEL" Value="8" ></AuthorityUnit>
+			<AuthorityUnit Text="项目延期"      ID="Tb_Project_DELAY" Value="9" ></AuthorityUnit>
+		</Authority>
+	</AuthorityGroup>
+
+	<AuthorityGroup Text="工作备忘" ID="GZBW">
+		<!--权限定义-->
+		<Authority Text="工作备忘">
+			<!--权限功能点-->
+			<AuthorityUnit Text="浏览所有工作备忘"  ID="Tb_WorkReminder_READ" Value="0" ></AuthorityUnit>
+		</Authority>
+	</AuthorityGroup>
+
+	<AuthorityGroup Text="工作日志" ID="GZRZ">
+		<!--权限定义-->
+		<Authority Text="工作日志">
+			<!--权限功能点-->
+			<AuthorityUnit Text="浏览所有工作日志"   ID="Tb_WorkLog_READ" Value="0" ></AuthorityUnit>
+		</Authority>
+	</AuthorityGroup>
+
+	<AuthorityGroup Text="工作计划" ID="GZJH">
+		<Authority Text="工作计划">
+			<!--权限功能点-->
+			<AuthorityUnit Text="浏览所有工作计划"   ID="Tb_Task_READ" Value="0" ></AuthorityUnit>
+      <AuthorityUnit Text="考核所有工作计划"   ID="Tb_Task_KHALL" Value="0" ></AuthorityUnit>
+		</Authority>
+	</AuthorityGroup>
+
+  <AuthorityGroup Text="BUG管理" ID="BUGGL">
+    <Authority Text="BUG管理">
+      <!--权限功能点-->
+      <AuthorityUnit Text="审核BUG"   ID="Tb_Debug_Check" Value="1" ></AuthorityUnit>
+    </Authority>
+  </AuthorityGroup>
+  
+
+	<AuthorityGroup Text="考核管理" ID="KHGL">
+		<Authority Text="其他考核指标">
+			<!--权限功能点-->
+			<AuthorityUnit Text="浏览"      ID="Tb_KaoHeZhiBiao_READ" Value="0" ></AuthorityUnit>
+			<AuthorityUnit Text="添加"      ID="Tb_KaoHeZhiBiao_ADD" Value="1" ></AuthorityUnit>
+			<AuthorityUnit Text="修改"      ID="Tb_KaoHeZhiBiao_EDIT" Value="2" ></AuthorityUnit>
+		</Authority>
+
+		<Authority Text="其他考核流水">
+			<!--权限功能点-->
+			<AuthorityUnit Text="浏览所有考核"      ID="Tb_KaoHeOther_READ" Value="0" ></AuthorityUnit>
+			<AuthorityUnit Text="添加"				      ID="Tb_KaoHeOther_ADD" Value="1" ></AuthorityUnit>
+			<AuthorityUnit Text="修改"				      ID="Tb_KaoHeOther_EDIT" Value="2" ></AuthorityUnit>
+			<AuthorityUnit Text="删除"				      ID="Tb_KaoHeOther_DEL" Value="3" ></AuthorityUnit>
+		</Authority>
+
+		<Authority Text="月度考核">
+			<!--权限功能点-->
+			<AuthorityUnit Text="浏览所有考核"      ID="Tb_PL_Month_READ" Value="0" ></AuthorityUnit>
+			<AuthorityUnit Text="创建月度考核"		ID="Tb_PL_Month_ADD" Value="1" ></AuthorityUnit>
+			<AuthorityUnit Text="调整月度考核"		ID="Tb_PL_Month_EDIT" Value="2" ></AuthorityUnit>
+		</Authority>
+
+    <Authority Text="项目贡献度">
+      <!--权限功能点-->
+      <AuthorityUnit Text="浏览项目贡献度"      ID="ProjectGXD_READ" Value="0" ></AuthorityUnit>
+      <AuthorityUnit Text="统计项目贡献度"		ID="ProjectGXD_ADD" Value="1" ></AuthorityUnit>
+      <AuthorityUnit Text="调整项目贡献度"		ID="ProjectGXD_EDIT" Value="2" ></AuthorityUnit>
+    </Authority>
+
+    <Authority Text="年度贡献度">
+      <!--权限功能点-->
+      <AuthorityUnit Text="浏览所有年度贡献度"      ID="YearGXD_READ" Value="0" ></AuthorityUnit>
+    </Authority>
+	</AuthorityGroup>
+
+	<AuthorityGroup Text="系统管理" ID="XTGL">
+		<!--权限定义1-->
+		<Authority Text="组织结构">
+			<!--权限功能点-->
+			<AuthorityUnit Text="浏览"      ID="JOrg_READ" Value="0" ></AuthorityUnit>
+			<AuthorityUnit Text="添加"      ID="JOrg_ADD"   Value="1" ></AuthorityUnit>
+			<AuthorityUnit Text="修改"      ID="JOrg_EDIT" Value="2" ></AuthorityUnit>
+		</Authority>
+
+		<!--权限定义2-->
+		<Authority Text="用户列表">
+			<AuthorityUnit Text="浏览"      ID="JUser_READ" Value="0" ></AuthorityUnit>
+			<AuthorityUnit Text="添加"      ID="JUser_ADD"   Value="1" ></AuthorityUnit>
+			<AuthorityUnit Text="修改"      ID="JUser_EDIT" Value="2" ></AuthorityUnit>
+			<AuthorityUnit Text="重置密码"  ID="JUser_RESET" Value="9" ></AuthorityUnit>
+		</Authority>
+
+		<!--权限定义3-->
+		<!--
+      JRole_READ               浏览
+      JJRole_ADD               添加
+      JRole_EDIT               修改
+      JRole_DEL                删除
+      JRole_USER               设置用户
+      JRole_AUTHORITY          设置权限
+    -->
+		<Authority Text="系统角色">
+			<AuthorityUnit Text="浏览"      ID="JRole_READ" Value="0" ></AuthorityUnit>
+			<AuthorityUnit Text="添加"      ID="JRole_ADD"   Value="1" ></AuthorityUnit>
+			<AuthorityUnit Text="修改"      ID="JRole_EDIT" Value="2" ></AuthorityUnit>
+			<AuthorityUnit Text="删除"      ID="JRole_DEL" Value="3" ></AuthorityUnit>
+			<AuthorityUnit Text="设置用户"      ID="JRole_USER" Value="4" ></AuthorityUnit>
+			<AuthorityUnit Text="设置权限"      ID="JRole_AUTHORITY" Value="5" ></AuthorityUnit>
+		</Authority>
+
+
+		<!--权限定义4-->
+		<!--
+       JItem_ADD：添加条目（仅对admin有用，不写入权限）
+       JItem_READ ：浏览
+       JItem_EDIT : 修改
+       JItem_DEL :  删除（仅对admin有用，不写入权限）
+       JItem_SET : 设置条目值
+    -->
+		<Authority Text="系统条目">
+			<AuthorityUnit Text="浏览"      ID="JItem_READ" Value="0" ></AuthorityUnit>
+			<AuthorityUnit Text="修改"      ID="JItem_EDIT" Value="2" ></AuthorityUnit>
+			<AuthorityUnit Text="设置条目值"      ID="JItem_SET" Value="3" ></AuthorityUnit>
+		</Authority>
+
+		<!--权限定义5-->
+		<!--
+        JStrInfo_READ               浏览
+        JStrInfo_ADD               添加 （仅对admin有用，不写入权限）
+        JStrInfo_EDIT               修改
+        JStrInfo_DEL                删除 （仅对admin有用，不写入权限）
+    -->
+		<Authority Text="系统配置">
+			<AuthorityUnit Text="浏览"      ID="JStrInfo_READ" Value="0" ></AuthorityUnit>
+			<AuthorityUnit Text="修改"      ID="JStrInfo_EDIT" Value="2" ></AuthorityUnit>
+		</Authority>
+
+		<!--权限定义6-->
+		<!--
+         相关权限点说说明：
+         JUserLoginLog_READ ：浏览
+         JUserLoginLog_EDIT : 修改
+    -->
+		<Authority Text="登录日志">
+			<AuthorityUnit Text="浏览"      ID="JUserLoginLog_READ" Value="0" ></AuthorityUnit>
+			<AuthorityUnit Text="修改"      ID="JUserLoginLog_EDIT" Value="2" ></AuthorityUnit>
+		</Authority>
+
+	</AuthorityGroup>
+
+</AuthorityRoot>

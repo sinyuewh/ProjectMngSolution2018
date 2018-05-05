@@ -1,0 +1,204 @@
+2016/8/28 0:28:13
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/8/28 0:28:45
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/8/28 0:31:47
+System.InvalidOperationException: 集合已修改；可能无法执行枚举操作。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.KeyCollection.Enumerator.MoveNext()
+   在 KORWeb.DAL.Tb_Task_BugDA.GetTaskDebugRate(String TaskID) 位置 G:\MyWork\ITSolution2016\DAL\Tb_Task_BugDA.cs:行号 264
+   在 KORWeb.BUL.Tb_KH_MonthBU.CreateMonthKHData(Int32 byear, Int32 bmonth, Double khDays) 位置 G:\MyWork\ITSolution2016\BUL\Project\Tb_KH_MonthBU.cs:行号 259
+----------------------------------------------------------------------------------------------------
+2016/8/28 0:31:48
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/8/28 0:33:58
+System.InvalidOperationException: 集合已修改；可能无法执行枚举操作。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.KeyCollection.Enumerator.MoveNext()
+   在 KORWeb.DAL.Tb_Task_BugDA.GetTaskDebugRate(String TaskID) 位置 G:\MyWork\ITSolution2016\DAL\Tb_Task_BugDA.cs:行号 264
+   在 KORWeb.BUL.Tb_KH_MonthBU.CreateMonthKHData(Int32 byear, Int32 bmonth, Double khDays) 位置 G:\MyWork\ITSolution2016\BUL\Project\Tb_KH_MonthBU.cs:行号 258
+----------------------------------------------------------------------------------------------------
+2016/8/28 0:33:58
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/8/28 0:34:04
+System.InvalidOperationException: 集合已修改；可能无法执行枚举操作。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.KeyCollection.Enumerator.MoveNext()
+   在 KORWeb.DAL.Tb_Task_BugDA.GetTaskDebugRate(String TaskID) 位置 G:\MyWork\ITSolution2016\DAL\Tb_Task_BugDA.cs:行号 264
+   在 KORWeb.BUL.Tb_KH_MonthBU.CreateMonthKHData(Int32 byear, Int32 bmonth, Double khDays) 位置 G:\MyWork\ITSolution2016\BUL\Project\Tb_KH_MonthBU.cs:行号 258
+----------------------------------------------------------------------------------------------------
+2016/8/28 0:35:23
+System.InvalidOperationException: 集合已修改；可能无法执行枚举操作。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.KeyCollection.Enumerator.MoveNext()
+   在 KORWeb.DAL.Tb_Task_BugDA.GetTaskDebugRate(String TaskID) 位置 G:\MyWork\ITSolution2016\DAL\Tb_Task_BugDA.cs:行号 264
+   在 KORWeb.BUL.Tb_KH_MonthBU.CreateMonthKHData(Int32 byear, Int32 bmonth, Double khDays) 位置 G:\MyWork\ITSolution2016\BUL\Project\Tb_KH_MonthBU.cs:行号 258
+----------------------------------------------------------------------------------------------------
+2016/8/28 0:36:59
+System.InvalidOperationException: 集合已修改；可能无法执行枚举操作。
+   在 System.ThrowHelper.ThrowInvalidOperationException(ExceptionResource resource)
+   在 System.Collections.Generic.Dictionary`2.KeyCollection.Enumerator.MoveNext()
+   在 KORWeb.DAL.Tb_Task_BugDA.GetTaskDebugRate(String TaskID) 位置 G:\MyWork\ITSolution2016\DAL\Tb_Task_BugDA.cs:行号 264
+   在 KORWeb.BUL.Tb_KH_MonthBU.CreateMonthKHData(Int32 byear, Int32 bmonth, Double khDays) 位置 G:\MyWork\ITSolution2016\BUL\Project\Tb_KH_MonthBU.cs:行号 258
+----------------------------------------------------------------------------------------------------
+2016/8/28 0:47:43
+System.Data.OleDb.OleDbException: 由于其 Required 属性设置为真(True)，字段 'Tb_KH_Month.Remark' 不能包含 Null 值。在此字段中输入一个数值。
+   在 WebFrame.Data.JTable.InsertData(Dictionary`2 data, Dictionary`2 dataType) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 208
+   在 WebFrame.Data.JTable.InsertData(Dictionary`2 data) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 85
+   在 KORWeb.DAL.Tb_KH_MonthDA.NewData(Dictionary`2 data1) 位置 G:\MyWork\ITSolution2016\DAL\Tb_KH_MonthDA.cs:行号 73
+   在 KORWeb.BUL.Tb_KH_MonthBU.CreateMonthKHData(Int32 byear, Int32 bmonth, Double khDays) 位置 G:\MyWork\ITSolution2016\BUL\Project\Tb_KH_MonthBU.cs:行号 309
+----------------------------------------------------------------------------------------------------
+2016/8/28 0:47:44
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/8/28 0:50:12
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/8/28 0:53:18
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/8/28 0:55:06
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/8/28 0:57:18
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/8/28 1:03:08
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/8/28 1:06:46
+System.Data.OleDb.OleDbException: INSERT INTO 语句包含下列未知的字段名： 'rate'。确定键入的名称是正确的， 然后重试。
+   在 WebFrame.Data.JTable.InsertData(Dictionary`2 data, Dictionary`2 dataType) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 208
+   在 WebFrame.Data.JTable.InsertData(Dictionary`2 data) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 85
+   在 KORWeb.DAL.Tb_KH_MonthDA.NewData(Dictionary`2 data1) 位置 G:\MyWork\ITSolution2016\DAL\Tb_KH_MonthDA.cs:行号 73
+   在 KORWeb.BUL.Tb_KH_MonthBU.CreateMonthKHData(Int32 byear, Int32 bmonth, Double khDays) 位置 G:\MyWork\ITSolution2016\BUL\Project\Tb_KH_MonthBU.cs:行号 312
+----------------------------------------------------------------------------------------------------
+2016/8/28 1:06:47
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/8/28 1:07:43
+System.Data.OleDb.OleDbException: INSERT INTO 语句包含下列未知的字段名： 'rate'。确定键入的名称是正确的， 然后重试。
+   在 WebFrame.Data.JTable.InsertData(Dictionary`2 data, Dictionary`2 dataType) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 208
+   在 WebFrame.Data.JTable.InsertData(Dictionary`2 data) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 85
+   在 KORWeb.DAL.Tb_KH_MonthDA.NewData(Dictionary`2 data1) 位置 G:\MyWork\ITSolution2016\DAL\Tb_KH_MonthDA.cs:行号 73
+   在 KORWeb.BUL.Tb_KH_MonthBU.CreateMonthKHData(Int32 byear, Int32 bmonth, Double khDays) 位置 G:\MyWork\ITSolution2016\BUL\Project\Tb_KH_MonthBU.cs:行号 312
+----------------------------------------------------------------------------------------------------
+2016/8/28 1:08:12
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/8/28 1:17:17
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/8/28 1:17:27
+System.Web.HttpUnhandledException: 引发类型为“System.Web.HttpUnhandledException”的异常。 ---> System.Web.HttpException: DataBinding:“System.Data.DataRowView”不包含名为“Rate”的属性。
+   在 System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   在 System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   在 System.Web.UI.DataBinder.Eval(Object container, String expression)
+   在 System.Web.UI.TemplateControl.Eval(String expression)
+   在 ASP.sysmanager_webui_checkmng_checklist1_aspx.__DataBind__control7(Object sender, EventArgs e) 位置 g:\MyWork\ITSolution2016\OAWebSite2016\SysManager\WebUI\CheckMng\CheckList1.aspx:行号 99
+   在 System.Web.UI.Control.OnDataBinding(EventArgs e)
+   在 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   在 System.Web.UI.Control.DataBind()
+   在 System.Web.UI.Control.DataBindChildren()
+   在 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   在 System.Web.UI.Control.DataBind()
+   在 System.Web.UI.WebControls.Repeater.CreateItem(Int32 itemIndex, ListItemType itemType, Boolean dataBind, Object dataItem)
+   在 System.Web.UI.WebControls.Repeater.CreateControlHierarchy(Boolean useDataSource)
+   在 System.Web.UI.WebControls.Repeater.OnDataBinding(EventArgs e)
+   在 System.Web.UI.WebControls.Repeater.DataBind()
+   在 System.Web.UI.WebControls.Repeater.EnsureDataBound()
+   在 System.Web.UI.WebControls.Repeater.OnPreRender(EventArgs e)
+   在 System.Web.UI.Control.PreRenderRecursiveInternal()
+   在 System.Web.UI.Control.PreRenderRecursiveInternal()
+   在 System.Web.UI.Control.PreRenderRecursiveInternal()
+   在 System.Web.UI.Control.PreRenderRecursiveInternal()
+   在 System.Web.UI.Control.PreRenderRecursiveInternal()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.sysmanager_webui_checkmng_checklist1_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\jsj\AppData\Local\Temp\Temporary ASP.NET Files\root\75cabd6a\4d39ff52\App_Web_qwvbifz8.1.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/8/28 2:17:24
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------

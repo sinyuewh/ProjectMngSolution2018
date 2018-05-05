@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDL", "DDL\DDL.csproj", "{13850FD8-9F00-44B5-9236-B6548CADC208}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{8CAD6519-41BF-4F19-AF05-8F9A666BB8AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUL", "BUL\BUL.csproj", "{BC1540A0-6DC0-41FB-8655-F514E9BFCF0C}"
+EndProject
+Project("{4F174C21-8C12-11D0-8340-0000F80270F8}") = "DbProject", "DbProject\DbProject.dbp", "{04B156B0-0500-4EE4-B311-D851FEF3BA02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite2016", "OAWebSite2016\WebSite2016.csproj", "{54A39B80-E828-468E-93C8-FA9F385D2310}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13850FD8-9F00-44B5-9236-B6548CADC208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13850FD8-9F00-44B5-9236-B6548CADC208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13850FD8-9F00-44B5-9236-B6548CADC208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13850FD8-9F00-44B5-9236-B6548CADC208}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CAD6519-41BF-4F19-AF05-8F9A666BB8AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CAD6519-41BF-4F19-AF05-8F9A666BB8AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CAD6519-41BF-4F19-AF05-8F9A666BB8AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CAD6519-41BF-4F19-AF05-8F9A666BB8AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC1540A0-6DC0-41FB-8655-F514E9BFCF0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC1540A0-6DC0-41FB-8655-F514E9BFCF0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC1540A0-6DC0-41FB-8655-F514E9BFCF0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC1540A0-6DC0-41FB-8655-F514E9BFCF0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54A39B80-E828-468E-93C8-FA9F385D2310}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54A39B80-E828-468E-93C8-FA9F385D2310}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54A39B80-E828-468E-93C8-FA9F385D2310}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54A39B80-E828-468E-93C8-FA9F385D2310}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

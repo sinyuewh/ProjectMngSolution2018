@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Menu>
+
+  <SysChild Caption="开发平台" visible="true">
+    <ChildModel Caption="开发平台" isAuthorityMode="false">
+
+      <ChildMenu Caption="代码生成器" Value="开发平台:代码生成器" url="/Designer/WebUI/CreateCode.aspx">
+      </ChildMenu>
+
+      <ChildMenu Caption="字符串资源" Value="开发平台:字符串资源" url="/Designer/WebUI/JStrInfo_List.aspx">
+      </ChildMenu>
+
+      <ChildMenu Caption="系统条目" Value="开发平台:系统条目" url="/Designer/WebUI/JItem_List.aspx">
+      </ChildMenu>
+
+      <ChildMenu Caption="SQL字符串" Value="开发平台:SQL字符串" url="/Designer/WebUI/JSqlInfo_List.aspx">
+      </ChildMenu>
+
+      <ChildMenu Caption="系统权限" Value="开发平台:系统权限" url="/Designer/WebUI/JAuthority_List.aspx">
+      </ChildMenu>
+
+      <ChildMenu Caption="权限结构树" Value="开发平台:权限结构树" url="/Designer/WebUI/JAuthorityTree.aspx">
+      </ChildMenu>
+
+      <ChildMenu Caption="SQL执行器" Value="开发平台:SQL执行器"  url="/Designer/WebUI/ExecuteSql.aspx">
+      </ChildMenu>
+
+      <ChildMenu Caption="网站文件管理" Value="开发平台:网站文件管理" url="/Designer/WebUI/WebFileAdmin.aspx">
+      </ChildMenu>
+
+      <ChildMenu Caption="连接字符串加密" Value="开发平台:连接字符串加密" url="/Designer/WebUI/EntryConnectString.aspx">
+      </ChildMenu>
+
+      <ChildMenu Caption="代码合格检查" Value="开发平台:代码合格检查" url="#">
+      </ChildMenu>
+    </ChildModel>
+  </SysChild>
+
+  <!--子系统(支撑平台)-->
+  <SysChild Caption="系统管理">
+
+    <ChildModel Caption="系统管理">
+      <ChildMenu Caption="组织机构" url="/Designer/WebUI/SysMng/JOrg_List.aspx"></ChildMenu>
+      <ChildMenu Caption="用户列表" url="/Designer/WebUI/SysMng/JUser_List.aspx"></ChildMenu>
+
+      <ChildMenu Caption="系统角色"  url="/Designer/WebUI/SysMng/JRole_List.aspx">
+      </ChildMenu>
+
+      <ChildMenu Caption="登录日志" url="/Designer/WebUI/SysMng/JUserLoginLog_List.aspx">
+      </ChildMenu>
+
+      <ChildMenu Caption="快捷列表" url="/Designer/WebUI/SysMng/MyFavorList.aspx">
+      </ChildMenu>
+      <ChildMenu Caption="修改密码" url="/Designer/WebUI/SysMng/ChangePassWord.aspx"></ChildMenu>
+
+    </ChildModel>
+  </SysChild>
+</Menu>

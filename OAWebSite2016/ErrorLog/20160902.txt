@@ -1,0 +1,410 @@
+2016/9/2 15:07:31
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/9/2 15:50:33
+System.Web.HttpUnhandledException: 引发类型为“System.Web.HttpUnhandledException”的异常。 ---> System.Data.OleDb.OleDbException: 标准表达式中数据类型不匹配。
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable)
+   在 WebFrame.Data.JCommand.GetSearchResult(DataSet ds, Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 372
+   在 WebFrame.Data.JCommand.SearchData(Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 192
+   在 WebFrame.Data.JConnect.ExecuteQuery(String SqlText, String Condition, String OrderBy, String GroupBy, Int32& CurPage, Int32 PageSize, Int32& TotalRow, String& commandText) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JConnect.cs:行号 838
+   在 WebFrame.ExpControl.JDataSource.GetListData() 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\ExpControl\Data\JDataSource.cs:行号 517
+   在 WebFrame.ExpControl.JDataBean.SetControlValues() 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\ExpControl\Data\JDataBean.cs:行号 88
+   在 OAWebSite2016.SysManager.WebUI.CheckMng.Tb_KH_Month_READ.Page_Load(Object sender, EventArgs e) 位置 G:\MyWork\ITSolution2016\OAWebSite2016\SysManager\WebUI\CheckMng\Tb_KH_Month_READ.aspx.cs:行号 16
+   在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Adapters.ControlAdapter.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.sysmanager_webui_checkmng_tb_kh_month_read_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\JSJ\AppData\Local\Temp\Temporary ASP.NET Files\root\75cabd6a\4d39ff52\App_Web_qt4xnspy.1.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/9/2 16:27:29
+System.Web.HttpUnhandledException: 引发类型为“System.Web.HttpUnhandledException”的异常。 ---> System.Data.OleDb.OleDbException: 标准表达式中数据类型不匹配。
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 WebFrame.Data.JCommand.GetSearchResult(DataSet ds, Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 377
+   在 WebFrame.Data.JCommand.SearchData(Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 192
+   在 WebFrame.Data.JTable.SearchData(List`1 condition, Int32 curpage, String[] FieldList) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 530
+   在 WebFrame.Data.JTable.HasData(List`1 condition) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 612
+   在 WebFrame.ExpControl.JDataBean.SaveDataToDb(Dictionary`2 data1) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\ExpControl\Data\JDataBean.cs:行号 334
+   在 WebFrame.ExpControl.JDataBean.SaveDataToDb() 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\ExpControl\Data\JDataBean.cs:行号 287
+   在 OAWebSite2016.SysManager.WebUI.CheckMng.Tb_KH_Month_READ.btnSubmit_ServerClick(Object sender, EventArgs e) 位置 G:\MyWork\ITSolution2016\OAWebSite2016\SysManager\WebUI\CheckMng\Tb_KH_Month_READ.aspx.cs:行号 34
+   在 System.Web.UI.HtmlControls.HtmlInputButton.OnServerClick(EventArgs e)
+   在 System.Web.UI.HtmlControls.HtmlInputButton.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.HtmlControls.HtmlInputButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.sysmanager_webui_checkmng_tb_kh_month_read_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\JSJ\AppData\Local\Temp\Temporary ASP.NET Files\root\75cabd6a\4d39ff52\App_Web_npc6uhgn.1.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/9/2 16:30:34
+System.Web.HttpUnhandledException: 引发类型为“System.Web.HttpUnhandledException”的异常。 ---> System.Data.OleDb.OleDbException: 标准表达式中数据类型不匹配。
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 WebFrame.Data.JCommand.GetSearchResult(DataSet ds, Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 377
+   在 WebFrame.Data.JCommand.SearchData(Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 192
+   在 WebFrame.Data.JTable.SearchData(List`1 condition, Int32 curpage, String[] FieldList) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 530
+   在 WebFrame.Data.JTable.HasData(List`1 condition) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 612
+   在 WebFrame.ExpControl.JDataBean.SaveDataToDb(Dictionary`2 data1) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\ExpControl\Data\JDataBean.cs:行号 334
+   在 WebFrame.ExpControl.JDataBean.SaveDataToDb() 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\ExpControl\Data\JDataBean.cs:行号 287
+   在 OAWebSite2016.SysManager.WebUI.CheckMng.Tb_KH_Month_READ.btnSubmit_ServerClick(Object sender, EventArgs e) 位置 G:\MyWork\ITSolution2016\OAWebSite2016\SysManager\WebUI\CheckMng\Tb_KH_Month_READ.aspx.cs:行号 34
+   在 System.Web.UI.HtmlControls.HtmlInputButton.OnServerClick(EventArgs e)
+   在 System.Web.UI.HtmlControls.HtmlInputButton.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.HtmlControls.HtmlInputButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.sysmanager_webui_checkmng_tb_kh_month_read_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\JSJ\AppData\Local\Temp\Temporary ASP.NET Files\root\75cabd6a\4d39ff52\App_Web_xuhfmzjt.4.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/9/2 16:32:14
+System.Web.HttpUnhandledException: 引发类型为“System.Web.HttpUnhandledException”的异常。 ---> System.Data.OleDb.OleDbException: 标准表达式中数据类型不匹配。
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 WebFrame.Data.JCommand.GetSearchResult(DataSet ds, Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 377
+   在 WebFrame.Data.JCommand.SearchData(Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 192
+   在 WebFrame.Data.JTable.SearchData(List`1 condition, Int32 curpage, String[] FieldList) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 530
+   在 WebFrame.Data.JTable.HasData(List`1 condition) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 612
+   在 WebFrame.ExpControl.JDataBean.SaveDataToDb(Dictionary`2 data1) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\ExpControl\Data\JDataBean.cs:行号 334
+   在 WebFrame.ExpControl.JDataBean.SaveDataToDb() 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\ExpControl\Data\JDataBean.cs:行号 287
+   在 OAWebSite2016.SysManager.WebUI.CheckMng.Tb_KH_Month_READ.btnSubmit_ServerClick(Object sender, EventArgs e) 位置 G:\MyWork\ITSolution2016\OAWebSite2016\SysManager\WebUI\CheckMng\Tb_KH_Month_READ.aspx.cs:行号 34
+   在 System.Web.UI.HtmlControls.HtmlInputButton.OnServerClick(EventArgs e)
+   在 System.Web.UI.HtmlControls.HtmlInputButton.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.HtmlControls.HtmlInputButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.sysmanager_webui_checkmng_tb_kh_month_read_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\JSJ\AppData\Local\Temp\Temporary ASP.NET Files\root\75cabd6a\4d39ff52\App_Web_xuhfmzjt.4.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/9/2 16:33:16
+System.Web.HttpUnhandledException: 引发类型为“System.Web.HttpUnhandledException”的异常。 ---> System.Data.OleDb.OleDbException: 标准表达式中数据类型不匹配。
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 WebFrame.Data.JCommand.GetSearchResult(DataSet ds, Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 377
+   在 WebFrame.Data.JCommand.SearchData(Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 192
+   在 WebFrame.Data.JTable.SearchData(List`1 condition, Int32 curpage, String[] FieldList) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 530
+   在 WebFrame.Data.JTable.HasData(List`1 condition) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 612
+   在 WebFrame.ExpControl.JDataBean.SaveDataToDb(Dictionary`2 data1) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\ExpControl\Data\JDataBean.cs:行号 334
+   在 WebFrame.ExpControl.JDataBean.SaveDataToDb() 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\ExpControl\Data\JDataBean.cs:行号 287
+   在 OAWebSite2016.SysManager.WebUI.CheckMng.Tb_KH_Month_READ.btnSubmit_ServerClick(Object sender, EventArgs e) 位置 G:\MyWork\ITSolution2016\OAWebSite2016\SysManager\WebUI\CheckMng\Tb_KH_Month_READ.aspx.cs:行号 34
+   在 System.Web.UI.HtmlControls.HtmlInputButton.OnServerClick(EventArgs e)
+   在 System.Web.UI.HtmlControls.HtmlInputButton.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.HtmlControls.HtmlInputButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.sysmanager_webui_checkmng_tb_kh_month_read_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\JSJ\AppData\Local\Temp\Temporary ASP.NET Files\root\75cabd6a\4d39ff52\App_Web_qqqra7fm.3.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/9/2 16:35:25
+System.Web.HttpUnhandledException: 引发类型为“System.Web.HttpUnhandledException”的异常。 ---> System.Data.OleDb.OleDbException: 标准表达式中数据类型不匹配。
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 WebFrame.Data.JCommand.GetSearchResult(DataSet ds, Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 377
+   在 WebFrame.Data.JCommand.SearchData(Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 192
+   在 WebFrame.Data.JTable.SearchData(List`1 condition, Int32 curpage, String[] FieldList) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 530
+   在 WebFrame.Data.JTable.HasData(List`1 condition) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 612
+   在 WebFrame.ExpControl.JDataBean.SaveDataToDb(Dictionary`2 data1) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\ExpControl\Data\JDataBean.cs:行号 334
+   在 WebFrame.ExpControl.JDataBean.SaveDataToDb() 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\ExpControl\Data\JDataBean.cs:行号 287
+   在 OAWebSite2016.SysManager.WebUI.CheckMng.Tb_KH_Month_READ.btnSubmit_ServerClick(Object sender, EventArgs e) 位置 G:\MyWork\ITSolution2016\OAWebSite2016\SysManager\WebUI\CheckMng\Tb_KH_Month_READ.aspx.cs:行号 34
+   在 System.Web.UI.HtmlControls.HtmlInputButton.OnServerClick(EventArgs e)
+   在 System.Web.UI.HtmlControls.HtmlInputButton.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.HtmlControls.HtmlInputButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.sysmanager_webui_checkmng_tb_kh_month_read_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\JSJ\AppData\Local\Temp\Temporary ASP.NET Files\root\75cabd6a\4d39ff52\App_Web_qqqra7fm.3.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/9/2 16:36:29
+System.Web.HttpUnhandledException: 引发类型为“System.Web.HttpUnhandledException”的异常。 ---> System.Data.OleDb.OleDbException: 标准表达式中数据类型不匹配。
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 WebFrame.Data.JCommand.GetSearchResult(DataSet ds, Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 377
+   在 WebFrame.Data.JCommand.SearchData(Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 192
+   在 WebFrame.Data.JTable.SearchData(List`1 condition, Int32 curpage, String[] FieldList) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 530
+   在 WebFrame.Data.JTable.HasData(List`1 condition) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 612
+   在 WebFrame.ExpControl.JDataBean.SaveDataToDb(Dictionary`2 data1) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\ExpControl\Data\JDataBean.cs:行号 334
+   在 WebFrame.ExpControl.JDataBean.SaveDataToDb() 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\ExpControl\Data\JDataBean.cs:行号 287
+   在 OAWebSite2016.SysManager.WebUI.CheckMng.Tb_KH_Month_READ.btnSubmit_ServerClick(Object sender, EventArgs e) 位置 G:\MyWork\ITSolution2016\OAWebSite2016\SysManager\WebUI\CheckMng\Tb_KH_Month_READ.aspx.cs:行号 34
+   在 System.Web.UI.HtmlControls.HtmlInputButton.OnServerClick(EventArgs e)
+   在 System.Web.UI.HtmlControls.HtmlInputButton.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.HtmlControls.HtmlInputButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.sysmanager_webui_checkmng_tb_kh_month_read_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\JSJ\AppData\Local\Temp\Temporary ASP.NET Files\root\75cabd6a\4d39ff52\App_Web_qqqra7fm.3.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/9/2 16:37:27
+System.Web.HttpUnhandledException: 引发类型为“System.Web.HttpUnhandledException”的异常。 ---> System.Data.OleDb.OleDbException: 标准表达式中数据类型不匹配。
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 WebFrame.Data.JCommand.GetSearchResult(DataSet ds, Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 377
+   在 WebFrame.Data.JCommand.SearchData(Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 192
+   在 WebFrame.Data.JTable.SearchData(List`1 condition, Int32 curpage, String[] FieldList) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 530
+   在 WebFrame.Data.JTable.HasData(List`1 condition) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 612
+   在 WebFrame.ExpControl.JDataBean.SaveDataToDb(Dictionary`2 data1) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\ExpControl\Data\JDataBean.cs:行号 334
+   在 WebFrame.ExpControl.JDataBean.SaveDataToDb() 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\ExpControl\Data\JDataBean.cs:行号 287
+   在 OAWebSite2016.SysManager.WebUI.CheckMng.Tb_KH_Month_READ.btnSubmit_ServerClick(Object sender, EventArgs e) 位置 G:\MyWork\ITSolution2016\OAWebSite2016\SysManager\WebUI\CheckMng\Tb_KH_Month_READ.aspx.cs:行号 34
+   在 System.Web.UI.HtmlControls.HtmlInputButton.OnServerClick(EventArgs e)
+   在 System.Web.UI.HtmlControls.HtmlInputButton.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.HtmlControls.HtmlInputButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.sysmanager_webui_checkmng_tb_kh_month_read_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\JSJ\AppData\Local\Temp\Temporary ASP.NET Files\root\75cabd6a\4d39ff52\App_Web_qqqra7fm.3.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/9/2 16:38:56
+System.Web.HttpUnhandledException: 引发类型为“System.Web.HttpUnhandledException”的异常。 ---> System.Data.OleDb.OleDbException: 标准表达式中数据类型不匹配。
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 WebFrame.Data.JCommand.GetSearchResult(DataSet ds, Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 377
+   在 WebFrame.Data.JCommand.SearchData(Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 192
+   在 WebFrame.Data.JTable.SearchData(List`1 condition, Int32 curpage, String[] FieldList) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 530
+   在 WebFrame.Data.JTable.HasData(List`1 condition) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 612
+   在 WebFrame.ExpControl.JDataBean.SaveDataToDb(Dictionary`2 data1) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\ExpControl\Data\JDataBean.cs:行号 334
+   在 WebFrame.ExpControl.JDataBean.SaveDataToDb() 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\ExpControl\Data\JDataBean.cs:行号 287
+   在 OAWebSite2016.SysManager.WebUI.CheckMng.Tb_KH_Month_READ.btnSubmit_ServerClick(Object sender, EventArgs e) 位置 G:\MyWork\ITSolution2016\OAWebSite2016\SysManager\WebUI\CheckMng\Tb_KH_Month_READ.aspx.cs:行号 34
+   在 System.Web.UI.HtmlControls.HtmlInputButton.OnServerClick(EventArgs e)
+   在 System.Web.UI.HtmlControls.HtmlInputButton.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.HtmlControls.HtmlInputButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.sysmanager_webui_checkmng_tb_kh_month_read_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\JSJ\AppData\Local\Temp\Temporary ASP.NET Files\root\75cabd6a\4d39ff52\App_Web_qqqra7fm.3.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/9/2 16:40:48
+System.Web.HttpUnhandledException: 引发类型为“System.Web.HttpUnhandledException”的异常。 ---> System.Data.OleDb.OleDbException: 标准表达式中数据类型不匹配。
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 WebFrame.Data.JCommand.GetSearchResult(DataSet ds, Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 377
+   在 WebFrame.Data.JCommand.SearchData(Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 192
+   在 WebFrame.Data.JTable.SearchData(List`1 condition, Int32 curpage, String[] FieldList) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 530
+   在 WebFrame.Data.JTable.HasData(List`1 condition) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 612
+   在 WebFrame.ExpControl.JDataBean.SaveDataToDb(Dictionary`2 data1) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\ExpControl\Data\JDataBean.cs:行号 334
+   在 WebFrame.ExpControl.JDataBean.SaveDataToDb() 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\ExpControl\Data\JDataBean.cs:行号 287
+   在 OAWebSite2016.SysManager.WebUI.CheckMng.Tb_KH_Month_READ.btnSubmit_ServerClick(Object sender, EventArgs e) 位置 G:\MyWork\ITSolution2016\OAWebSite2016\SysManager\WebUI\CheckMng\Tb_KH_Month_READ.aspx.cs:行号 36
+   在 System.Web.UI.HtmlControls.HtmlInputButton.OnServerClick(EventArgs e)
+   在 System.Web.UI.HtmlControls.HtmlInputButton.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.HtmlControls.HtmlInputButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.sysmanager_webui_checkmng_tb_kh_month_read_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\JSJ\AppData\Local\Temp\Temporary ASP.NET Files\root\75cabd6a\4d39ff52\App_Web_-zo3m0xz.1.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/9/2 16:47:09
+System.Web.HttpUnhandledException: 引发类型为“System.Web.HttpUnhandledException”的异常。 ---> System.Data.OleDb.OleDbException: 标准表达式中数据类型不匹配。
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 WebFrame.Data.JCommand.GetSearchResult(DataSet ds, Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 377
+   在 WebFrame.Data.JCommand.SearchData(Int32 curpage) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JCommand.cs:行号 192
+   在 WebFrame.Data.JTable.SearchData(List`1 condition, Int32 curpage, String[] FieldList) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 530
+   在 WebFrame.Data.JTable.HasData(List`1 condition) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\Data\JTable.cs:行号 612
+   在 WebFrame.ExpControl.JDataBean.SaveDataToDb(Dictionary`2 data1) 位置 G:\开发框架WebFrame\WebFrameSolution\WebFrame\ExpControl\Data\JDataBean.cs:行号 334
+   在 OAWebSite2016.SysManager.WebUI.CheckMng.Tb_KH_Month_READ.btnSubmit_ServerClick(Object sender, EventArgs e) 位置 G:\MyWork\ITSolution2016\OAWebSite2016\SysManager\WebUI\CheckMng\Tb_KH_Month_READ.aspx.cs:行号 37
+   在 System.Web.UI.HtmlControls.HtmlInputButton.OnServerClick(EventArgs e)
+   在 System.Web.UI.HtmlControls.HtmlInputButton.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.HtmlControls.HtmlInputButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   在 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.sysmanager_webui_checkmng_tb_kh_month_read_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\JSJ\AppData\Local\Temp\Temporary ASP.NET Files\root\75cabd6a\4d39ff52\App_Web_7fgvxq2p.3.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/9/2 17:07:03
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------

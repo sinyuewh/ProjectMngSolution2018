@@ -1,0 +1,258 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Web;
+using System.Web.UI;
+using System.Web.Security;
+
+
+namespace KORWeb.WebSite.AppCode
+{
+    #region 参考代码 IHttpHandlerFactory
+    /*
+    /// <summary>
+    /// 登陆权限控制
+    /// </summary>
+    public class LoginSecurityHandlerFactory : IHttpHandlerFactory
+    {
+        #region IHttpHandlerFactory 成员
+
+        public IHttpHandler GetHandler(HttpContext context,
+            string requestType,
+            string url, string pathTranslated)
+        {
+            PageHandlerFactory factory = (PageHandlerFactory)Activator.CreateInstance(typeof(PageHandlerFactory), true);
+            IHttpHandler handler = factory.GetHandler(context, requestType, url, pathTranslated);
+
+            //执行一些其它操作
+            Execute(handler);
+
+            return handler;
+        }
+
+        private void Execute(IHttpHandler handler)
+        {
+            if (handler is Page)
+            {
+                //可以直接对Page对象进行操作
+                ((Page)handler).PreLoad += new EventHandler(MyHandlerFactory_PreLoad);
+            }
+        }
+
+        void MyHandlerFactory_PreLoad(object sender, EventArgs e)
+        {
+            bool succ = true;
+            Page p1 = sender as Page;
+            String url1 = p1.Request.Url.ToString().ToLower();
+            String loginUrl = String.Empty;
+            String returnUrl = String.Empty;
+
+            FormsIdentity Id = p1.User.Identity as FormsIdentity;
+            if (Id != null)
+            {
+                String loginFlag = Id.Ticket.UserData;
+
+                if (url1.ToLower().Contains("/membercenter/"))
+                {
+                    if (loginFlag != "member")
+                    {
+                        succ = false;
+                        loginUrl = "/login/MemberLogin.aspx";
+                        returnUrl = p1.Request.Path;
+                    }
+                }
+                else if (url1.ToLower().Contains("/Designer/"))
+                {
+                    if (loginFlag != "admin")
+                    {
+                        succ = false;
+                        loginUrl = "/login/ManagerLogin.aspx";
+                        returnUrl = p1.Request.Path;
+                    }
+                }
+            }
+
+
+            //登陆页面
+            if (succ == false)
+            {
+                FormsAuthentication.SignOut();
+
+                if (!string.IsNullOrEmpty(returnUrl))
+                {
+                    loginUrl = loginUrl + "?returnUrl=" + HttpUtility.UrlEncode(returnUrl);
+                }
+                p1.Response.Redirect(loginUrl, true);
+            }
+        }
+
+
+        public void ReleaseHandler(IHttpHandler handler)
+        {
+
+        }
+
+        #endregion
+    }
+
+    /// <summary>
+    /// 关闭数据库连接
+    /// </summary>
+    public class CloseConnectHandlerFactory : IHttpHandlerFactory
+    {
+        #region IHttpHandlerFactory 成员
+
+        public IHttpHandler GetHandler(HttpContext context, string requestType, string url, string pathTranslated)
+        {
+            PageHandlerFactory factory = (PageHandlerFactory)Activator.CreateInstance(typeof(PageHandlerFactory), true);
+            IHttpHandler handler = factory.GetHandler(context, requestType, url, pathTranslated);
+
+            //执行一些其它操作
+            Execute(handler);
+
+            return handler;
+        }
+
+
+        private void Execute(IHttpHandler handler)
+        {
+            if (handler is Page)
+            {
+                //可以直接对Page对象进行操作
+                ((Page)handler).Unload += new EventHandler(MyHandlerFactory_Unload);
+            }
+        }
+
+
+        void MyHandlerFactory_Unload(object sender, EventArgs e)
+        {
+            WebFrame.Data.JConnect.CloseConnect();
+        }
+
+        public void ReleaseHandler(IHttpHandler handler)
+        {
+
+        }
+
+        #endregion
+    }
+     */
+    #endregion
+
+    /// <summary>
+    /// 关闭数据库连接的Handler
+    /// </summary>
+    public class NoNeedLoginHandler : IHttpHandler,System.Web.SessionState.IRequiresSessionState
+    {
+        #region IHttpHandler 成员
+
+        public bool IsReusable
+        {
+            get { return true; }
+        }
+
+        public void ProcessRequest(HttpContext context)
+        {
+            string rawUrl = context.Request.RawUrl.ToLower();
+            string requestUrl = context.Request.CurrentExecutionFilePath;
+            IHttpHandler handler = PageParser.GetCompiledPageInstance(requestUrl, context.Server.MapPath(requestUrl), context);
+
+            Page page = handler as Page;
+            if (page != null)
+            {
+                page.Unload += new EventHandler(page_Unload);
+            }
+            handler.ProcessRequest(context);
+        }
+
+        void page_Unload(object sender, EventArgs e)
+        {
+            WebFrame.Data.JConnect.CloseConnect();
+        }
+        #endregion
+    }
+
+
+    /// <summary>
+    /// 验证用户登录的Handler
+    /// </summary>
+    public class NeedLoginHandler : IHttpHandler, System.Web.SessionState.IRequiresSessionState
+    {
+        #region IHttpHandler 成员
+
+        public bool IsReusable
+        {
+            get { return true; }
+        }
+
+        public void ProcessRequest(HttpContext context)
+        {
+            string rawUrl = context.Request.RawUrl.ToLower();
+            string requestUrl = context.Request.CurrentExecutionFilePath;
+            IHttpHandler handler = PageParser.GetCompiledPageInstance(requestUrl, null, context);
+            Page page = handler as Page;
+            if (page != null)
+            {
+               page.PreLoad += new EventHandler(page_PreLoad);
+               page.Unload += new EventHandler(page_Unload);
+
+            }
+            handler.ProcessRequest(context);
+        }
+
+        void page_Unload(object sender, EventArgs e)
+        {
+            WebFrame.Data.JConnect.CloseConnect();
+        }
+
+        void page_PreLoad(object sender, EventArgs e)
+        {
+            bool succ = true;
+            Page p1 = sender as Page;
+            String url1 = p1.Request.Url.ToString().ToLower();
+            String loginUrl = String.Empty;
+            String returnUrl = String.Empty;
+
+            FormsIdentity Id = p1.User.Identity as FormsIdentity;
+            if (Id != null)
+            {
+                String loginFlag = Id.Ticket.UserData;
+
+                if (url1.ToLower().Contains("/membercenter/"))
+                {
+                    if (loginFlag != "member")
+                    {
+                        succ = false;
+                        loginUrl = "/login/MemberLogin.aspx";
+                        returnUrl = p1.Request.Path;
+                    }
+                }
+                else if (url1.ToLower().Contains("/Designer/"))
+                {
+                    if (loginFlag != "admin")
+                    {
+                        succ = false;
+                        loginUrl = "/login/ManagerLogin.aspx";
+                        returnUrl = p1.Request.Path;
+                    }
+                }
+            }
+
+
+            //登陆页面
+            if (succ == false)
+            {
+                FormsAuthentication.SignOut();
+
+                if (!string.IsNullOrEmpty(returnUrl))
+                {
+                    loginUrl = loginUrl + "?returnUrl=" + HttpUtility.UrlEncode(returnUrl);
+                }
+                p1.Response.Redirect(loginUrl, true);
+            }
+        }
+
+        #endregion
+    }
+}

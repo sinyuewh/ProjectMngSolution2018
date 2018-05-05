@@ -1,0 +1,13 @@
+﻿<%-- Author:{AUTHORNAME}--%>
+<%-- DateTime:{DATETIME}--%>
+
+<%@ Page Title="" Language="C#" MasterPageFile="~/Designer/include/Third.Master" 
+AutoEventWireup="true" CodeBehind="{TABLENAME}.aspx.cs" 
+Inherits="KORWeb.WebSite.{AUTHOR}.{TABLENAME}" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+	<jasp:SecurityPanel ID="sec1" runat="server" AuthorityKind="DirectNoAccessPage" AuthorityID="$$0">
+    </jasp:SecurityPanel>
+</asp:Content>

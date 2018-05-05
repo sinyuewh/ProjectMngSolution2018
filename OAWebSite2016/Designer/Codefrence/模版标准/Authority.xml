@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AuthorityRoot>
+  <AuthorityGroup Text="系统管理" ID="XTGL">
+
+    <!--权限定义1-->
+    <Authority Text="组织结构">
+      <!--权限功能点-->
+      <AuthorityUnit Text="浏览" Value="0" ></AuthorityUnit>
+      <AuthorityUnit Text="添加部门" Value="1" ></AuthorityUnit>
+      <AuthorityUnit Text="修改部门" Value="2" ></AuthorityUnit>
+      <AuthorityUnit Text="删除部门" Value="3" ></AuthorityUnit>
+
+      <!--相关页面-->
+      <RelateUrl Value="/Designer/WebUI/SysMng/JOrg_List.aspx"></RelateUrl>
+      <RelateUrl Value="/Designer/WebUI/SysMng/JOrg_Detail.aspx"></RelateUrl>
+    </Authority>
+
+  </AuthorityGroup>
+</AuthorityRoot>

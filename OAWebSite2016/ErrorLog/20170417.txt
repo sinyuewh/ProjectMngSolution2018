@@ -1,0 +1,35 @@
+2017/4/17 20:59:55
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2017/4/17 21:54:09
+System.Web.HttpUnhandledException: 引发类型为“System.Web.HttpUnhandledException”的异常。 ---> System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 OAWebSite2016.SysManager.WebUI.WorkPlanMng.Tb_Task_List3.Repeater1_ItemDataBound(Object sender, RepeaterItemEventArgs e) 位置 H:\MyWork2017\ITSolution2016\OAWebSite2016\SysManager\WebUI\WorkPlanMng\Tb_Task_List3.aspx.cs:行号 48
+   在 System.Web.UI.WebControls.Repeater.OnItemDataBound(RepeaterItemEventArgs e)
+   在 System.Web.UI.WebControls.Repeater.CreateItem(Int32 itemIndex, ListItemType itemType, Boolean dataBind, Object dataItem)
+   在 System.Web.UI.WebControls.Repeater.CreateControlHierarchy(Boolean useDataSource)
+   在 System.Web.UI.WebControls.Repeater.OnDataBinding(EventArgs e)
+   在 System.Web.UI.WebControls.Repeater.DataBind()
+   在 OAWebSite2016.SysManager.WebUI.WorkPlanMng.Tb_Task_List3.SetData() 位置 H:\MyWork2017\ITSolution2016\OAWebSite2016\SysManager\WebUI\WorkPlanMng\Tb_Task_List3.aspx.cs:行号 100
+   在 OAWebSite2016.SysManager.WebUI.WorkPlanMng.Tb_Task_List3.Page_Load(Object sender, EventArgs e) 位置 H:\MyWork2017\ITSolution2016\OAWebSite2016\SysManager\WebUI\WorkPlanMng\Tb_Task_List3.aspx.cs:行号 62
+   在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Adapters.ControlAdapter.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.sysmanager_webui_workplanmng_tb_task_list3_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\jsj\AppData\Local\Temp\Temporary ASP.NET Files\root\a00266fc\6388d20e\App_Web_1b4mylvr.4.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------

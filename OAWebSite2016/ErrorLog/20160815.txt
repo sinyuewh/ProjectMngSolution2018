@@ -1,0 +1,21 @@
+2016/8/15 13:38:37
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2016/8/15 16:45:15
+System.Data.OleDb.OleDbException: INSERT INTO 语句包含下列未知的字段名： 'RelaFile'。确定键入的名称是正确的， 然后重试。
+   在 KORWeb.BUL.Tb_Task_LogBU.NewLog(String ProjectGuidID, String Stitle, String Content, String Kind, FileUpload f1) 位置 G:\MyWork\ITSolution2016\BUL\Project\Tb_Task_LogBU.cs:行号 245
+   在 OAWebSite2016.SysManager.WebUI.ProjectManager.TB_Task_SubmitTest.btnSubmit_ServerClick(Object sender, EventArgs e) 位置 G:\MyWork\ITSolution2016\OAWebSite2016\SysManager\WebUI\ProjectManager\TB_Task_SubmitTest.aspx.cs:行号 42
+----------------------------------------------------------------------------------------------------
+2016/8/15 23:06:11
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------

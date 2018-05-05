@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>  
+<head>  
+<title>JQuery学习</title>  
+<script src="/Js/jquery-1.4.2.min.js" type="text/javascript"></script>
+<script type="text/javascript">  
+$(document).ready(function(){  
+    var oBtnTest = $("#btnTest");  
+    oBtnTest.click(function(){  
+        oBtnTest.disabled = true;      
+        var oResult = $("#result");  
+        oResult.html("loading").css("color","red");
+        jQuery.getScript("http://61.183.239.46:7777/",   
+        function(){
+        oResult.html("name:" + Dylan).css("color", "black");              
+            oBtnTest.disabled = false;              
+        });           
+    });      
+});      
+</script>  
+</head>  
+<body>  
+<button id="btnTest">BtnTest</button>  
+<div id="result"></div>  
+</body>  
+</html>  

@@ -1,0 +1,62 @@
+﻿<%-- Author:{AUTHORNAME}--%>
+<%-- DateTime:{DATETIME}--%>
+
+<%@ Page Title="" Language="C#" MasterPageFile="~/SysManager/include/H-uiThird.Master"
+    AutoEventWireup="true" CodeBehind="{TABLENAME}_Detail.aspx.cs"
+	Inherits="KORWeb.WebSite.{AUTHOR}.{TABLENAME}_Detail" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">    
+    <!--定义数据源-->
+    <div style ="display:none">
+        
+    </div>
+    <jasp:JDataSource ID="data1" runat="server" JType="Table" SqlID="{TABLENAME}" IsNoConditionNoData="true">
+        <ParaItems>
+            <jasp:ParameterItem ParaType="RequestQueryString" ParaName="{PRIMARYKEY}" />
+        </ParaItems>
+    </jasp:JDataSource>
+    
+    
+    <!--定义数据豆-->
+      <!--定义数据豆-->
+    <jasp:JDataBean ID="bean1" runat="server" DataSourceID="data1" 
+	    ControlList="{ALLCOLID}" NoSaveControlList ="{NOSAVEID}"
+        TableName="{TABLENAME}" PrimaryKeys="{PRIMARYKEY}"  IsAppendData="true" />
+        
+        
+    <!--数据Form-->
+    {COLPAGELIST}
+     
+    <div class="row cl">
+        <div class="col-9 col-offset-3">
+            <jasp:SecurityPanel ID="sec2" runat="server" AuthorityKind="DirectNoAccessPage" AuthorityID="$$1|$$2">
+				<input class="btn btn-primary radius" runat="server" id="btnSubmit" type="submit"
+					value="&nbsp;&nbsp;提交&nbsp;&nbsp;" />
+            </jasp:SecurityPanel>
+                
+             &nbsp;&nbsp;
+            <button onclick="layer_close();" class="btn btn-default radius" type="button">
+                &nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+        </div>
+    </div>
+
+	<jasp:SecurityPanel ID="sec1" runat="server" AuthorityKind="DirectNoAccessPage" AuthorityID="$$0">
+    </jasp:SecurityPanel>
+    
+    <script type="text/javascript">
+        $(function() {
+            $("#aspnetForm").Validform({
+                tiptype: 2,
+                callback: function(form) {
+
+                }
+            });
+
+        });
+</script>
+
+</asp:Content>
+
+

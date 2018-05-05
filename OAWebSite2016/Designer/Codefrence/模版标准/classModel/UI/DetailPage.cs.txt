@@ -1,0 +1,61 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using WebFrame.Util;
+using KORWeb.BUL;
+using WebFrame;
+
+namespace KORWeb.WebSite.{AUTHOR}
+{
+    public partial class {TABLENAME}_Detail : System.Web.UI.Page 
+    {
+        protected override void OnInit(EventArgs e)
+        {
+            this.btnSubmit.Click += new EventHandler(btnSubmit_Click);
+            base.OnInit(e);
+        }
+
+        //提交数据的代码
+        void btnSubmit_Click(object sender, EventArgs e)
+        {
+            String error = String.Empty;
+            Control con1=bean1.CheckControls(out error);  //进行数据验证
+            if (con1 != null)
+            {
+                JAjax.AlertAndFocusControl(error, con1.ClientID);
+            }
+            else
+            {
+                int succ = bean1.SaveDataToDb();
+                if (succ == 1)
+                {
+                    //提交并刷新父页面
+                    String js1 = "alert('提示：操作成功！');";
+					js1 = js1 + "$('.submitButton', art.dialog.opener.document).click();";                    
+                    js1 = js1 + "art.dialog.close();";
+                    JAjax.ExecuteJS(js1);
+                }
+            }
+        }
+        
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!Page.IsPostBack)
+            {
+               
+            }
+        }
+
+        protected override void OnPreRenderComplete(EventArgs e)
+        {
+            if (!Page.IsPostBack)
+            {
+                this.bean1.SetControlValues();       //填充数据
+            }
+            base.OnPreRenderComplete(e);
+        }
+    }
+}

@@ -1,0 +1,15 @@
+﻿=======ListPage中=======
+{TABLENAME}       
+{AUTHOR}
+{PRIMARYKEY}
+{COL1}
+{COL2}
+{COLLIST}
+{COLLISTBIND}
+
+========DetailPage=======
+{ALLCOLID}
+{COLPAGELIST}
+
+<%-- Author:{AUTHORNAME}--%>
+<%-- DateTime:{DATETIME}--%>

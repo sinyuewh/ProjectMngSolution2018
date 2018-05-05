@@ -1,0 +1,176 @@
+/*-----修改后的CSS-----*/
+BODY {
+	FONT-FAMILY:verdana,arial,helvetica;
+	font-size:14px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color:#f0f8ff;
+	
+	overflow: auto; color: #000000; 
+	background-image: url(../images/ty1.jpg);
+    border: solid 0px black;
+    height: 100%; 
+    scrollbar-face-color: #d3d3d3;
+    scrollbar-shadow-color: #F3F4F4; 
+    scrollbar-highlight-color: #F3F4F4; 
+    scrollbar-3dlight-color: #F3F4F4;
+    scrollbar-darkshadow-color: #F3F4F4; 
+    scrollbar-track-color: #F3F4F4; 
+    scrollbar-arrow-color: #F3F4F4;
+}
+
+img {
+	border-width:0;
+	
+}
+td,th
+{
+	FONT-FAMILY:verdana,arial,helvetica;
+	font-size:12px;
+	word-wrap : break-word;
+}
+
+
+/*---- 链接的样式 butBlue 设置 -----*/
+a:active {
+	font-size:12px;
+	line-height: 20px;
+	font-weight: normal;
+	color: black;
+	text-decoration:none;
+}
+a:link {
+	font-size:12px;
+	line-height: 20px;
+	font-weight: normal;
+	color: black;
+	text-decoration:none;
+}
+a:visited {
+	font-size:12px;
+	line-height: 20px;
+	font-weight: normal;
+	text-decoration:none;
+	color: black;
+}
+a:hover {
+	font-size:12px;
+	line-height: 20px;
+	font-weight: normal;
+	color: blue;
+	text-decoration:underline;
+}
+
+/*---- 链接的样式设置 (黑色)-----*/
+a.black:active {
+	font-size:12px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+a.black:link {
+	font-size:12px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+}
+a.black:visited {
+	font-size:12px;
+	line-height: 20px;
+	font-weight: normal;
+	color:black ;
+	text-decoration: none;
+}
+a.black:hover {
+	font-size:12px;
+	line-height: 20px;
+	font-weight: normal;
+	color: RED;
+	text-decoration: underline;
+}
+
+
+/*---- 链接的样式设置 (蓝色)-----*/
+a.blue:active {
+	font-size:12px;
+	line-height: 20px;
+	font-weight: normal;
+	color: blue;
+	text-decoration: underline;
+}
+a.blue:link {
+	font-size:12px;
+	line-height: 20px;
+	font-weight: normal;
+	color: blue;
+	text-decoration: underline;
+}
+a.blue:visited {
+	font-size:12px;
+	line-height: 20px;
+	font-weight: normal;
+	color:blue ;
+	text-decoration: underline;
+}
+a.blue:hover {
+	font-size:12px;
+	line-height: 20px;
+	font-weight: normal;
+	color: RED;
+	text-decoration: underline;
+}
+/*---- 链接的样式设置 (蓝色)-----*/
+
+.Content
+{
+	font-size:14px;
+	line-height: 150%;
+	font-weight: normal;
+}
+
+/*-------------------------*/
+textarea,input
+{
+	font-size:14px;
+	font-weight: normal;
+}
+
+/*---------控制文本框的美化------------*/
+.inputtext
+{
+	/* border:1px solid #d9e6f0;
+	background-color:#efefef; */
+	
+	vertical-align:middle;
+}
+/*---------------------------------------------------*/
+.btn,.submitButton
+{ 
+   
+    border: 1px solid #7b9ebd;
+	font-size: 12px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#cecfde);
+	cursor: hand;
+	color: black;
+    /* padding-top: 5px;*/
+    /* margin-top:2px;*/
+	height: 23px;
+}
+
+/*-----------checkBox choice -----------------------------*/
+.selDocument{}
+.selAllDocument{}
+
+/*------------------------------------------------*/
+Div.ButtonArea
+{
+	 text-align:center;
+	 padding-top:10;
+	 padding-bottom:10;
+	 margin-top:10px;
+}
+

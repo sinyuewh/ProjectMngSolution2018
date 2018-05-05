@@ -1,0 +1,21 @@
+6月份：1.5天
+5月份：0.5天
+
+4月份：0天
+
+3月份：1天
+2月份：1.5天
+1月份：1天
+
+7月份：0.5天
+
+合计6天
+
+SELECT   modelID AS id, modelName AS [text], NULL AS parentid, 0 AS tag, NULL AS state, NULL AS checked
+FROM      JModel
+UNION
+SELECT   AuthorityID AS id, AuthorityName AS [text], ModelID AS parentid, 0 AS tag, NULL AS state, NULL AS checked
+FROM      JAuthority
+UNION
+SELECT   AuthorityUnitID AS id, Remark AS [text], AuthorityID AS parentid, 1 AS tag, NULL AS state, NULL AS checked
+FROM      JAuthorityDetail

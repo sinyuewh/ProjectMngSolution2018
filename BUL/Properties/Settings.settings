@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="KORWeb.BUL.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="KORWeb_BusinessRule_MySendMessageService_WebServiceInterface" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://jiekou.56dxw.com/WebServiceInterface.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

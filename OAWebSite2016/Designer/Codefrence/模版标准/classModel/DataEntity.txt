@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using WebFrame;
+using WebFrame.Data;
+
+namespace KORWeb.DDL
+{
+    /// <summary>
+    /// 说明：{XXXX1}
+    /// 编码：{XXXX2}
+    /// 时间：{XXXX3}
+    /// </summary>
+    [Serializable]
+    public class {XXXX4} : DataEntityBase
+    {
+        //实体属性
+        {XXXX5}
+    }
+}

@@ -1,0 +1,37 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" %>
+
+<script runat="server">
+   
+</script>
+
+<!doctype html>
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/NewFrame/css/base.css" />
+    <link rel="stylesheet" href="/NewFrame/css/home.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    </form>
+
+    <script type="text/javascript" src="/NewFrame/js/jquery.js"></script>
+
+    <script type="text/javascript" src="/NewFrame/js/common.js"></script>
+
+    <script type="text/javascript">
+        $(".title-list ul").on("click", "li", function() {
+            var aIndex = $(this).index();
+            $(this).addClass("current").siblings().removeClass("current");
+            $(".matter-content").removeClass("current").eq(aIndex).addClass("current");
+        });
+
+        $(".duty").find("tbody").find("tr:even").css("backgroundColor", "#eff6fa");
+    </script>
+
+</body>
+</html>

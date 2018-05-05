@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Menu>
+  <ChildModel MenuID="10" Caption="项目管理" ClassName="zx">
+    <ChildMenu Caption="项目列表" url="/SysManager/WebUI/ProjectMng/Tb_Project_List1.aspx"></ChildMenu>
+    <ChildMenu Caption="项目日志" url="/SysManager/WebUI/ProjectMng/Tb_Project_Log1.aspx"></ChildMenu>
+    <ChildMenu Caption="项目文档" url="/SysManager/WebUI/ProjectMng/Tb_Project_Attachment1.aspx"></ChildMenu>
+    <ChildMenu Caption="项目模板" url="/SysManager/WebUI/ProjectMng/Tb_Project_Attachment2.aspx"></ChildMenu>
+  </ChildModel>
+
+  <ChildModel MenuID="15" Caption="计划管理" ClassName="dw">
+    <ChildMenu Caption="总体计划"  url="/SysManager/WebUI/WorkPlanMng/Tb_Plan_List1.aspx"></ChildMenu>
+    <ChildMenu Caption="月度计划" url="/SysManager/WebUI/WorkPlanMng/Tb_Plan_List2.aspx"></ChildMenu>
+    <ChildMenu Caption="周计划" url="/SysManager/WebUI/WorkPlanMng/Tb_Plan_List3.aspx"></ChildMenu>
+  </ChildModel>
+
+  <ChildModel MenuID="20" Caption="工作管理" ClassName="rc">
+    <ChildMenu Caption="今日工作"  url="/SysManager/WebUI/WorkLogMng/TodayWorkList1.aspx"></ChildMenu>
+    <ChildMenu Caption="工作确认" url="/SysManager/WebUI/WorkLogMng/TodayWorkList2.aspx"></ChildMenu>
+    <ChildMenu Caption="工作列表" url="/SysManager/WebUI/WorkLogMng/TodayWorkList3.aspx"></ChildMenu>
+  </ChildModel> 
+  
+  <ChildModel MenuID="70" Caption="考核管理" ClassName="tj">
+    <ChildMenu Caption="项目考核" url="/SysManager/WebUI/CheckMng/Tjfx2.aspx"></ChildMenu>
+    <ChildMenu Caption="月度考核" url="/SysManager/WebUI/CheckMng/Tjfx1.aspx"></ChildMenu>
+    <ChildMenu Caption="年度考核" url="/SysManager/WebUI/CheckMng/Tjfx1.aspx"></ChildMenu>
+  </ChildModel>
+
+  <ChildModel MenuID="80" Caption="系统管理" ClassName="yh">
+    <ChildMenu Caption="组织结构" url="/SysManager/WebUI/SysMng/JOrg_List.aspx"></ChildMenu>
+    <ChildMenu Caption="用户列表" url="/SysManager/WebUI/SysMng/JUser_List.aspx"></ChildMenu>
+    <ChildMenu Caption="系统角色" url="/SysManager/WebUI/SysMng/JRole_List.aspx"></ChildMenu>
+    <ChildMenu Caption="系统条目" url="/SysManager/WebUI/SysMng/JItem_List.aspx"></ChildMenu>
+    <ChildMenu Caption="登录日志" url="/SysManager/WebUI/SysMng/JUserLoginLog_List.aspx"></ChildMenu>
+    <ChildMenu Caption="修改密码" url="/SysManager/WebUI/SysMng/ChangePassWord.aspx"></ChildMenu>
+  </ChildModel>
+
+</Menu>

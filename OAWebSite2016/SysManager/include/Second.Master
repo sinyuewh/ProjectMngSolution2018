@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" %>
+
+<script runat="server">
+   
+</script>
+
+<!doctype html>
+<html>
+<head id="Head1" runat="server">
+    <title></title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/NewFrame/css/base.css" />
+    <link rel="stylesheet" href="/NewFrame/css/info-mgt.css" />
+    <link rel="stylesheet" href="/NewFrame/css/WdatePicker.css" />
+    
+     <script type="text/javascript" src="/H-ui.admin/lib/jquery/1.9.1/jquery.min.js"></script>
+
+   <%-- <script src="/Js/jquery-1.4.2.min.js" type="text/javascript"></script>--%>
+
+    <script src="/Js/jquery-ui-1.8.4.custom.min.js" type="text/javascript"></script>
+
+    <script src="/Js/PubLib.js" type="text/javascript"></script>
+
+   
+    <script type="text/javascript" src="/H-ui.admin/lib/layer/1.9.3/layer.js"></script>   
+    <script type="text/javascript" src="/H-ui.admin/lib/laypage/1.2/laypage.js"></script>
+    <script type="text/javascript" src="/H-ui.admin/js/layerext.js"></script> 
+<%--    <script type="text/javascript" src="/H-ui.admin/js/H-ui.admin.js"></script> --%>
+
+    <script src="/JS/List.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="/NewFrame/js/jquery.js"></script>
+
+    <script type="text/javascript" src="/NewFrame/js/common.js"></script>
+
+    <script type="text/javascript" src="/NewFrame/js/WdatePicker.js"></script>
+
+    <script type="text/javascript" src="/NewFrame/js/jquery.pagination.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceForNavigatorTitle" runat="server">
+    </asp:ContentPlaceHolder>
+    <div style="float: right; padding-right: 10px; margin-top: -25px">
+        <asp:ContentPlaceHolder ID="ContentPlaceForNavigatorButtonArea" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <asp:ContentPlaceHolder ID="ContentPlaceForContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <asp:ContentPlaceHolder ID="ContentPlaceForPageChange" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script type="text/javascript">
+
+        $("tbody").find("tr:odd").css("backgroundColor", "#eff6fa");
+
+    </script>
+
+    </form>
+</body>
+</html>

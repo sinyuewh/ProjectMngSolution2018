@@ -1,0 +1,308 @@
+﻿
+
+
+<!doctype html>
+<html>
+<head><meta charset="utf-8" /><link rel="stylesheet" href="/NewFrame/css/base.css" /><link rel="stylesheet" type="text/css" href="/NewFrame/css/jquery.dialog.css" /><link rel="stylesheet" href="/NewFrame/css/index.css" /><title>
+	电梯全生命周期信息平台
+</title>
+
+    <script src="/JS/jquery-1.8.2.min.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        .sidebar .nav > li .subnav li a:hover
+        {
+            text-decoration: underline;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function switchSysBar() {
+            var locate = location.href.replace('ManagerIndex.aspx', '');
+            var ssrc = document.all("img1").src.replace(locate, '');
+            if (ssrc.indexOf("/NewFrame/images/toleft.png") > -1) {
+                document.all("img1").src = "/NewFrame/images/toright.png";
+                document.all("frmTitle").style.display = "none"
+            }
+            else {
+                document.all("img1").src = "/NewFrame/images/toleft.png";
+                document.all("frmTitle").style.display = ""
+            }
+        }
+
+        //显示多标签的菜单
+        function GoUrl(subtitle, weburl) {
+            $(window.parent.document).contents().find("#iframe")[0].contentWindow.addTab(subtitle, weburl);
+        }
+
+        $(function() {
+            $(".sidebar .nav > li .subnav li a").click(
+           function() {
+               $(".sidebar .nav > li .subnav li").each(function() {
+                   $(this).find(">a").css("color", "black");
+               });
+               $(this).css("color", "#FF6100");
+               //             $(".sidebar .nav > li .subnav li").eq($(this).index()).css("color","red");
+               //.siblings().removeCss("color","black");
+           }
+           )
+       })
+
+       //Go MainPage
+       function GoHomePage() {
+           //$("#iframe").attr("src", "Index.aspx");
+           var title = "主页";
+           var url = "Index.aspx";
+
+           GoUrl(title, url);
+       }
+    </script>
+
+</head>
+<body>
+    <form name="form1" method="post" action="ManagerIndex.aspx" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+    <div id="container">
+        <div id="hd">
+            <div class="hd-wrap ue-clear">
+                <div class="top-light">
+                </div>
+                <h1 class="logo">
+                </h1>
+                <div class="login-info ue-clear">
+                    <div class="welcome ue-clear">
+                        <span>欢迎您,</span><a href="javascript:;" class="user-name">苏纽兵</a></div>
+                    <div class="login-msg ue-clear">
+                        <a href="javascript:;" class="msg-txt">消息</a> <a href="javascript:;" class="msg-num">
+                            10</a>
+                    </div>
+                </div>
+                <div class="toolbar ue-clear">
+                    <a href="javascript:GoHomePage();" class="home-btn">首页</a> <a href="javascript:;" class="quit-btn exit">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="bd">
+            <div class="wrap ue-clear">
+                <div class="sidebar" id="frmTitle" name="fmTitle">
+                    <h2 class="sidebar-header">
+                        <p>
+                            功能导航</p>
+                    </h2>
+                    <ul class="nav">
+                       
+                                
+                                <li class="rc">
+                                    <div class="nav-header">
+                                        <a href="javascript:;" class="ue-clear"><span>
+                                            实时监控</span><i class="icon"></i></a></div>
+                                    <ul class="subnav">
+                                        
+                                                <li><a href="#" onclick="javascript:GoUrl('单梯监控','/Plat_WbDw/WebUI/ASsjk/TB_Lift_VideoList.aspx');">
+                                                    单梯监控</a></li>
+                                            
+                                                <li><a href="#" onclick="javascript:GoUrl('列表监控','/Plat_WbDw/WebUI/ASsjk/HomePage_LiftPlaceForList.aspx');">
+                                                    列表监控</a></li>
+                                            
+                                    </ul>
+                                </li>
+                            
+                                
+                                <li class="yjzx">
+                                    <div class="nav-header">
+                                        <a href="javascript:;" class="ue-clear"><span>
+                                            应急中心</span><i class="icon"></i></a></div>
+                                    <ul class="subnav">
+                                        
+                                                <li><a href="#" onclick="javascript:GoUrl('困人救援','/Plat_WbDw/WebUI/BYjzx/TB_Lift_GzRecord_List.aspx');">
+                                                    困人救援</a></li>
+                                            
+                                    </ul>
+                                </li>
+                            
+                                
+                                <li class="wbxy">
+                                    <div class="nav-header">
+                                        <a href="javascript:;" class="ue-clear"><span>
+                                            日常业务</span><i class="icon"></i></a></div>
+                                    <ul class="subnav">
+                                        
+                                                <li><a href="#" onclick="javascript:GoUrl('维保提醒','/Plat_WbDw/WebUI/CWbgl/TB_Lift_WbRecord_Last_List.aspx');">
+                                                    维保提醒</a></li>
+                                            
+                                                <li><a href="#" onclick="javascript:GoUrl('日常业务:维修处理','/Plat_WbDw/WebUI/CWbgl/TB_LiftInfoGz_ListWb.aspx');">
+                                                    维修处理</a></li>
+                                            
+                                                <li><a href="#" onclick="javascript:GoUrl('年检提醒','/Plat_WbDw/WebUI/CWbgl/TB_Lift_YcRecord_Last_List.aspx');">
+                                                    年检提醒</a></li>
+                                            
+                                    </ul>
+                                </li>
+                            
+                                
+                                <li class="dw">
+                                    <div class="nav-header">
+                                        <a href="javascript:;" class="ue-clear"><span>
+                                            维保小组</span><i class="icon"></i></a></div>
+                                    <ul class="subnav">
+                                        
+                                                <li><a href="#" onclick="javascript:GoUrl('设置维保小组','/Plat_WbDw/WebUI/CWbgl/TB_WbGroup_List.aspx');">
+                                                    设置维保小组</a></li>
+                                            
+                                    </ul>
+                                </li>
+                            
+                                
+                                <li class="aq">
+                                    <div class="nav-header">
+                                        <a href="javascript:;" class="ue-clear"><span>
+                                            安全档案</span><i class="icon"></i></a></div>
+                                    <ul class="subnav">
+                                        
+                                                <li><a href="#" onclick="javascript:GoUrl('安全档案:电梯维保','/Plat_WbDw/WebUI/DAqda/TB_Lift_WbRecordTotalWb_List.aspx');">
+                                                    电梯维保</a></li>
+                                            
+                                                <li><a href="#" onclick="javascript:GoUrl('安全档案:电梯维修','/Plat_WbDw/WebUI/DAqda/TB_Lift_GzRecordTotal_List.aspx');">
+                                                    电梯维修</a></li>
+                                            
+                                                <li><a href="#" onclick="javascript:GoUrl('安全档案:困人事件','/Plat_WbDw/WebUI/DAqda/TB_Lift_KRRecordTotal_List.aspx');">
+                                                    困人事件</a></li>
+                                            
+                                                <li><a href="#" onclick="javascript:GoUrl('安全档案:电梯事故','/Plat_WbDw/WebUI/DAqda/TB_Lift_SgRecordTotal_List.aspx');">
+                                                    电梯事故</a></li>
+                                            
+                                                <li><a href="#" onclick="javascript:GoUrl('安全档案:电梯年检','/Plat_WbDw/WebUI/DAqda/TB_Lift_YcRecordTotal_List.aspx');">
+                                                    电梯年检</a></li>
+                                            
+                                                <li><a href="#" onclick="javascript:GoUrl('安全档案:用户投诉','/Plat_WbDw/WebUI/DAqda/TB_Lift_TsRecordTotal_List.aspx');">
+                                                    用户投诉</a></li>
+                                            
+                                                <li><a href="#" onclick="javascript:GoUrl('安全档案:电梯全生命周期','/Plat_WbDw/WebUI/DAqda/Tb_LiftZongHeView.aspx');">
+                                                    电梯全生命周期</a></li>
+                                            
+                                    </ul>
+                                </li>
+                            
+                                
+                                <li class="zx">
+                                    <div class="nav-header">
+                                        <a href="javascript:;" class="ue-clear"><span>
+                                            资讯管理</span><i class="icon"></i></a></div>
+                                    <ul class="subnav">
+                                        
+                                                <li><a href="#" onclick="javascript:GoUrl('通知公告','/Plat_WbDw/WebUI/GZxgl/TB_Notice_ListWb.aspx');">
+                                                    通知公告</a></li>
+                                            
+                                                <li><a href="#" onclick="javascript:GoUrl('政策法规','/Plat_WbDw/WebUI/GZxgl/TB_Laws_ListWb.aspx');">
+                                                    政策法规</a></li>
+                                            
+                                    </ul>
+                                </li>
+                            
+                                
+                                <li class="tj">
+                                    <div class="nav-header">
+                                        <a href="javascript:;" class="ue-clear"><span>
+                                            统计分析</span><i class="icon"></i></a></div>
+                                    <ul class="subnav">
+                                        
+                                                <li><a href="#" onclick="javascript:GoUrl('电梯数量统计图','/Plat_WbDw/WebUI/ETjfx/TB_LiftCount_Analysis.aspx');">
+                                                    电梯数量统计图</a></li>
+                                            
+                                                <li><a href="#" onclick="javascript:GoUrl('电梯数量分布表','/Plat_WbDw/WebUI/ETjfx/TB_LiftNum_Analysis.aspx');">
+                                                    电梯数量分布表</a></li>
+                                            
+                                                <li><a href="#" onclick="javascript:GoUrl('电梯使用类别','/Plat_WbDw/WebUI/ETjfx/TB_UseClasses_Analysis.aspx');">
+                                                    电梯使用类别</a></li>
+                                            
+                                                <li><a href="#" onclick="javascript:GoUrl('电梯使用年限','/Plat_WbDw/WebUI/ETjfx/TB_UseYear_Analysis.aspx');">
+                                                    电梯使用年限</a></li>
+                                            
+                                                <li><a href="#" onclick="javascript:GoUrl('电梯事故伤亡','/Plat_WbDw/WebUI/ETjfx/TB_LiftEvent_Analysis.aspx');">
+                                                    电梯事故伤亡</a></li>
+                                            
+                                                <li><a href="#" onclick="javascript:GoUrl('电梯故障明细','/Plat_WbDw/WebUI/ETjfx/TB_GZDetail_Analysis.aspx');">
+                                                    电梯故障明细</a></li>
+                                            
+                                                <li><a href="#" onclick="javascript:GoUrl('电梯年平均故障','/Plat_WbDw/WebUI/ETjfx/TB_YearAvgGZ_Analysis.aspx');">
+                                                    电梯年平均故障</a></li>
+                                            
+                                                <li><a href="#" onclick="javascript:GoUrl('电梯使用年限与故障数','/Plat_WbDw/WebUI/ETjfx/TB_LiftGZL_Analysis.aspx');">
+                                                    电梯使用年限与故障数</a></li>
+                                            
+                                    </ul>
+                                </li>
+                            
+                                
+                                <li class="yh">
+                                    <div class="nav-header">
+                                        <a href="javascript:;" class="ue-clear"><span>
+                                            用户管理</span><i class="icon"></i></a></div>
+                                    <ul class="subnav">
+                                        
+                                                <li><a href="#" onclick="javascript:GoUrl('用户管理','/Plat_WbDw/WebUI/FYhgl/JUser_ListWb.aspx');">
+                                                    用户管理</a></li>
+                                            
+                                                <li><a href="#" onclick="javascript:GoUrl('修改密码','/Plat_WbDw/WebUI/FYhgl/ChangePassWordWb.aspx');">
+                                                    修改密码</a></li>
+                                            
+                                                <li><a href="#" onclick="javascript:GoUrl('登录日志','/Plat_WbDw/WebUI/FYhgl/JUserLoginLog_ListWb.aspx');">
+                                                    登录日志</a></li>
+                                            
+                                    </ul>
+                                </li>
+                            
+                    </ul>
+                </div>
+                <div class="content">
+                    <div class="toleft" onclick="switchSysBar()">
+                        <span class="navPoint" id="switchPoint" title="关闭/打开左栏">
+                            <img src="/NewFrame/images/toleft.png" width="6" height="46" name="img1" id="img1" /></span></div>
+                    <iframe src="HomePage.aspx" id="iframe" name="iframe" width="100%" height="100%"
+                        frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+        <div id="ft" class="ue-clear">
+            <div class="ft-left">
+                <span>电梯全生命周期信息平台</span> 
+            </div>
+            <div class="ft-right">
+                 <em>V3.0&nbsp;2016</em>
+            </div>
+        </div>
+    </div>
+    <div class="exitDialog">
+        <div class="dialog-content">
+            <div class="ui-dialog-icon">
+            </div>
+            <div class="ui-dialog-text">
+                <p class="dialog-content">
+                    你确定要退出系统？</p>
+                <p class="tips">
+                    如果是请点击“确定”，否则点“取消”</p>
+                <div class="buttons">
+                    <input type="button" class="button long2 ok" value="确定" />
+                    <input type="button" class="button long2 normal" value="取消" />
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+
+<script type="text/javascript" src="/NewFrame/js/jquery.js"></script>
+
+<script type="text/javascript" src="/NewFrame/js/common.js"></script>
+
+<script type="text/javascript" src="/NewFrame/js/core.js"></script>
+
+<script type="text/javascript" src="/NewFrame/js/jquery.dialog.js"></script>
+
+<script type="text/javascript" src="/NewFrame/js/index.js"></script>
+
+</html>

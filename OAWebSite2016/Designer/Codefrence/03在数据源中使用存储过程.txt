@@ -1,0 +1,45 @@
+﻿ALTER PROCEDURE GetInfoKindList
+	(
+	   @Caption nvarchar(200),
+	   @FieldList nvarchar(200),
+	   @TotalRow int OUTPUT,
+	   @OutPutPara nvarchar(2000) OUTPUT
+	)
+AS
+	declare @sql nvarchar(2000);
+	declare @sql1 nvarchar(2000);
+	declare @num int;
+			
+	/*----set sql----*/
+	set @sql='select '+ @FieldList+' from UinfoKind t1 left outer join UinfoKind t2 on t1.parentid=t2.infokindid';
+	set @sql1='select @t1=count(*) from UinfoKind t1 left outer join UinfoKind t2 on t1.parentid=t2.infokindid';
+    
+    
+    if len(isnull(@Caption,''))>0
+		begin
+			set @sql=@sql+' where t1.caption like ''%'+@Caption+'%''';
+			set @sql1=@sql1+' where t1.caption like ''%'+@Caption+'%''';
+		end
+		
+	EXEC SP_EXECUTESQL @sql;
+	EXEC SP_EXECUTESQL @sql1,N'@t1 int output',@num output;
+	
+	--print @sql1;
+	--print len(isnull(@Caption,''));
+	
+	--XEC sp_executesql @sqlstr,N'@iRowCount int output',@RowCount output 
+	set @TotalRow=@num;
+	
+	/* SET NOCOUNT ON */
+	RETURN
+
+
+/*--------------------------------------------------------------------------------------*/
+<jasp:JDataSource ID="data1" runat="server" JType="StoreProc" SqlID="GetInfoKindList"  PageSize="3">
+    <ParaItems>
+        <jasp:ParameterItem ParaType="Control" ParaName="Caption" DataName="Caption" />
+        <jasp:ParameterItem ParaType="String" 
+            ParaName="t1.num,t1.infoKindID,t1.parentID,t2.Caption ParentCaption,t1.Caption,t1.operator,t1.CreateTime,t1.UpdateTime"
+            DataName ="FieldList" />
+    </ParaItems>
+</jasp:JDataSource>

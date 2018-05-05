@@ -1,0 +1,2 @@
+1) Access 数据库的兼容性比较差，对时间、Text的字段必须进行转换，不能使用字符类型；
+2) Access 数据库中Password为关键字，Sql语句中必须使用[PassWord]代替；

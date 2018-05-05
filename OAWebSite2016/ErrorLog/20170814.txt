@@ -1,0 +1,116 @@
+2017/8/14 11:14:58
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2017/8/14 13:48:02
+System.Web.HttpUnhandledException: 引发类型为“System.Web.HttpUnhandledException”的异常。 ---> System.Data.OleDb.OleDbException: The table 'JATTACHMENT' is already opened exclusively by another user, or it is already open through the user interface and cannot be manipulated programmatically.
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextErrorHandling(OleDbHResult hr)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandTextForSingleResult(tagDBPARAMS dbParams, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommandText(Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteCommand(CommandBehavior behavior, Object& executeResult)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReaderInternal(CommandBehavior behavior, String method)
+   在 System.Data.OleDb.OleDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.OleDb.OleDbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   在 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   在 WebFrame.Data.JCommand.GetSearchResult(DataSet ds, Int32 curpage)
+   在 WebFrame.Data.JCommand.SearchData(Int32 curpage)
+   在 WebFrame.Data.JTable.SearchData(List`1 condition, Int32 curpage, String[] FieldList)
+   在 KORWeb.DAL.JAttachmentDA.GetListData(List`1 condition, Int32 PageSize, Int32 CurPage, String orderBy, Int32& TotalRow, String[] Fields) 位置 D:\MyProject\ProjectMngSolution2017\DAL\WebFrame\JAttachmentDA.cs:行号 126
+   在 KORWeb.DAL.JAttachmentDA.GetListData(List`1 condition, Int32 PageSize, Int32 CurPage, String orderBy, String[] Fields) 位置 D:\MyProject\ProjectMngSolution2017\DAL\WebFrame\JAttachmentDA.cs:行号 137
+   在 KORWeb.BUL.Tb_Project_LogBU.GetAttachmengList(String Guidid, String projectStatus) 位置 D:\MyProject\ProjectMngSolution2017\BUL\Project\Tb_Project_LogBU.cs:行号 213
+   在 ASP.sysmanager_webui_projectlogmng_projectlogindex_aspx.__DataBind__control21(Object sender, EventArgs e) 位置 d:\MyProject\ProjectMngSolution2017\OAWebSite2016\SysManager\WebUI\ProjectLogMng\ProjectLogIndex.aspx:行号 215
+   在 System.Web.UI.Control.OnDataBinding(EventArgs e)
+   在 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   在 System.Web.UI.Control.DataBind()
+   在 System.Web.UI.Control.DataBindChildren()
+   在 System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   在 System.Web.UI.Control.DataBind()
+   在 System.Web.UI.WebControls.Repeater.CreateItem(Int32 itemIndex, ListItemType itemType, Boolean dataBind, Object dataItem)
+   在 System.Web.UI.WebControls.Repeater.CreateControlHierarchy(Boolean useDataSource)
+   在 System.Web.UI.WebControls.Repeater.OnDataBinding(EventArgs e)
+   在 System.Web.UI.WebControls.Repeater.DataBind()
+   在 OAWebSite2016.SysManager.WebUI.ProjectLogMng.ProjectLogIndex.SearchProjectLogData() 位置 D:\MyProject\ProjectMngSolution2017\OAWebSite2016\SysManager\WebUI\ProjectLogMng\ProjectLogIndex.aspx.cs:行号 115
+   在 OAWebSite2016.SysManager.WebUI.ProjectLogMng.ProjectLogIndex.SearchData() 位置 D:\MyProject\ProjectMngSolution2017\OAWebSite2016\SysManager\WebUI\ProjectLogMng\ProjectLogIndex.aspx.cs:行号 108
+   在 OAWebSite2016.SysManager.WebUI.ProjectLogMng.ProjectLogIndex.OnPreRenderComplete(EventArgs e) 位置 D:\MyProject\ProjectMngSolution2017\OAWebSite2016\SysManager\WebUI\ProjectLogMng\ProjectLogIndex.aspx.cs:行号 82
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.sysmanager_webui_projectlogmng_projectlogindex_aspx.ProcessRequest(HttpContext context) 位置 c:\Windows\Microsoft.NET\Framework\v2.0.50727\Temporary ASP.NET Files\root\43fa3dd6\cb1b44dc\App_Web_urbv5_01.3.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2017/8/14 15:21:59
+System.Web.HttpCompileException: d:\MyProject\ProjectMngSolution2017\OAWebSite2016\SysManager\WebUI\ProjectLogMng\ProjectDocumentIndex.aspx(158): error CS1061: “ASP.sysmanager_webui_projectlogmng_projectdocumentindex_aspx”不包含“parentGuid”的定义，并且找不到可接受类型为“ASP.sysmanager_webui_projectlogmng_projectdocumentindex_aspx”的第一个参数的扩展方法“parentGuid”(是否缺少 using 指令或程序集引用?)
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.PageHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2017/8/14 15:23:23
+System.Web.HttpCompileException: d:\MyProject\ProjectMngSolution2017\OAWebSite2016\SysManager\WebUI\ProjectLogMng\ProjectDocumentIndex.aspx(157): error CS1061: “ASP.sysmanager_webui_projectlogmng_projectdocumentindex_aspx”不包含“parentGuid”的定义，并且找不到可接受类型为“ASP.sysmanager_webui_projectlogmng_projectdocumentindex_aspx”的第一个参数的扩展方法“parentGuid”(是否缺少 using 指令或程序集引用?)
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.PageHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2017/8/14 15:23:46
+System.Web.HttpCompileException: d:\MyProject\ProjectMngSolution2017\OAWebSite2016\SysManager\WebUI\ProjectLogMng\ProjectDocumentIndex.aspx(158): error CS1061: “ASP.sysmanager_webui_projectlogmng_projectdocumentindex_aspx”不包含“parentGuid”的定义，并且找不到可接受类型为“ASP.sysmanager_webui_projectlogmng_projectdocumentindex_aspx”的第一个参数的扩展方法“parentGuid”(是否缺少 using 指令或程序集引用?)
+   在 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   在 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   在 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.UI.PageHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   在 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   在 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2017/8/14 18:05:43
+System.ArgumentException: 路径中具有非法字符。
+   在 System.IO.Path.CheckInvalidPathChars(String path)
+   在 System.IO.Path.Combine(String path1, String path2)
+   在 System.Web.Configuration.UserMapPath.GetPhysicalPathForPath(String path, VirtualDirectoryMapping mapping)
+   在 System.Web.Configuration.UserMapPath.GetPathConfigFilename(String siteID, VirtualPath path, String& directory, String& baseName)
+   在 System.Web.Configuration.UserMapPath.MapPath(String siteID, VirtualPath path)
+   在 System.Web.Configuration.UserMapPath.MapPath(String siteID, String path)
+   在 System.Web.Hosting.HostingEnvironment.MapPathActual(VirtualPath virtualPath, Boolean permitNull)
+   在 System.Web.Hosting.HostingEnvironment.MapPathInternal(VirtualPath virtualPath, Boolean permitNull)
+   在 System.Web.CachedPathData.GetConfigPathData(String configPath)
+   在 System.Web.CachedPathData.GetConfigPathData(String configPath)
+   在 System.Web.CachedPathData.GetConfigPathData(String configPath)
+   在 System.Web.CachedPathData.GetConfigPathData(String configPath)
+   在 System.Web.CachedPathData.GetVirtualPathData(VirtualPath virtualPath, Boolean permitPathsOutsideApp)
+   在 System.Web.HttpContext.GetFilePathData()
+   在 System.Web.HttpContext.GetConfigurationPathData()
+   在 System.Web.Configuration.RuntimeConfig.GetConfig(HttpContext context)
+   在 System.Web.HttpContext.get_ImpersonationToken()
+   在 System.Web.ClientImpersonationContext.Start(HttpContext context, Boolean throwOnError)
+   在 System.Web.HttpApplication.ThreadContext.SetImpersonationContext()
+   在 System.Web.HttpApplication.ThreadContext.Enter(Boolean setImpersonationContext)
+   在 System.Web.HttpApplication.OnThreadEnterPrivate(Boolean setImpersonationContext)
+   在 System.Web.HttpApplication.ApplicationStepManager.ResumeSteps(Exception error)
+----------------------------------------------------------------------------------------------------

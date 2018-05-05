@@ -1,0 +1,10 @@
+2、熟练掌握.NET / C#开发,对数据结构有深刻理解，能独立进行Web、Restful API应用程序的开发；
+
+3、熟悉Mysql、Ms SQL Server、Oracle传统数据库，有数据库设计经验。
+
+4、熟悉大数据平台实时数据分析、处理架构，熟悉mongodb、redis、Hadoop、Storm、Kafka等其中的至少2种开源框架、组件并有相关产品项目开发经验。 
+
+5、熟悉WCF、Windows服务、Web API开发，了解Socket、OWIN、WebSocket。
+
+6、了解敏捷、CMMI等软件开发生命周期，熟悉软件工程方法； 
+

@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using KORWeb.BUL;
+using WebFrame.Util;
+using WebFrame.Data;
+
+namespace KORWeb.WebSite.{AUTHOR}
+{
+    public partial class {TABLENAME}_List : System.Web.UI.Page 
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            AjaxPro.Utility.RegisterTypeForAjax(typeof(KORWeb.WebSite.{AUTHOR}.{TABLENAME}_List));
+        }
+
+
+        //调用后台的方法
+        [AjaxPro.AjaxMethod]
+        public bool DeleteData(String seldata)
+        {
+            bool succ = false;
+            //{TABLENAME}BU bu1 = new {TABLENAME}BU();
+            //succ=bu1.DeleteData(seldata);
+            succ= WebFrame.Data.DbCommBU.DeleteData("{TABLENAME}", "{PRIMARYKEY}", seldata);
+            return succ;
+        }     
+    }
+}

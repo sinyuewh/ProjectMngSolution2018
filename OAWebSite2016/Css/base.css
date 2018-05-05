@@ -1,0 +1,133 @@
+* {
+	font-size: 12px;
+	font-family: "宋体";
+}
+
+td { line-height: 1.5; }
+
+body {
+	font-size: 12px;
+	line-height: 1.5;
+	font-family: "宋体";
+}
+form,h1,h2,h3,ul,ol,div{	margin: 0; padding:0;}
+
+td,th,div {
+	word-break:break-all;
+	word-wrap:break-word;
+}
+
+b,strong {
+	color:#666600;
+}
+
+li,dd {
+	list-style-type:none; margin:0px; padding:0px; 
+}
+
+input {
+	border: 1px solid #ababab;
+}
+
+input[type="text"] {
+	padding:3px 3px 2px 3px;
+	border-width:1px;
+	border-style:solid;
+	border-color:#999999 #dddddd #dddddd #999999;
+	margin: 1 1 1 1;
+}
+
+h1 { color:#171B16; font-size:130%; font-weight:bold; }
+h2 { color:#171B16; font-size:115%; font-weight:bold; }
+h3 { color:#171B16; font-size:100%; font-weight:bold;}
+
+a:link { font-size: 9pt; color: #000000; text-decoration: none; font-family: 宋体""; }
+a:visited{ font-size: 9pt; color: #000000; text-decoration: none; font-family: 宋体""; }
+a:hover {color: red; font-family: 宋体"";
+}
+a img { border-style:none; }
+
+b a {
+	color:#666600;
+}
+strong a {
+	color:#666600;
+}
+
+a b{
+	color:#666600;
+}
+a strong{
+	color:#666600;
+}
+
+.np {border:none;}
+
+.ll {
+	border-right: 2px solid #ACACAC;
+	border-bottom: 2px solid #ACACAC;
+	background-color: #E6E6E6
+}
+
+#uploadfield{float:left;}
+
+/*-------------*/
+.trSty1{ 
+    background-color: #f4fbf4;
+}
+
+.trSty2{ 
+    background-color: #ffffff;
+}
+/*-------------*/
+.l_titile
+{ font-weight:bold; height:26px; background:url('/Images/tbg.gif'); font-size:12px; color:#666600;}
+
+/*GridView 的样式===============================*/
+
+.GridViewStyle 
+{/* 控制GridView整体属性 */ 
+  border-color:#dbe4cd;
+  border-width:1px;
+  font-size:9pt;
+  width:98%;
+  margin-top:8px;
+} 
+.GridViewHeaderStyle th 
+{ /* 控制GridView头标题属性 */ 
+  font-weight:bold; height:26px; background:url('/Images/tbg.gif'); font-size:12px; color:#666600;
+} 
+.GridViewRowStyle 
+{ /*控制带颜色的行(交替行)*/
+  background-color:#f4fbf4;
+} 
+.GridViewEditRowStyle
+{
+  background-color: #2461BF;
+}
+.GridViewAlternatingRowStyle 
+{ /*交替行样式*/
+  background-color: #ffffff; 
+} 
+.GridViewRowStyle td, .GridViewAlternatingRowStyle td
+{ /*控制单元格线粗细及颜色、高度等(单元格的属性)*/
+  height:18px;
+  cursor:hand;/* 鼠标移到行上时变为手型 */
+  color:Black;
+} 
+
+.GridViewSelectedRowStyle 
+{ 
+  background-color: #D1DDF1; 
+  font-weight: bold; 
+  color: #333333; 
+} 
+.GridViewPagerStyle, .GridViewPagerStyle td
+{ 
+  background-color: #2461BF; 
+  text-align:center;
+  color: White; 
+  height:18px;
+}
+
+/*GridView 的样式===============================*/

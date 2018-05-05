@@ -1,0 +1,46 @@
+﻿<!--注意：$$CurPage、$$PageSize 和 $$Orderby 为数据源字符串系统变量 (不区分大小些)
+    业务类的参数只支持字符串类型 -->
+
+<jasp:JDataSource ID="data1" runat ="server" JType ="Business" PageSize="5" >
+<AssemblePara AssembleFile="KORWeb.BusinessRule.dll" 
+    ClassLibName="KORWeb.BUL.UinfoKindBU" 
+    MethodName="GetInfoKindList" />
+<ParaItems>
+    <jasp:ParameterItem ParaType="Control" ParaName="Caption" />
+    <jasp:ParameterItem ParaType="String"
+            ParaName="t1.num,t1.infoKindID,t1.parentID,t2.Caption ParentCaption,t1.Caption,t1.operator,t1.CreateTime,t1.UpdateTime" />
+    <jasp:ParameterItem ParaType="String" ParaName="$$CurPage" />
+    <jasp:ParameterItem ParaType="String" ParaName="$$PageSize" />
+</ParaItems>
+</jasp:JDataSource>
+
+
+//---------------------------------------------------------------------------------------
+//BU层代码参考
+public DataSourceResult GetInfoKindList(String Caption, String fields, String CurPage, String PageSize)
+{
+      UinfoKindDA da1 = new UinfoKindDA();
+      return da1.GetInfoKindList(Caption,fields,int.Parse(CurPage),int.Parse(PageSize));
+}
+
+//------------------------------------------------------------------------------------------
+//DA层代码参考
+public DataSourceResult GetInfoKindList(String Caption,String fields, int CurPage, int PageSize)
+{
+    JTable tab1 = new JTable();
+    tab1.TableName = "UinfoKind t1 left outer join UinfoKind t2 on t1.parentid=t2.infokindid";
+    List<SearchField> condition = new List<SearchField>();
+    if (String.IsNullOrEmpty(Caption) == false)
+    {
+        condition.Add(new SearchField("t1.Caption", Caption, SearchOperator.Contains));
+    }
+
+    tab1.PageSize =PageSize;
+    DataTable dt1=tab1.SearchData(condition, CurPage, fields).Tables[0];
+    DataSourceResult result = new DataSourceResult();
+    result.DataTable = dt1;
+    result.CurPage = CurPage;
+    result.TotalRow = tab1.GetTotalRow();
+
+    return result ;
+}

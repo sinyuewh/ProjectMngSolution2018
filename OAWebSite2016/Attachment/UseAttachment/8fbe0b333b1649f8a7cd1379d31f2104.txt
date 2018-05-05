@@ -1,0 +1,118 @@
+/// <summary>
+/// LED业务处理类
+/// </summary>
+    public class LEDBU
+    {
+        Dictionary<String, object> Led = new Dictionary<string, object>();
+        String codeURL = "http://www.znb.cc/kingorient/elevator/LEDCode.txt";
+
+        public LEDBU()
+        {
+            this.SetLedDicData();
+        }
+
+
+        /// <summary>
+        /// 得到LED的数据
+        /// </summary>
+        /// <returns></returns>
+        public String GetLEDData()
+        {
+            String result = String.Empty;
+            System.Net.WebClient client1 = new System.Net.WebClient();
+            String s1=client1.DownloadString(this.codeURL);
+            client1.Dispose();
+            result = this.GetLEDString(s1);
+            return result;
+        }
+        /// <summary>
+        /// 设置LED的Dic数据
+        /// </summary>
+        private void SetLedDicData()
+        {
+            //2，3，4，5，6，7
+            Led["01111110"] = "0";
+            Led["01111111"] = "0.";
+
+            //4，5
+            Led["00011000"] = "1";
+            Led["00011001"] = "1.";
+
+            //1,3,4,6,7
+            Led["10110110"] = "2";
+            Led["10110111"] = "2.";
+
+            //1,3,4,5,6
+            Led["10111100"] = "3";
+            Led["10111101"] = "3.";
+
+            //1,2,5
+            Led["11001000"] = "4";
+            Led["11001001"] = "4.";
+
+            //1,2,3,5,6
+            Led["11101100"] = "5";
+            Led["11101101"] = "5.";
+
+            //1,2,3,5,6,7
+            Led["11101110"] = "6";
+            Led["11101111"] = "6.";
+
+            //3,4,5
+            Led["00111000"] = "7";
+            Led["00111001"] = "7.";
+
+            //1,2,3,4,5,6,7
+            Led["11111110"] = "8";
+            Led["11111111"] = "8.";
+
+            //1,2,3,4,5,6
+            Led["11111100"] = "9";
+            Led["11111101"] = "9.";
+
+            //1,2,3,4,5,7
+            Led["11111010"] = "A";
+            Led["11111011"] = "A.";
+
+            //1,2,5,6,7
+            Led["11001110"] = "b";
+            Led["11001111"] = "b.";
+
+            //1,6,7
+            Led["10000110"] = "c";
+            Led["10000111"] = "c.";
+
+            //1,4,5,6,7
+            Led["10011110"] = "d";
+            Led["10011111"] = "d.";
+
+            //1,2,3,6,7
+            Led["11100110"] = "E";
+            Led["11100111"] = "E.";
+
+            //1,2,3,7
+            Led["11100010"] = "F";
+            Led["11100011"] = "F.";
+
+            //1,2,4,5,7
+            Led["11011010"] = "H";
+            Led["11011011"] = "H.";
+        }
+
+        private String GetLEDString(String originalStr)
+        {
+            String s1 = String.Empty;
+            if (String.IsNullOrEmpty(originalStr) == false)
+            {
+                String[] a1 = originalStr.Split('-');
+                foreach (String m in a1)
+                {
+                    if (this.Led.ContainsKey(m))
+                    {
+                        s1 = s1 + this.Led[m];
+                    }
+                }
+            }
+            return s1;
+        }
+    }

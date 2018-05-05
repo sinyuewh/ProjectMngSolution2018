@@ -1,0 +1,53 @@
+.onShow
+{
+    background:#ECF6F9 url(/images/onShow.gif) no-repeat;
+    float: left;color: #000;
+    border: 1px solid #ADD0E4;
+    padding-left:25px; 
+	font-size: 12px;
+	line-height:24px; 
+	vertical-align:middle;
+	text-align:left;
+}
+.onFocus
+{
+    background:#ECF6F9 url(/images/onFocus.gif) no-repeat;
+    float: left;color: #000;
+    border: 1px solid #ADD0E4;
+    padding-left:25px; 
+	font-size: 12px;
+	line-height:24px; 
+	vertical-align:middle;
+	text-align:left;
+}
+.onError
+{
+    background:#FFEBD7 url(/images/onError.gif) no-repeat;
+    float: left;color: #000;
+    border: 1px solid #FFA953;
+    padding-left:25px;
+	font-size: 12px;
+	line-height:24px; 
+	vertical-align:middle;
+	text-align:left;
+}
+.onCorrect
+{
+    background:#fff url(/images/onCorrect.gif) no-repeat;
+    padding-left:25px;
+	font-size: 12px;
+	line-height:24px; 
+	vertical-align:middle;
+	text-align:left;
+}
+.onLoad
+{
+    background:#FFEBD7 url(/images/onLoad.gif) no-repeat 3px 3px;
+    float: left;color: #000;
+    border: 1px solid #ADD0E4;
+    padding-left:25px;
+	font-size: 12px;
+	line-height:24px; 
+	vertical-align:middle;
+	text-align:left;
+} 

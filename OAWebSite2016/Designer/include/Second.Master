@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" %>
+<script runat ="server">
+   
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <meta http-equiv="x-ua-compatible" content="IE=EmulateIE7" />
+    <script src="/Js/jquery-1.4.2.min.js" type="text/javascript"></script>
+    <script src="/Js/jquery-ui-1.8.4.custom.min.js" type="text/javascript"></script>
+    <script src="/Js/PubLib.js" type="text/javascript"></script>
+    <script src="/ArtDialog/jquery.artdialog.js?skin=blue" type="text/javascript"></script>
+    <script src="/ArtDialog/plugins/iframeTools.js" type="text/javascript"></script>
+    <script src="/Js/dialog.js?kind=3" type="text/javascript"></script>
+    <script src="/JS/List.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="padding: 10 0 10 0">
+        <table width="99%" border="0" cellspacing="0" cellpadding="0" align="center" style ="margin-top:5px">
+            <tr>
+                <td height="30" background="/images/Frame/tab_05.gif">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="12" height="30">
+                                <img src="/images/Frame/tab_03.gif" width="12" height="30" />
+                            </td>
+                            <td>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td width="50%" valign="middle">
+                                            <table id="currentPalace" width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td width="5%">
+                                                        <div align="center">
+                                                            <img src="/images/Frame/tb.gif" width="16" height="16" /></div>
+                                                    </td>
+                                                    <td width="95%">
+                                                        <span >你当前的位置</span>：<asp:ContentPlaceHolder ID="ContentPlaceForNavigatorTitle" runat="server">
+                                                        </asp:ContentPlaceHolder>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td width="50%" style="text-align: right">
+                                            <asp:ContentPlaceHolder ID="ContentPlaceForNavigatorButtonArea" runat="server">
+                                            </asp:ContentPlaceHolder>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td width="16">
+                                <img src="/images/Frame/tab_07.gif" width="16" height="30" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="8" background="/images/Frame/tab_12.gif">
+                                &nbsp;
+                            </td>
+                            <td>
+                                <asp:ContentPlaceHolder ID="ContentPlaceForContent" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                            <td width="8" background="/images/Frame/tab_15.gif">
+                                &nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td height="35" background="/images/Frame/tab_19.gif">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="12">
+                                <img src="/images/Frame/tab_18.gif" width="12" height="35" />
+                            </td>
+                            <td>
+                                <asp:ContentPlaceHolder ID="ContentPlaceForPageChange" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                            <td width="16">
+                                <img src="/images/Frame/tab_20.gif" width="16" height="35" />
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

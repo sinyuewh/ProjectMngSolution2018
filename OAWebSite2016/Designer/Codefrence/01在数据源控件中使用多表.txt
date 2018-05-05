@@ -1,0 +1,11 @@
+﻿<!--数据源控件使用多表查询-->
+<jasp:JDataSource ID="data1" runat ="server" JType ="Table"
+    SqlID ="UinfoKind t1 left outer join UinfoKind t2 on t1.parentid=t2.infokindid" 
+    PageSize ="13"
+    FieldsList="t1.num,t1.infoKindID, t1.parentID, t2.Caption ParentCaption,
+                t1.Caption,t1.operator,t1.CreateTime,t1.UpdateTime">
+<ParaItems>
+    <jasp:ParameterItem ParaType="Control" ParaName="Caption"
+        DataName="t1.Caption" SearchOperator="Contains" />
+</ParaItems>
+</jasp:JDataSource>

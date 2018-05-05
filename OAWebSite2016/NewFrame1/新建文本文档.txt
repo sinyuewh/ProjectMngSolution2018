@@ -1,0 +1,50 @@
+ <ul class="toollist ue-clear">
+                <li><a href="/Plat_Zrdw/WebUI/LiftMng/TB_BALiftInfo_List.aspx" class="img">
+                    <img src="/NewFrame/images/icon11.png" /></a>
+                    <p>
+                        <a href="/Plat_Zrdw/WebUI/LiftMng/TB_BALiftInfo_List.aspx">电梯资料</a></p>
+                </li>
+                <li><a href="/Plat_Zrdw/Main/HomePage_LiftPlace.aspx" class="img">
+                    <img src="/NewFrame/images/icon12.png" /></a>
+                    <p>
+                        <a href="/Plat_Zrdw/Main/HomePage_LiftPlace.aspx">平面监控</a></p>
+                </li>
+                <li><a href="/Plat_Zrdw/Main/HomePage_Gz.aspx" class="img">
+                    <img src="/NewFrame/images/icon13.png" /></a>
+                    <p>
+                        <a href="/Plat_Zrdw/Main/HomePage_Gz.aspx">运行故障</a></p>
+                </li>
+                <li><a href="/Plat_Zrdw/Main/HomePage_Yc.aspx" class="img">
+                    <img src="/NewFrame/images/icon14.png" /></a>
+                    <p>
+                        <a href="/Plat_Zrdw/Main/HomePage_Yc.aspx">年检状况</a></p>
+                </li>
+                <li><a href="/Plat_Zrdw/Main/HomePage_Wb.aspx" class="img">
+                    <img src="/NewFrame/images/icon15.png" /></a>
+                    <p>
+                        <a href="/Plat_Zrdw/Main/HomePage_Wb.aspx">维保状况</a></p>
+                </li>
+                <li><a href="/Plat_Zrdw/WebUI/LiftFiles/TB_Lift_PjghRecord_List.aspx" class="img">
+                    <img src="/NewFrame/images/icon16.png" /></a>
+                    <p>
+                        <a href="/Plat_Zrdw/WebUI/LiftFiles/TB_Lift_PjghRecord_List.aspx">维修记录</a></p>
+                </li>
+                <%--<li><a href="javascript:;" class="img">
+                    <img src="/NewFrame/images/icon17.png" /></a>
+                    <p>
+                        <a href="javascript:;">投诉状况</a></p>
+                </li>--%>
+                <li><a href="/Plat_Zrdw/WebUI/SystemMng/JUser_List.aspx" class="img">
+                    <img src="/NewFrame/images/icon18.png" /></a>
+                    <p>
+                        <a href="/Plat_Zrdw/WebUI/SystemMng/JUser_List.aspx">用户列表</a></p>
+                </li>
+                <li><a href="/Plat_Zrdw/WebUI/SysMng/ChangePassWord.aspx" class="img">
+                    <img src="/NewFrame/images/icon19.png" /></a>
+                    <p>
+                        <a href="/Plat_Zrdw/WebUI/SysMng/ChangePassWord.aspx">修改密码</a></p>
+                </li>
+                <li class="add-btn">
+                    <img src="/NewFrame/images/add.png" />
+                </li>
+            </ul>

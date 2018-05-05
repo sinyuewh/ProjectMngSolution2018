@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0px;
+	padding:0px;
+	font-size:12px;
+}
+body{
+	background-image:url(/images/Frame/login/m_body_bg.jpg);
+	background-position: center top;
+	background-repeat:repeat-x;
+	
+}
+.container{
+	width:674px;
+	padding-top:315px;
+	padding-left:350px;
+	margin:0 auto;
+}
+
+.user{
+	font-size:14px;
+	font-weight:900;
+	letter-spacing:1px;
+	color:#FFFFFF;
+	display:block;
+	float:left;
+}
+.mid_form{
+	width:340px;
+	float:left;
+}
+.wz{
+	height:29px;
+	padding-top:16px;
+	font-size:14px;
+	font-weight:900;
+	letter-spacing:1px;
+	color:#FFFFFF;
+	display:block;
+	float:left;
+	width:70px;
+}
+.form_user,.form_pass,.form_code{
+	height:29px;
+	padding-top:16px;
+	width:270px;
+	float:left;
+}
+.form_code input{
+	width:100px;
+}
+input{
+	width:208px;
+	border:0px;
+	height:20px;
+}
+.mid_button{
+	float:left;
+}
+.mid_button img{
+	cursor:pointer;
+}
+
+
+

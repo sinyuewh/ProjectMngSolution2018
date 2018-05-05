@@ -1,0 +1,9 @@
+﻿变量是区分大小写的
+1、{USERID}
+  会自动替换成--FrameLib.UserID
+
+2、{TODAY}
+  DateTime.Now.ToString("yyyy-MM-dd")
+
+2、{NOW}
+  DateTime.Now.ToString()
