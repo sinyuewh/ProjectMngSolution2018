@@ -27,11 +27,13 @@
   </ChildModel>
 
   <ChildModel MenuID="80" Caption="系统管理" ClassName="yh">
-    <ChildMenu Caption="组织结构" url="/SysManager/WebUI/SysMng/JOrg_List.aspx"></ChildMenu>
-    <ChildMenu Caption="用户列表" url="/SysManager/WebUI/SysMng/JUser_List.aspx"></ChildMenu>
-    <ChildMenu Caption="系统角色" url="/SysManager/WebUI/SysMng/JRole_List.aspx"></ChildMenu>
-    <ChildMenu Caption="系统条目" url="/SysManager/WebUI/SysMng/JItem_List.aspx"></ChildMenu>
-    <ChildMenu Caption="登录日志" url="/SysManager/WebUI/SysMng/JUserLoginLog_List.aspx"></ChildMenu>
+    <ChildMenu Caption="组织结构" url="/SysManager/WebUI/SysMng/OrgMng/JOrg_List.aspx" RoleID="xtgl"></ChildMenu>
+    <ChildMenu Caption="用户列表" url="/SysManager/WebUI/SysMng/UserMng/JUser_List.aspx" RoleID="xtgl"></ChildMenu>
+    
+    <ChildMenu Caption="系统角色" url="/SysManager/WebUI/SysMng/RoleMng/JRole_List.aspx" RoleID="xtgl"></ChildMenu>  
+    <ChildMenu Caption="系统条目" url="/SysManager/WebUI/SysMng/JItemMng/JItem_List.aspx" RoleID="xtgl"></ChildMenu>
+    
+    <ChildMenu Caption="登录日志" url="/SysManager/WebUI/SysMng/UserLoginLogMng/JUserLoginLog_List.aspx" RoleID="xtgl"></ChildMenu>
     <ChildMenu Caption="修改密码" url="/SysManager/WebUI/SysMng/ChangePassWord.aspx"></ChildMenu>
   </ChildModel>
 

@@ -310,19 +310,26 @@
     <Compile Include="SysManager\WebUI\ProjectMng\Tb_Project_Person_Edit.aspx.designer.cs">
       <DependentUpon>Tb_Project_Person_Edit.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\SetMyQuanXian.aspx.cs">
-      <DependentUpon>SetMyQuanXian.aspx</DependentUpon>
+    <Compile Include="SysManager\WebUI\SysMng\JItemMng\JItem_Detail.aspx.cs">
+      <DependentUpon>JItem_Detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\SetMyQuanXian.aspx.designer.cs">
-      <DependentUpon>SetMyQuanXian.aspx</DependentUpon>
+    <Compile Include="SysManager\WebUI\SysMng\JItemMng\JItem_Detail.aspx.designer.cs">
+      <DependentUpon>JItem_Detail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\SetUserQx.aspx.cs">
-      <DependentUpon>SetUserQx.aspx</DependentUpon>
+    <Compile Include="SysManager\WebUI\SysMng\JItemMng\JItem_List.aspx.cs">
+      <DependentUpon>JItem_List.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\SetUserQx.aspx.designer.cs">
-      <DependentUpon>SetUserQx.aspx</DependentUpon>
+    <Compile Include="SysManager\WebUI\SysMng\JItemMng\JItem_List.aspx.designer.cs">
+      <DependentUpon>JItem_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SysManager\WebUI\SysMng\JItemMng\JItem_SetItemValues.aspx.cs">
+      <DependentUpon>JItem_SetItemValues.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysManager\WebUI\SysMng\JItemMng\JItem_SetItemValues.aspx.designer.cs">
+      <DependentUpon>JItem_SetItemValues.aspx</DependentUpon>
     </Compile>
     <Compile Include="SysManager\WebUI\WorkLogMng\JLogData_Detail_ADD.aspx.cs">
       <DependentUpon>JLogData_Detail_ADD.aspx</DependentUpon>
@@ -450,53 +457,25 @@
     <Compile Include="SysManager\WebUI\SysMng\ChangePassWord.aspx.designer.cs">
       <DependentUpon>ChangePassWord.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JItem_Detail.aspx.cs">
-      <DependentUpon>JItem_Detail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JItem_Detail.aspx.designer.cs">
-      <DependentUpon>JItem_Detail.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JItem_Detail_ADD.aspx.cs">
-      <DependentUpon>JItem_Detail_ADD.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JItem_Detail_ADD.aspx.designer.cs">
-      <DependentUpon>JItem_Detail_ADD.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JItem_List.aspx.cs">
-      <DependentUpon>JItem_List.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JItem_List.aspx.designer.cs">
-      <DependentUpon>JItem_List.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JItem_SetItemValues.aspx.cs">
-      <DependentUpon>JItem_SetItemValues.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JItem_SetItemValues.aspx.designer.cs">
-      <DependentUpon>JItem_SetItemValues.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JOrg_Detail.aspx.cs">
+    <Compile Include="SysManager\WebUI\SysMng\OrgMng\JOrg_Detail.aspx.cs">
       <DependentUpon>JOrg_Detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JOrg_Detail.aspx.designer.cs">
+    <Compile Include="SysManager\WebUI\SysMng\OrgMng\JOrg_Detail.aspx.designer.cs">
       <DependentUpon>JOrg_Detail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JOrg_Detail_ADD.aspx.cs">
+    <Compile Include="SysManager\WebUI\SysMng\OrgMng\JOrg_Detail_ADD.aspx.cs">
       <DependentUpon>JOrg_Detail_ADD.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JOrg_Detail_ADD.aspx.designer.cs">
+    <Compile Include="SysManager\WebUI\SysMng\OrgMng\JOrg_Detail_ADD.aspx.designer.cs">
       <DependentUpon>JOrg_Detail_ADD.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JOrg_List.aspx.cs">
+    <Compile Include="SysManager\WebUI\SysMng\OrgMng\JOrg_List.aspx.cs">
       <DependentUpon>JOrg_List.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JOrg_List.aspx.designer.cs">
+    <Compile Include="SysManager\WebUI\SysMng\OrgMng\JOrg_List.aspx.designer.cs">
       <DependentUpon>JOrg_List.aspx</DependentUpon>
     </Compile>
     <Compile Include="SysManager\WebUI\SysMng\Handler\DoAction.aspx.cs">
@@ -506,95 +485,46 @@
     <Compile Include="SysManager\WebUI\SysMng\Handler\DoAction.aspx.designer.cs">
       <DependentUpon>DoAction.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JRole_Detail.aspx.cs">
-      <DependentUpon>JRole_Detail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JRole_Detail.aspx.designer.cs">
-      <DependentUpon>JRole_Detail.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JRole_Detail_ADD.aspx.cs">
-      <DependentUpon>JRole_Detail_ADD.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JRole_Detail_ADD.aspx.designer.cs">
-      <DependentUpon>JRole_Detail_ADD.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JRole_List.aspx.cs">
+    <Compile Include="SysManager\WebUI\SysMng\RoleMng\JRole_List.aspx.cs">
       <DependentUpon>JRole_List.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JRole_List.aspx.designer.cs">
+    <Compile Include="SysManager\WebUI\SysMng\RoleMng\JRole_List.aspx.designer.cs">
       <DependentUpon>JRole_List.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JRole_SetAthority.aspx.cs">
-      <DependentUpon>JRole_SetAthority.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JRole_SetAthority.aspx.designer.cs">
-      <DependentUpon>JRole_SetAthority.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JRole_SetUsers.aspx.cs">
+    <Compile Include="SysManager\WebUI\SysMng\RoleMng\JRole_SetUsers.aspx.cs">
       <DependentUpon>JRole_SetUsers.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JRole_SetUsers.aspx.designer.cs">
+    <Compile Include="SysManager\WebUI\SysMng\RoleMng\JRole_SetUsers.aspx.designer.cs">
       <DependentUpon>JRole_SetUsers.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JStrInfo_Detail.aspx.cs">
-      <DependentUpon>JStrInfo_Detail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JStrInfo_Detail.aspx.designer.cs">
-      <DependentUpon>JStrInfo_Detail.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JStrInfo_Detail_ADD.aspx.cs">
-      <DependentUpon>JStrInfo_Detail_ADD.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JStrInfo_Detail_ADD.aspx.designer.cs">
-      <DependentUpon>JStrInfo_Detail_ADD.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JStrInfo_List.aspx.cs">
-      <DependentUpon>JStrInfo_List.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JStrInfo_List.aspx.designer.cs">
-      <DependentUpon>JStrInfo_List.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JUserLoginLog_Detail.aspx.cs">
-      <DependentUpon>JUserLoginLog_Detail.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JUserLoginLog_Detail.aspx.designer.cs">
-      <DependentUpon>JUserLoginLog_Detail.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JUserLoginLog_List.aspx.cs">
+    <Compile Include="SysManager\WebUI\SysMng\UserLoginLogMng\JUserLoginLog_List.aspx.cs">
       <DependentUpon>JUserLoginLog_List.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JUserLoginLog_List.aspx.designer.cs">
+    <Compile Include="SysManager\WebUI\SysMng\UserLoginLogMng\JUserLoginLog_List.aspx.designer.cs">
       <DependentUpon>JUserLoginLog_List.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JUser_Detail.aspx.cs">
+    <Compile Include="SysManager\WebUI\SysMng\UserMng\JUser_Detail.aspx.cs">
       <DependentUpon>JUser_Detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JUser_Detail.aspx.designer.cs">
+    <Compile Include="SysManager\WebUI\SysMng\UserMng\JUser_Detail.aspx.designer.cs">
       <DependentUpon>JUser_Detail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JUser_Detail_ADD.aspx.cs">
+    <Compile Include="SysManager\WebUI\SysMng\UserMng\JUser_Detail_ADD.aspx.cs">
       <DependentUpon>JUser_Detail_ADD.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JUser_Detail_ADD.aspx.designer.cs">
+    <Compile Include="SysManager\WebUI\SysMng\UserMng\JUser_Detail_ADD.aspx.designer.cs">
       <DependentUpon>JUser_Detail_ADD.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JUser_List.aspx.cs">
+    <Compile Include="SysManager\WebUI\SysMng\UserMng\JUser_List.aspx.cs">
       <DependentUpon>JUser_List.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SysManager\WebUI\SysMng\JUser_List.aspx.designer.cs">
+    <Compile Include="SysManager\WebUI\SysMng\UserMng\JUser_List.aspx.designer.cs">
       <DependentUpon>JUser_List.aspx</DependentUpon>
     </Compile>
     <Compile Include="SysManager\WebUI\WorkLogMng\Handler\DoAction.aspx.cs">
@@ -755,8 +685,9 @@
     <Content Include="SysManager\WebUI\ProjectMng\Tb_Project_Log1.aspx" />
     <Content Include="SysManager\WebUI\ProjectMng\Tb_Project_Attachment1.aspx" />
     <Content Include="SysManager\WebUI\ProjectMng\Tb_Project_Attachment2.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\SetMyQuanXian.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\SetUserQx.aspx" />
+    <Content Include="SysManager\WebUI\SysMng\JItemMng\JItem_Detail.aspx" />
+    <Content Include="SysManager\WebUI\SysMng\JItemMng\JItem_List.aspx" />
+    <Content Include="SysManager\WebUI\SysMng\JItemMng\JItem_SetItemValues.aspx" />
     <Content Include="SysManager\WebUI\WorkLogMng\JLogData_Detail_ADD.aspx" />
     <Content Include="SysManager\WebUI\WorkLogMng\JLog_Data_Detail.aspx" />
     <Content Include="SysManager\WebUI\WorkLogMng\JLog_Detail.aspx" />
@@ -781,27 +712,16 @@
     <Content Include="SysManager\WebUI\WorkPlanMng\Tb_Plan_Detail3.aspx" />
     <Content Include="Test.aspx" />
     <Content Include="SysManager\WebUI\SysMng\ChangePassWord.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\JItem_Detail.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\JItem_Detail_ADD.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\JItem_List.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\JItem_SetItemValues.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\JOrg_Detail.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\JOrg_Detail_ADD.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\JOrg_List.aspx" />
+    <Content Include="SysManager\WebUI\SysMng\OrgMng\JOrg_Detail.aspx" />
+    <Content Include="SysManager\WebUI\SysMng\OrgMng\JOrg_Detail_ADD.aspx" />
+    <Content Include="SysManager\WebUI\SysMng\OrgMng\JOrg_List.aspx" />
     <Content Include="SysManager\WebUI\SysMng\Handler\DoAction.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\JRole_Detail.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\JRole_Detail_ADD.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\JRole_List.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\JRole_SetAthority.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\JRole_SetUsers.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\JStrInfo_Detail.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\JStrInfo_Detail_ADD.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\JStrInfo_List.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\JUserLoginLog_Detail.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\JUserLoginLog_List.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\JUser_Detail.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\JUser_Detail_ADD.aspx" />
-    <Content Include="SysManager\WebUI\SysMng\JUser_List.aspx" />
+    <Content Include="SysManager\WebUI\SysMng\RoleMng\JRole_List.aspx" />
+    <Content Include="SysManager\WebUI\SysMng\RoleMng\JRole_SetUsers.aspx" />
+    <Content Include="SysManager\WebUI\SysMng\UserLoginLogMng\JUserLoginLog_List.aspx" />
+    <Content Include="SysManager\WebUI\SysMng\UserMng\JUser_Detail.aspx" />
+    <Content Include="SysManager\WebUI\SysMng\UserMng\JUser_Detail_ADD.aspx" />
+    <Content Include="SysManager\WebUI\SysMng\UserMng\JUser_List.aspx" />
     <Content Include="SysManager\WebUI\WorkLogMng\Handler\DoAction.aspx" />
     <Content Include="SysManager\WebUI\WorkLogMng\WorkLogDetail.aspx" />
     <Content Include="SysManager\WebUI\WorkLogMng\WorkLogList1.aspx" />
