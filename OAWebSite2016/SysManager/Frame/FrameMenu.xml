@@ -2,7 +2,9 @@
 
 <Menu>
   <ChildModel MenuID="10" Caption="项目管理" ClassName="zx">
-    <ChildMenu Caption="项目列表" url="/SysManager/WebUI/ProjectMng/Tb_Project_List1.aspx"></ChildMenu>
+    <ChildMenu Caption="项目列表" url="/SysManager/WebUI/ProjectMng/ProjectInfo/Tb_Project_List1.aspx"></ChildMenu>
+    
+    
     <ChildMenu Caption="项目日志" url="/SysManager/WebUI/ProjectMng/Tb_Project_Log1.aspx"></ChildMenu>
     <ChildMenu Caption="项目文档" url="/SysManager/WebUI/ProjectMng/Tb_Project_Attachment1.aspx"></ChildMenu>
     <ChildMenu Caption="项目模板" url="/SysManager/WebUI/ProjectMng/Tb_Project_Attachment2.aspx"></ChildMenu>
@@ -25,6 +27,8 @@
     <ChildMenu Caption="月度考核" url="/SysManager/WebUI/CheckMng/Tjfx1.aspx"></ChildMenu>
     <ChildMenu Caption="年度考核" url="/SysManager/WebUI/CheckMng/Tjfx1.aspx"></ChildMenu>
   </ChildModel>
+  
+  
 
   <ChildModel MenuID="80" Caption="系统管理" ClassName="yh">
     <ChildMenu Caption="组织结构" url="/SysManager/WebUI/SysMng/OrgMng/JOrg_List.aspx" RoleID="xtgl"></ChildMenu>

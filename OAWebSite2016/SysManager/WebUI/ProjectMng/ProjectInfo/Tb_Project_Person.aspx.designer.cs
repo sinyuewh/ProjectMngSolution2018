@@ -8,28 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OAWebSite2016.SysManager.WebUI.SysMng {
+namespace OAWebSite2016.SysManager.WebUI.ProjectMng {
     
     
-    public partial class JItem_List {
-        
-        /// <summary>
-        /// Itemname 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::WebFrame.ExpControl.JTextBox Itemname;
-        
-        /// <summary>
-        /// Remark 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::WebFrame.ExpControl.JTextBox Remark;
+    public partial class Tb_Project_Person {
         
         /// <summary>
         /// data1 控件。
@@ -41,6 +23,15 @@ namespace OAWebSite2016.SysManager.WebUI.SysMng {
         protected global::WebFrame.ExpControl.JDataSource data1;
         
         /// <summary>
+        /// IsAdmin 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::WebFrame.ExpControl.JTextBox IsAdmin;
+        
+        /// <summary>
         /// Repeater1 控件。
         /// </summary>
         /// <remarks>
@@ -48,14 +39,5 @@ namespace OAWebSite2016.SysManager.WebUI.SysMng {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater Repeater1;
-        
-        /// <summary>
-        /// sec0 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::WebFrame.ExpControl.SecurityPanel sec0;
     }
 }

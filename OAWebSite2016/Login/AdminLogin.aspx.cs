@@ -28,7 +28,9 @@ namespace OAWebSite2016.Login
                 {
                     JUserBU bu1 = new JUserBU();
                     String userid=String.Empty;
-                    int succ = bu1.Login(this.username.Value, Request.Form["password"], ref userid);
+                    String departnum = String.Empty;
+
+                    int succ = bu1.Login(this.username.Value, Request.Form["password"], ref userid,ref departnum);
                     if (succ == 0)
                     {
                         JAjax.AlertAndFocusControl("错误：用户名不存在！", this.username.ClientID);
@@ -48,6 +50,7 @@ namespace OAWebSite2016.Login
                         WebFrame.FrameLib.Login(userid);
 
                         JCookie.SetCookieValue("login_userid", this.username.Value);
+                        JCookie.SetCookieValue("departnum", departnum);
                         if (this.remember.Checked)
                         {
                             JCookie.SetCookieValue("login_password", Request.Form["password"]);

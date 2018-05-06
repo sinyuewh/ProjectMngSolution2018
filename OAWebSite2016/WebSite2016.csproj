@@ -240,6 +240,13 @@
     <Compile Include="SysManager\WebUI\ProjectMng\Handler\DoAction.aspx.designer.cs">
       <DependentUpon>DoAction.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SysManager\WebUI\ProjectMng\ProjectInfo\SelectProjectPerson.aspx.cs">
+      <DependentUpon>SelectProjectPerson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SysManager\WebUI\ProjectMng\ProjectInfo\SelectProjectPerson.aspx.designer.cs">
+      <DependentUpon>SelectProjectPerson.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SysManager\WebUI\ProjectMng\Tb_Project_Attachment_ADD.aspx.cs">
       <DependentUpon>Tb_Project_Attachment_ADD.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -247,18 +254,18 @@
     <Compile Include="SysManager\WebUI\ProjectMng\Tb_Project_Attachment_ADD.aspx.designer.cs">
       <DependentUpon>Tb_Project_Attachment_ADD.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SysManager\WebUI\ProjectMng\Tb_Project_Detail.aspx.cs">
+    <Compile Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_Detail.aspx.cs">
       <DependentUpon>Tb_Project_Detail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SysManager\WebUI\ProjectMng\Tb_Project_Detail.aspx.designer.cs">
+    <Compile Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_Detail.aspx.designer.cs">
       <DependentUpon>Tb_Project_Detail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SysManager\WebUI\ProjectMng\Tb_Project_Detail_ADD.aspx.cs">
+    <Compile Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_Detail_ADD.aspx.cs">
       <DependentUpon>Tb_Project_Detail_ADD.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SysManager\WebUI\ProjectMng\Tb_Project_Detail_ADD.aspx.designer.cs">
+    <Compile Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_Detail_ADD.aspx.designer.cs">
       <DependentUpon>Tb_Project_Detail_ADD.aspx</DependentUpon>
     </Compile>
     <Compile Include="SysManager\WebUI\ProjectMng\Tb_Project_Log.aspx.cs">
@@ -282,32 +289,32 @@
     <Compile Include="SysManager\WebUI\ProjectMng\Tb_Project_Log_Detail.aspx.designer.cs">
       <DependentUpon>Tb_Project_Log_Detail.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SysManager\WebUI\ProjectMng\Tb_Project_Person.aspx.cs">
+    <Compile Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_Person.aspx.cs">
       <DependentUpon>Tb_Project_Person.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SysManager\WebUI\ProjectMng\Tb_Project_Person.aspx.designer.cs">
+    <Compile Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_Person.aspx.designer.cs">
       <DependentUpon>Tb_Project_Person.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SysManager\WebUI\ProjectMng\Tb_Project_Person_ADD.aspx.cs">
+    <Compile Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_Person_ADD.aspx.cs">
       <DependentUpon>Tb_Project_Person_ADD.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SysManager\WebUI\ProjectMng\Tb_Project_Person_ADD.aspx.designer.cs">
+    <Compile Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_Person_ADD.aspx.designer.cs">
       <DependentUpon>Tb_Project_Person_ADD.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SysManager\WebUI\ProjectMng\Tb_Project_delay.aspx.cs">
+    <Compile Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_delay.aspx.cs">
       <DependentUpon>Tb_Project_delay.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SysManager\WebUI\ProjectMng\Tb_Project_delay.aspx.designer.cs">
+    <Compile Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_delay.aspx.designer.cs">
       <DependentUpon>Tb_Project_delay.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SysManager\WebUI\ProjectMng\Tb_Project_Person_Edit.aspx.cs">
+    <Compile Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_Person_Edit.aspx.cs">
       <DependentUpon>Tb_Project_Person_Edit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SysManager\WebUI\ProjectMng\Tb_Project_Person_Edit.aspx.designer.cs">
+    <Compile Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_Person_Edit.aspx.designer.cs">
       <DependentUpon>Tb_Project_Person_Edit.aspx</DependentUpon>
     </Compile>
     <Compile Include="SysManager\WebUI\SysMng\JItemMng\JItem_Detail.aspx.cs">
@@ -667,21 +674,18 @@
     <Content Include="SysManager\WebUI\CheckMng\Tjfx1.aspx" />
     <Content Include="SysManager\WebUI\CheckMng\Tjfx2.aspx" />
     <Content Include="SysManager\WebUI\ProjectMng\Handler\DoAction.aspx" />
+    <Content Include="SysManager\WebUI\ProjectMng\ProjectInfo\SelectProjectPerson.aspx" />
     <Content Include="SysManager\WebUI\ProjectMng\Tb_Project_Attachment_ADD.aspx" />
-    <Content Include="SysManager\WebUI\ProjectMng\Tb_Project_Detail.aspx" />
-    <Content Include="SysManager\WebUI\ProjectMng\Tb_Project_Detail_ADD.aspx" />
-    <Content Include="SysManager\WebUI\ProjectMng\Tb_Project_List1.aspx" />
-    <Content Include="SysManager\WebUI\ProjectMng\Bak\Tb_Project_List2.aspx" />
+    <Content Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_Detail.aspx" />
+    <Content Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_Detail_ADD.aspx" />
+    <Content Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_List1.aspx" />
     <Content Include="SysManager\WebUI\ProjectMng\Tb_Project_Log.aspx" />
     <Content Include="SysManager\WebUI\ProjectMng\Tb_Project_Log_ADD.aspx" />
     <Content Include="SysManager\WebUI\ProjectMng\Tb_Project_Log_Detail.aspx" />
-    <Content Include="SysManager\WebUI\ProjectMng\Tb_Project_Person.aspx" />
-    <Content Include="SysManager\WebUI\ProjectMng\Tb_Project_Person_ADD.aspx" />
-    <Content Include="SysManager\WebUI\ProjectMng\Bak\Tb_Project_List5.aspx" />
-    <Content Include="SysManager\WebUI\ProjectMng\Bak\Tb_Project_List4.aspx" />
-    <Content Include="SysManager\WebUI\ProjectMng\Tb_Project_delay.aspx" />
-    <Content Include="SysManager\WebUI\ProjectMng\Bak\Tb_Project_List3.aspx" />
-    <Content Include="SysManager\WebUI\ProjectMng\Tb_Project_Person_Edit.aspx" />
+    <Content Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_Person.aspx" />
+    <Content Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_Person_ADD.aspx" />
+    <Content Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_delay.aspx" />
+    <Content Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_Person_Edit.aspx" />
     <Content Include="SysManager\WebUI\ProjectMng\Tb_Project_Log1.aspx" />
     <Content Include="SysManager\WebUI\ProjectMng\Tb_Project_Attachment1.aspx" />
     <Content Include="SysManager\WebUI\ProjectMng\Tb_Project_Attachment2.aspx" />

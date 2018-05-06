@@ -35,6 +35,7 @@
             <ParaItems>
                 <jasp:ParameterItem ParaType="Control" ParaName="Itemname" SearchOperator="Contains" />
                 <jasp:ParameterItem ParaType="Control" ParaName="Remark" SearchOperator="Contains" />
+                <jasp:ParameterItem ParaType="String" ParaName="xx" DataName="kind='0'" SearchOperator="UserDefine" />
             </ParaItems>
         </jasp:JDataSource>
         <!--数据表格-->

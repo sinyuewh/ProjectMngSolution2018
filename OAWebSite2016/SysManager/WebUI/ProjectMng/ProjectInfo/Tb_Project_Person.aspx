@@ -129,14 +129,14 @@
         function NewData() {
             var title = "添加新成员";
             var url = 'Tb_Project_Person_ADD.aspx?parentGuid=<%=Request.QueryString["parentGuid"] %>';
-            layer_show(title, url, 600, 400);
+            layer_show(title, url, 500,300);
         }
 
         //3*--修改数据
         function EditData(data1) {
             var title = "编辑成员数据";
             var url = "Tb_Project_Person_Edit.aspx?GuidID=" + data1;
-            layer_show(title, url, 600, 400);
+            layer_show(title, url, 500, 300);
         }
 
         //4*--删除数据
@@ -144,7 +144,7 @@
             layer.confirm("提示：确定要删除项目组成员吗？", function() {
                 $.ajax({
                     type: 'POST',
-                    url: "Handler/DoAction.aspx",
+                    url: "../Handler/DoAction.aspx",
                     data: {
                         KeyID: dataid,
                         Action: 'DEL_Tb_Project_PERSON'

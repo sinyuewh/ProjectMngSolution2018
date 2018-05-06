@@ -247,9 +247,16 @@ namespace KORWeb.BUL
             DataTable dt1 = this.GetListData(condition, -1, -1, "num", "*");
             if (dt1 != null && dt1.Rows.Count > 0)
             {
-                result = "{0}等{1}人";
+                if (dt1.Rows.Count > 1)
+                {
+                    result = "{0}等{1}人";
+                }
+                else
+                {
+                    result = "{0}";
+                }
                 int count1 = dt1.Rows.Count;
-                String prjName = "未安排项目经理";
+                String prjName = dt1.Rows[0]["UserName"].ToString();
 
                 //项目角色为1表示是项目经理
                 condition.Add(new SearchField("PrjRole", "1"));

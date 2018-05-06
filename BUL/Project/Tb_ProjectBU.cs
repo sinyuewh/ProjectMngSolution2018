@@ -901,12 +901,13 @@ namespace KORWeb.BUL
 
         #region 静态方法
         /// <summary>
-        /// 得到当前用户对项目的访问基本权限
+        /// 得到当前用户对项目的访问基本权限  0--项目发起人 1--项目经理 2--测试人员 3--其他人员
         /// 0---没有权限
-        /// 1---普通用户   （项目角色为2)
-        /// 2---项目经理   （项目角色为1)
-        /// 3---项目管理员 （项目角色为0)
-        /// 4---项目发起人 （包括admin)
+        /// 1---其他人员   （项目角色为3)
+        /// 2---测试人员   （项目角色为2)
+        /// 
+        /// 3---项目经理   （项目角色为1)
+        /// 4---项目发起人 （包括admin 0)
         /// </summary>
         /// <param name="ProjectGuidID">项目的GuidID</param>
         /// <param name="userid">用户id</param>
@@ -946,7 +947,7 @@ namespace KORWeb.BUL
                         {
                             int t1 = 0;
                             int.TryParse(dic1["PrjRole"].ToString(), out t1);
-                            result = 3 - t1;
+                            result = 4 - t1;
                         }
                     }
                }

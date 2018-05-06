@@ -18,6 +18,7 @@
         <jasp:JTextBox ID="guidID" runat="server" TextDefaultValue="Guid"></jasp:JTextBox>
         <jasp:JTextBox ID="Status" runat="server" TextDefaultValue="String0"></jasp:JTextBox>
         <jasp:JTextBox ID="FinishDate" runat="server"></jasp:JTextBox>
+        
         <jasp:JTextBox ID="DepartID" runat="server" TextDefaultValue="DepartID" ></jasp:JTextBox>
         <jasp:JTextBox ID="Author" runat="server" TextDefaultValue="UserID" ></jasp:JTextBox>
         <jasp:JTextBox ID="CreateTime" runat="server"  TextDefaultValue="Now" ></jasp:JTextBox>
@@ -29,44 +30,50 @@
     <div class="row cl">
         <label class="form-label col-3">
             项目编号：</label>
-        <div class="formControls col-5">
+        <div class="formControls col-8">
             <jasp:JTextBox class="input-text" AllowNullValue="false" ID="prjNum" runat="server"
                 Caption="项目编号" IsUnique="true" UniqueTable="Tb_Project" mydatatype="*2-20" />
         </div>
-        <div class="col-4">
-        </div>
+        
     </div>
     
     <div class="row cl">
         <label class="form-label col-3">
             项目名称：</label>
-        <div class="formControls col-5">
+        <div class="formControls col-8">
             <jasp:JTextBox class="input-text" AllowNullValue="false" ID="prjName" runat="server"
                 Caption="项目名称" mydatatype="*2-50" />
         </div>
-        <div class="col-4">
-        </div>
+        
     </div>
     
     <div class="row cl">
         <label class="form-label col-3">
-            客户：</label>
-        <div class="formControls col-5">
+            客户名称：</label>
+        <div class="formControls col-8">
             <jasp:JTextBox class="input-text"  ID="clientName" runat="server"
-                Caption="客户" />
+                Caption="客户名称" />
         </div>
-        <div class="col-4">
-        </div>
+        
     </div>      
         
     <div class="row cl">
         <label class="form-label col-3">
-            项目日期：</label>
+            开始日期：</label>
         <div class="formControls col-8">
             <jasp:JTextBox class="input-text" ID="begDate" runat="server" AllowNullValue="false"
-                Caption="开始日期" onclick="$.calendar();" Width="143px" /> <b>至</b>
-                <jasp:JTextBox class="input-text" ID="endDate" runat="server" AllowNullValue="false"
-                Caption="预计结束日期" onclick="$.calendar();" Width="143px" />
+                Caption="开始日期" onclick="$.calendar();"  /> 
+                
+        </div>
+        
+    </div>
+    
+    <div class="row cl">
+        <label class="form-label col-3">
+            预计结束：</label>
+        <div class="formControls col-8">
+            <jasp:JTextBox class="input-text" ID="endDate" runat="server" AllowNullValue="false"
+                Caption="预计结束日期" onclick="$.calendar();"  />
         </div>
         
     </div>
@@ -74,11 +81,10 @@
     <div class="row cl">
         <label class="form-label col-3">
             备注：</label>
-        <div class="formControls col-5">
+        <div class="formControls col-8">
             <jasp:JTextBox class="input-text" ID="Remark" runat="server"  Caption="备注"  TextMode="MultiLine" Height ="150px" />
         </div>
-        <div class="col-4">
-        </div>
+        
     </div>
     
     <!--控制修改的权限-->

@@ -1,33 +1,39 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SysManager/include/H-uiThird.Master"
-    AutoEventWireup="true" CodeBehind="Tb_Project_Person_ADD.aspx.cs" 
-    Inherits="OAWebSite2016.SysManager.WebUI.ProjectMng.Tb_Project_Person_ADD" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true"
+MasterPageFile="~/SysManager/include/H-uiThird.Master"
+ CodeBehind="Tb_Project_Person_Edit.aspx.cs" Inherits="OAWebSite2016.SysManager.WebUI.ProjectMng.Tb_Project_Person_Edit" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
+    <jasp:JDataSource ID="data2" runat="server" JType="Table" SqlID="Tb_Project_Person" IsNoConditionNoData="true">
+        <ParaItems>
+            <jasp:ParameterItem ParaType="RequestQueryString" ParaName="GuidID" />
+        </ParaItems>
+    </jasp:JDataSource>
+
     <!--定义数据豆-->
-    <jasp:JDataBean ID="bean1" runat="server" TableName="Tb_Project_Person" PrimaryKeys="guidID"
-         ControlList="num,PersonID,PrjRole,Weight"
+    <jasp:JDataBean ID="bean1" runat="server" TableName="Tb_Project_Person" PrimaryKeys="GuidID"
+         ControlList="num,UserID,PrjRole,Weight,GuidID,parentGuid" DataSourceID="data2"
         IsAppendData="true" />
     <!--数据Form-->
     <div style="display: none">
-        <jasp:JTextBox ID="guidID" runat="server"></jasp:JTextBox>
-        <jasp:JTextBox ID="parentGuid" runat="server" TextDefaultValue="RequestQueryString"></jasp:JTextBox>
+        <jasp:JTextBox ID="GuidID" runat="server"></jasp:JTextBox>
+        <jasp:JTextBox ID="parentGuid" runat="server"></jasp:JTextBox>
     </div>
     <div class="row cl">
         <label class="form-label col-3">
             排序：</label>
-        <div class="formControls col-5">
+        <div class="formControls col-8">
             <jasp:JTextBox class="input-text" AllowNullValue="false" ID="num" runat="server"
                 Caption="排序" DataType="Integer" mydatatype="n" />
         </div>
-        <div class="col-4">
-        </div>
+        
     </div>
     <div class="row cl">
         <label class="form-label col-3">
             用户：</label>
-        <div class="formControls col-5">
+        <div class="formControls col-8">
             <jasp:JDataSource ID="data1" runat="server" JType="Table" SqlID="JUser" OrderBy="num" PageSize="-1"
                 FieldsList="UserID,UserName">
                 <ParaItems>
@@ -36,26 +42,24 @@
             </jasp:JDataSource>
             <%--<%=this.data1.CommandText  %>--%>
             <span class="select-box">
-                <jasp:JDropDownList ID="PersonID" runat="server" DataSourceID="data1" DataTextField="UserName"
+                <jasp:JDropDownList ID="UserID" runat="server" DataSourceID="data1" DataTextField="UserName"
                     DataValueField="UserID" CssClass="select" AllowNullValue="false"  Caption="用户">
                 </jasp:JDropDownList>
             </span>
         </div>
-        <div class="col-4">
-        </div>
+        
     </div>
     <div class="row cl">
         <label class="form-label col-3">
             岗位：</label>
-        <div class="formControls col-5">
+        <div class="formControls col-8">
             <span class="select-box">
                 <jasp:AppDropDownList ID="PrjRole" runat="server" KeyItem="ProjectRole" CssClass="select"
                    BlankValue="--请选择--" AllowNullValue="false"  Caption="岗位" >
                 </jasp:AppDropDownList>
             </span>
         </div>
-        <div class="col-4">
-        </div>
+        
     </div>
     
     <div class="row cl" style="display:none">
@@ -85,8 +89,7 @@
             </div>
         </div>
     </jasp:SecurityPanel>
-    <jasp:SecurityPanel ID="SecurityPanel1" runat="server" AuthorityKind="DirectNoAccessPage"
-        >
+    <jasp:SecurityPanel ID="SecurityPanel1" runat="server" AuthorityKind="DirectNoAccessPage">
     </jasp:SecurityPanel>
 
     <script type="text/javascript">

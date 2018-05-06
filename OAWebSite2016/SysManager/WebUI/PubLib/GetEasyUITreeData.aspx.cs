@@ -19,8 +19,15 @@ namespace OAWebSite2016.SysManager.WebUI.PubLib
                 String olduser1 = Request["oldUsers"];
 
                 if (dataKind == "0")        //选择角色选择用户的Tree的Json数据
-                {               
-                    result = this.GetRoleUserJsonData();
+                {
+                    if (String.IsNullOrEmpty(olduser1))
+                    {
+                        result = this.GetRoleUserJsonData();
+                    }
+                    else
+                    {
+                        result = this.GetRoleUserJsonData(olduser1);
+                    }
                 }
                 else if (dataKind == "1")   //得到角色选择权限Tree的Json数据
                 {
@@ -86,6 +93,24 @@ namespace OAWebSite2016.SysManager.WebUI.PubLib
                     }
                 }
             }
+            String result = (new KORWeb.BUL.JUserBU()).GetSelectUserEasyUiJsonData(oldUser);
+            return result;
+        }
+
+
+        //得到角色用户选择Json数据
+        private String GetRoleUserJsonData(String oldUserValue)
+        {
+            List<String> oldUser = new List<string>();
+            if (String.IsNullOrEmpty(oldUserValue) == false)
+            {
+                String[] arr1 = oldUserValue.Split(',');
+                foreach (String m in arr1)
+                {
+                    oldUser.Add(m);
+                }
+            }
+
             String result = (new KORWeb.BUL.JUserBU()).GetSelectUserEasyUiJsonData(oldUser);
             return result;
         }

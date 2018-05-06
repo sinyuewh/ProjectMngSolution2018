@@ -5,10 +5,41 @@
     KORWeb.BUL.Tb_Project_PersonBU person1 = new Tb_Project_PersonBU();
     protected override void OnInit(EventArgs e)
     {
-        this.Repeater1.ItemDataBound += new RepeaterItemEventHandler(Repeater1_ItemDataBound);
+        this.Repeater1.ItemDataBound += new RepeaterItemEventHandler(Repeater1_ItemDataBound);      
         base.OnInit(e);
     }
 
+    protected override void OnLoad(EventArgs e)
+    {
+        if (!Page.IsPostBack)
+        {
+            this.Time0.Text = DateTime.Today.AddYears(-1).ToString("yyyy-MM-dd");
+            this.Time1.Text = DateTime.Today.ToString("yyyy-MM-dd");
+
+            //------------------------------------------------------------------------------
+            //系统管理员，公司领导 可查看所有的项目列表资料
+            if (WebFrame.Comm.JSecurity.HasRoles("xtgl,gsld"))
+            {
+                this.DepartNum.Text = "";
+                this.PersonID.Text = "";
+            }
+            else if (WebFrame.Comm.JSecurity.HasRoles("bmld"))  //部门领导可查询本部门的所有项目
+            {
+               this.DepartNum.Text = WebFrame.Util.JCookie.GetCookieValue("departnum");
+               this.PersonID.Text = "";
+            }
+            else
+            {
+                //查询项目关联的人员或项目的发起人
+                this.DepartNum.Text = "";
+                this.PersonID.Text = String.Format("Author='{0}' or exists (select 1 from Tb_Project_Person where parentGuid=Tb_ProjectView.GuidID and UserID='{0}')",WebFrame.FrameLib.UserID);
+            }
+            //------------------------------------------------------------------------------
+            
+        }
+        base.OnLoad(e);
+    }
+    
     void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
     {
         System.Data.DataRowView dv = e.Item.DataItem as System.Data.DataRowView;
@@ -33,7 +64,7 @@
             if (Status == "0")
             {
                 dic1["1"] = "项目立项";
-                dic1["3"] = "项目终止";
+                //dic1["3"] = "项目终止";
                 dic1["6"] = "项目删除";
             }
             else if(Status =="1")
@@ -92,8 +123,17 @@
     <div class="pd-20">
         <!--查询区设置-->
         <div class="text-c">
+            <span style="display:none">
+            <jasp:JTextBox ID="DepartNum" runat="server" />
+            <jasp:JTextBox ID="PersonID" runat="server" /></span>
+            
+            立项日期：<jasp:JTextBox ID="Time0" runat="server" class="input-text" Style="width: 120px"
+                placeholder="" onclick="$.calendar();" />
+            ～<jasp:JTextBox ID="Time1" runat="server" class="input-text" Style="width: 120px"
+                placeholder="" onclick="$.calendar();" />
+            &nbsp;&nbsp;
             项目状态：<span class="select-box" style="width: 150px">
-                <jasp:JDropDownList ID="Status" class="select" runat="server" AutoPostBack="true" >
+                <jasp:JDropDownList ID="Status" class="select" runat="server" >
                     <asp:ListItem Text="--全部--" Value=""></asp:ListItem>
                     <asp:ListItem Text="实施中" Value="1"></asp:ListItem>
                     <asp:ListItem Text="已完成" Value="2"></asp:ListItem>
@@ -101,14 +141,8 @@
                     <asp:ListItem Text="立项中" Value="0"></asp:ListItem>
                    
                 </jasp:JDropDownList>
-            </span>&nbsp;&nbsp; 项目编号：<jasp:JTextBox ID="prjNum" runat="server" class="input-text"
-                Style="width: 150px" placeholder="" autocomplete="on" list="datalist1" />
-            &nbsp;&nbsp; 项目名称：<jasp:JTextBox ID="prjName" runat="server" class="input-text" Style="width: 150px"
+            </span>&nbsp;&nbsp; 项目名称：<jasp:JTextBox ID="prjName" runat="server" class="input-text" Style="width: 200px"
                 placeholder="" autocomplete="on" list="datalist2" />
-            &nbsp;&nbsp;立项日期：<jasp:JTextBox ID="Time0" runat="server" class="input-text" Style="width: 100px"
-                placeholder="" onclick="$.calendar();" />
-            ～<jasp:JTextBox ID="Time1" runat="server" class="input-text" Style="width: 100px"
-                placeholder="" onclick="$.calendar();" />
             &nbsp;&nbsp;
             <button type="submit" class="btn btn-success radius" id="butSearch" name="">
                 <i class="Hui-iconfont">&#xe665;</i> 查询</button>
@@ -140,20 +174,26 @@
         <jasp:JDataSource ID="data1" runat="server" JType="Table" SqlID="Tb_ProjectView"
             PageSize="-1" OrderBy="begDate desc">
             <ParaItems>
-                <jasp:ParameterItem ParaType="Control" ParaName="prjNum" SearchOperator="Contains" />
                 <jasp:ParameterItem ParaType="Control" ParaName="prjName" SearchOperator="Contains" />
                 <jasp:ParameterItem ParaType="Control" ParaName="Status" DataType="NumericType" />
                 <jasp:ParameterItem ParaType="Control" ParaName="Time0" DataName="begDate>=cdate('{0}')"
                     SearchOperator="UserDefine" />
                 <jasp:ParameterItem ParaType="Control" ParaName="Time1" DataName="begDate<=cdate('{0} 23:59:59')"
                     SearchOperator="UserDefine" />
+                <jasp:ParameterItem ParaType="Control" ParaName="DepartNum" SearchOperator="RightContains" />
+                <jasp:ParameterItem ParaType="Control" ParaName="PersonID"  DataName="{0}" SearchOperator="UserDefine" />
             </ParaItems>
         </jasp:JDataSource>
+        
+       <%-- <%=this.data1.CommandText  %>--%>
         <!--数据表格-->
         <div class="mt-20" style="">
             <table class="table table-border table-bordered table-hover table-bg table-sort">
                 <thead>
                     <tr class="text-c">
+                         <th>
+                            立项部门
+                        </th>
                         <th>
                             项目编号
                         </th>
@@ -161,10 +201,10 @@
                             项目名称
                         </th>
                         <th>
-                            客户
+                            客户名称
                         </th>
                         <th>
-                            计划日期
+                            计划完成
                         </th>
                         <th>
                             实际完成
@@ -172,22 +212,19 @@
                         <th>
                             项目状态
                         </th>
-                        <th>
-                            项目组成员
-                        </th>
+                        
+                         <th>
+                            项目发起人
+                        </th>                     
                         
                         <th>
-                            立项部门
-                        </th>
+                            项目团队
+                        </th>  
+                        
                         <th>
-                            登记人
+                            项目日志
                         </th>
-                        <th>
-                            登记时间
-                        </th>
-                        <th>
-                            备注
-                        </th>
+                        
                         <th>
                             操作
                         </th>
@@ -197,6 +234,10 @@
                     <asp:Repeater ID="Repeater1" runat="server" DataSourceID="data1" EnableViewState="false">
                         <ItemTemplate>
                             <tr class="text-c">
+                                <td>
+                                    <%#Eval("departName")%>[<%#Eval("departNum")%>]
+                                </td>
+                                
                                 <td class="operate">
                                     <span class="projectGuidID" style="display: none"><%#Eval("GuidID")%></span>
                                     <span class="projectPrjNum" style="display: none"><%#Eval("PrjNum")%></span>
@@ -224,24 +265,20 @@
                                    <script>document.write(Arr1[<%#Eval("Status")%>])</script>
                                 </td>
                                 
+                                <td>
+                                    <%#Eval("AuthorName")%>
+                                </td>     
+                                
                                 <td class="operate">
                                      <a title="点击查看项目团队" onclick="javascript:SeeProjectPerson(this);">
                                         <asp:Label ID="personinfo" runat="server"></asp:Label>
                                      </a>
-                                </td> 
-                               
+                                </td>  
+                                
                                 <td>
-                                    <%#Eval("departName")%>
-                                </td>
-                                <td>
-                                    <%#Eval("AuthorName")%>
-                                </td>
-                                <td>
-                                    <%#Eval("Remark")%>
-                                </td>
-                                <td>
-                                    <%#Eval("Remark")%>
-                                </td>
+                                    1
+                                </td>                           
+                                                                
                                 <td class="operate">
                                     <span class="select-box" id ="span1" runat="server">
                                         <jasp:JDropDownList ID="doAction" class="select" runat="server" onchange="javascript:doProjectAction(this);">
@@ -287,7 +324,7 @@
         function NewData() {
             var title = "添加新项目";
             var url = "Tb_Project_Detail_ADD.aspx";
-            layer_show(title, url, 800, 550);
+            layer_show(title, url, 650, 550);
         }
 
         //2*--编辑或查看项目的明细
@@ -295,7 +332,7 @@
             var v1 = $(obj).parent().parent().find('.projectPrjNum').html();
             var title = "项目信息";
             var url = "Tb_Project_Detail.aspx?prjNum=" + v1;
-            layer_show(title, url, 800, 550);
+            layer_show(title, url, 650, 550);
         }
 
         //3---查看项目组成员信息
@@ -307,17 +344,7 @@
             var url = "Tb_Project_Person.aspx?parentGuid=" + v1;
             layer_show(title, url, 900, 650);
         }
-
-
-        //4--查看项目日志
-        function SeeProjectLog(obj) {
-            var v1 = $(obj).parent().parent().find('.projectGuidID').html();
-            var v2 = $(obj).parent().parent().find('.projectName').html();
-
-            var title = "【" + v2 + "】";
-            var url = "Tb_Project_Log.aspx?parentGuid=" + v1;
-            layer_show(title, url, 900, 650);
-        }
+       
 
         //5--项目的相关操作
         function doProjectAction(obj) {
@@ -356,7 +383,7 @@
             layer.confirm("提示：确定要对项目【" + prjName + "】立项吗？", function() {
                 $.ajax({
                     type: 'POST',
-                    url: "Handler/DoAction.aspx",
+                    url: "../Handler/DoAction.aspx",
                     data: {
                         KeyID: dataid,
                         Action: 'SURE_Tb_Project'
@@ -379,7 +406,7 @@
             layer.confirm("提示：确定要删除项目【" + prjName + "】的数据吗？", function() {
                 $.ajax({
                     type: 'POST',
-                    url: "Handler/DoAction.aspx",
+                    url: "../Handler/DoAction.aspx",
                     data: {
                         KeyID: dataid,
                         Action: 'DEL_Tb_Project'
@@ -405,7 +432,7 @@
                 layer.prompt({ title: '请输入项目完成的日期', formType: 0, value: v1 }, function(text) {
                     $.ajax({
                         type: 'POST',
-                        url: "Handler/DoAction.aspx",
+                        url: "../Handler/DoAction.aspx",
                         data: {
                             KeyID: dataid,
                             Action: 'COMPLETE_Tb_Project',
@@ -431,7 +458,7 @@
                 layer.prompt({ title: '请输入项目取消的说明', formType: 2 }, function(text) {
                     $.ajax({
                         type: 'POST',
-                        url: "Handler/DoAction.aspx",
+                        url: "../Handler/DoAction.aspx",
                         data: {
                             KeyID: dataid,
                             Action: 'CANCEL_Tb_Project',
@@ -466,7 +493,7 @@
                 layer.prompt({ title: '请输入项目返工的说明', formType: 2 }, function(text) {
                     $.ajax({
                         type: 'POST',
-                        url: "Handler/DoAction.aspx",
+                        url: "../Handler/DoAction.aspx",
                         data: {
                             KeyID: dataid,
                             Action: 'ReturnWork_Tb_Project',

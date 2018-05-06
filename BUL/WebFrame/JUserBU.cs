@@ -537,10 +537,11 @@ namespace KORWeb.BUL
         /// 2--表示账号已停用
         /// 3--表示登陆成功
         /// </returns>
-        public int Login(String userName, String PassWord,ref String Userid)
+        public int Login(String userName, String PassWord,ref String Userid,ref String departNum)
         {
             int succ = 0;
             Userid = userName;
+            departNum=String.Empty;
 
             if (String.IsNullOrEmpty(userName) == false
                 && String.IsNullOrEmpty(PassWord) == false)
@@ -584,10 +585,19 @@ namespace KORWeb.BUL
                             FrameLib.UserName = data1["UserName"].ToString();               //用户的UserName
                             FrameLib.AuthorityGroup = data1["AuthorityGroup"].ToString();   //表示用户的类别
                             
-                            //FrameLib.DepartID = data1["DepartID"].ToString();               //表示用户所属的部门ID
-                            
-                            Userid = data1["userid"].ToString();
+                            FrameLib.DepartID = data1["DepartID"].ToString();               //表示用户所属的部门ID
 
+                            //根据部门的ID设置部门的Num（数据权限用）
+                            condition.Clear();
+                            JOrgDA org1 = new JOrgDA();
+                            condition.Add(new SearchField("OrgID",data1["DepartID"].ToString()));
+                            DataRow r1=org1.GetFirstDataRow(condition,"num");
+                            if(r1!=null)
+                            {
+                                departNum = r1["num"].ToString();
+                            }
+
+                            Userid = data1["userid"].ToString();
 
                             //创建用户登录日志
                             JUserLoginLogDA da2 = new JUserLoginLogDA();
