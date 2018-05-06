@@ -32,14 +32,6 @@ namespace OAWebSite2016.SysManager.WebUI.SysMng
             else
             {
                 Dictionary<String, object> dic1 = bean1.GetControlValues();
-                if (this.DepartLeader.SelectedValue == "True")
-                {
-                    dic1["DepartLeader"] = true;
-                }
-                else
-                {
-                    dic1["DepartLeader"] = false;
-                }
                 int succ = bean1.SaveDataToDb(dic1);
                 
                 if (succ == 1  )   //submit succ

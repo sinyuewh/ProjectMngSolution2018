@@ -6,6 +6,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using KORWeb.BUL;
 using WebFrame.Util;
+using System.Data;
+using WebFrame.Data;
+using WebFrame;
 
 namespace OAWebSite2016.SysManager.WebUI.SysMng
 {
@@ -31,35 +34,12 @@ namespace OAWebSite2016.SysManager.WebUI.SysMng
             }
             else
             {
-                Dictionary<String,object> dic1= bean1.GetControlValues();
+                Dictionary<String, object> dic1 = bean1.GetControlValues();
                 dic1["AuthorityGroup"] = WebFrame.FrameLib.AuthorityGroup;
                 dic1["[PassWord]"] = "123456";
                 dic1["LoginCount"] = 0;
 
-                
-                if (this.DepartLeader.SelectedValue == "True")
-                {
-                    dic1["DepartLeader"] = true;
-                }
-                else
-                {
-                    dic1["DepartLeader"] = false;
-                }
                 int succ = bean1.SaveDataToDb(dic1);
-               
-
-                //int succ2 = 0;
-                //if (succ == 1)
-                //{
-                //    Dictionary<String, object> dic2 = bean2.GetControlValues();
-                //    dic2["AuthorityGroup"] = WebFrame.FrameLib.AuthorityGroup;
-                //    succ2 = bean2.SaveDataToDb(dic2);
-                //}
-                //else
-                //{
-                //    //throw bean1.MyException;
-                //}
-
                 if (succ == 1)   //submit succ
                 {
                     String js1 = "layer.alert('操作成功!',function(index){;";
@@ -79,10 +59,22 @@ namespace OAWebSite2016.SysManager.WebUI.SysMng
         {
             if (!Page.IsPostBack)
             {
+                KORWeb.BUL.JUserBU bu1 = new JUserBU();
+                List<SearchField> condition = new List<SearchField>();
+                condition.Add(new SearchField("UserID", "admin", SearchOperator.NotEqual));
 
+                DataRow dr1 = bu1.GetFirstDataRow(condition, "max(Num) as num1");
+                if (dr1 != null)
+                {
+                    int num1 = 1;
+                    int.TryParse(dr1[0].ToString(), out num1);
+                    this.Num.Text = (num1+1) + "";
+                }
+                else
+                {
+                    this.Num.Text = "1";
+                }
             }
         }
-
-       
     }
 }

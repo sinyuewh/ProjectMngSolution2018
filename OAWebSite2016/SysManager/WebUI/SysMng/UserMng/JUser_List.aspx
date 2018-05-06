@@ -17,9 +17,9 @@
            JUser_RESET : 重置密码
         --%>
         <div class="text-c">
-            姓名：<jasp:JTextBox ID="UserName" runat="server" class="input-text" Style="width: 150px"
+            姓名：<jasp:JTextBox ID="UserName" runat="server" class="input-text" Style="width: 200px"
                 placeholder="输入用户姓名" />
-            &nbsp; 状态： <span class="select-box" style="width: 120px">
+            &nbsp; 状态： <span class="select-box" style="width: 150px">
                 <jasp:JDropDownList ID="Status" runat="server" CssClass="select">
                     <asp:ListItem Text="正常" Value="1"></asp:ListItem>
                     <asp:ListItem Text="停用" Value="0"></asp:ListItem>
@@ -67,9 +67,7 @@
                         <th>
                             所在部门
                         </th>
-                        <th>
-                            部门负责人
-                        </th>
+                        
                         <th>
                             最近登录
                         </th>
@@ -99,12 +97,9 @@
                                     <%#Eval("UserName") %>
                                 </td>
                                 
+                                                               
                                 <td>
-                                    <%#Eval("orgName") %>
-                                </td>
-                                
-                                 <td>
-                                    <%#Eval("DepartLeader") %>
+                                    <%#Eval("OrgName") %>
                                 </td>
                                 
                                 <td>
@@ -139,7 +134,7 @@
                 "bStateSave": true, //状态保存
                 "aoColumnDefs": [
                 //                { "bVisible": false, "aTargets": [0] }, //控制列的隐藏显示
-		          {"orderable": false, "aTargets": [6]}// 制定列不参与排序
+		         // {"orderable": false, "aTargets": [6]}// 制定列不参与排序
 		        ]
             });
             $('.table-sort tbody').on('click', 'tr', function() {
@@ -193,6 +188,6 @@
         }
     </script>
 
-    <jasp:SecurityPanel ID="sec0" runat="server" AuthorityKind="DirectNoAccessPage">
+    <jasp:SecurityPanel ID="sec0" runat="server" AuthorityKind="DirectNoAccessPage" RoleID="xtgl">
     </jasp:SecurityPanel>
 </asp:Content>
