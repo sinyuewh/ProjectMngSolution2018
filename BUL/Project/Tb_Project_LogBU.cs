@@ -200,6 +200,14 @@ namespace KORWeb.BUL
         public static int GetProjectLogCount(String projectGuidid)
         {
             int count1 = 0;
+            List<SearchField> condition = new List<SearchField>();
+            condition.Add(new SearchField("parentGuid", projectGuidid));
+            Tb_Project_LogDA da1 = new Tb_Project_LogDA();
+            DataRow dr1= da1.GetFirstDataRow(condition,"count(*) as count0");
+            if (dr1 != null)
+            {
+                int.TryParse(dr1[0].ToString(),out count1);
+            }
             return count1;
         }
 

@@ -102,7 +102,7 @@
         (e.Item.FindControl("personinfo") as Label).Text = info1; 
         
         //设置日志的数量
-        Tb_Project_LogBU log1 = new Tb_Project_LogBU();
+        (e.Item.FindControl("logcount") as Label).Text = Tb_Project_LogBU.GetProjectLogCount(projectID)+"";
         
     }
 </script>
@@ -281,7 +281,7 @@
                                 
                                 <td class="operate">
                                      <a title="点击查看项目的操作日志" onclick="javascript:SeeProjectDoActionLog(this);">
-                                        <asp:Label ID="Label1" runat="server"></asp:Label>
+                                        <asp:Label ID="logcount" runat="server"></asp:Label>
                                      </a>
                                 </td>                         
                                                                 
@@ -349,6 +349,16 @@
             var title = "【" + v2 + "】";
             var url = "Tb_Project_Person.aspx?parentGuid=" + v1;
             layer_show(title, url, 900, 650);
+        }
+
+        //4--查看项目相关的操作日志
+        function SeeProjectDoActionLog(obj) {
+            var v1 = $(obj).parent().parent().find('.projectGuidID').html();
+            var v2 = $(obj).parent().parent().find('.projectName').html();
+
+            var title = "【" + v2 + "】项目操作日志";
+            var url = "Tb_Project_Log1.aspx?parentGuid=" + v1;
+            layer_show(title, url, 1200, 650);
         }
        
 
