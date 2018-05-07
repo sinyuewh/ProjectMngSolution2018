@@ -37,11 +37,7 @@ namespace OAWebSite2016.SysManager.WebUI.ProjectMng
             if (!Page.IsPostBack)
             {
                 this.parentGuid.Text = Request.QueryString["parentGuid"];
-                this.guidID.Text = WebFrame.Util.JString.GetUnique32ID();
-
-               // this.PersonID.Items.Insert(0, new ListItem("--请选择--", ""));
-
-                
+                this.guidID.Text = WebFrame.Util.JString.GetUnique32ID();               
 
                 int t1 = KORWeb.BUL.Tb_ProjectBU.GetProjectClassByUserID(Request.QueryString["parentGuid"], WebFrame.FrameLib.UserID);
 
@@ -68,7 +64,29 @@ namespace OAWebSite2016.SysManager.WebUI.ProjectMng
             }
             else
             {
-                
+                String user1 = this.UserID.Text;
+                if (String.IsNullOrEmpty(user1) == false)
+                {
+                    Tb_Project_PersonBU bu1 = new Tb_Project_PersonBU();
+                    succ=bu1.AddPerson(user1, Request.QueryString["parentGuid"], this.PrjRole.SelectedValue);
+                    if (succ)
+                    {
+                        String js1 = "layer.alert('操作成功!',function(index){;";
+                        js1 = js1 + " var index = parent.layer.getFrameIndex(window.name);";
+
+                        js1 = js1 + " parent.$('#butSearch').click();";
+                        js1 = js1 + " parent.layer.close(index);});";
+                        JAjax.ExecuteJS(js1);
+                    }
+                    else
+                    {
+                        UTools.Alert("错误：操作失败，请重试！");
+                    }
+                }
+                else
+                {
+                    UTools.Alert("错误：请至少选择一个用户！");
+                }
             }
         }
     }

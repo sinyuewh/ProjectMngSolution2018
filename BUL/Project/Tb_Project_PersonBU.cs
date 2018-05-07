@@ -269,6 +269,56 @@ namespace KORWeb.BUL
             }
             return result;
         }
+
+        /// <summary>
+        /// 增加项目组的成员
+        /// </summary>
+        /// <param name="personid"></param>
+        /// <param name="projectGuidid"></param>
+        /// <param name="gw"></param>
+        /// <returns></returns>
+        public bool AddPerson(String personid, String projectGuidid, String gw)
+        {
+            bool succ = false;
+            JConnect.GetConnect().BeginTrans();
+            try
+            {
+                String[] arr1 = personid.Split(',');
+                Dictionary<String, object> dic1 = new Dictionary<string, object>();
+                List<SearchField> condition = new List<SearchField>();
+
+                Tb_Project_PersonDA da1 = new Tb_Project_PersonDA();
+                foreach (String m in arr1)
+                {
+                    condition.Clear();
+                    condition.Add(new SearchField("parentGuid", projectGuidid));
+                    condition.Add(new SearchField("UserID", m));
+                    if (da1.HasData(condition))
+                    {
+                        dic1.Clear();
+                        dic1["PrjRole"] = gw;
+                        da1.EditData(condition, dic1);
+                    }
+                    else
+                    {
+                        dic1.Clear();
+                        dic1["parentGuid"] = projectGuidid;
+                        dic1["UserID"] = m;
+                        dic1["UserName"] = JUserBU.GetUserNamByIDS(m);
+                        dic1["PrjRole"] = gw;
+                        dic1["GuidID"] = JString.GetUnique32ID();
+                        da1.NewData(dic1);
+                    }
+                }
+                JConnect.GetConnect().CommitTrans();
+                succ = true;
+            }
+            catch (Exception err)
+            {
+                JConnect.GetConnect().RollBackTrans();
+            }
+            return succ;
+        }
         #endregion
 
         #region 静态方法

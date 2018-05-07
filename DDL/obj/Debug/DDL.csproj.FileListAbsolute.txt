@@ -190,3 +190,15 @@ E:\MyProject2018\ProjectMngSolution2018\DDL\bin\Debug\WebFrame.pdb
 E:\MyProject2018\ProjectMngSolution2018\DDL\obj\Debug\ResolveAssemblyReference.cache
 E:\MyProject2018\ProjectMngSolution2018\DDL\obj\Debug\KORWeb.DataEntity.dll
 E:\MyProject2018\ProjectMngSolution2018\DDL\obj\Debug\KORWeb.DataEntity.pdb
+E:\MyCurrentProject\ProjectMngSolution2018\DDL\bin\Debug\KORWeb.DataEntity.dll
+E:\MyCurrentProject\ProjectMngSolution2018\DDL\bin\Debug\KORWeb.DataEntity.pdb
+E:\MyCurrentProject\ProjectMngSolution2018\DDL\bin\Debug\FredCK.FCKeditorV2.dll
+E:\MyCurrentProject\ProjectMngSolution2018\DDL\bin\Debug\MySql.Data.dll
+E:\MyCurrentProject\ProjectMngSolution2018\DDL\bin\Debug\NPOI.dll
+E:\MyCurrentProject\ProjectMngSolution2018\DDL\bin\Debug\WebFrame.dll
+E:\MyCurrentProject\ProjectMngSolution2018\DDL\bin\Debug\AspNetPager.dll
+E:\MyCurrentProject\ProjectMngSolution2018\DDL\bin\Debug\org.in2bits.MyXls.dll
+E:\MyCurrentProject\ProjectMngSolution2018\DDL\bin\Debug\WebFrame.pdb
+E:\MyCurrentProject\ProjectMngSolution2018\DDL\obj\Debug\ResolveAssemblyReference.cache
+E:\MyCurrentProject\ProjectMngSolution2018\DDL\obj\Debug\KORWeb.DataEntity.dll
+E:\MyCurrentProject\ProjectMngSolution2018\DDL\obj\Debug\KORWeb.DataEntity.pdb

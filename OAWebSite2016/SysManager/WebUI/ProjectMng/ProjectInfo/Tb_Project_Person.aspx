@@ -67,7 +67,7 @@
                         <ItemTemplate>
                             <tr class="text-c">
                                 <td>
-                                    <%#Eval("num") %>
+                                    <%# Container.ItemIndex+1 %>
                                 </td>
                                 <td>
                                     <%#Eval("UserID") %>

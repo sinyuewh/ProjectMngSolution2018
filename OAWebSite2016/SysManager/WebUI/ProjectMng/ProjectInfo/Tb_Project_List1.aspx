@@ -100,6 +100,10 @@
         //设置项目组的成员信息
         String info1=person1.GetPersonInfo(projectID);
         (e.Item.FindControl("personinfo") as Label).Text = info1; 
+        
+        //设置日志的数量
+        Tb_Project_LogBU log1 = new Tb_Project_LogBU();
+        
     }
 </script>
 
@@ -222,9 +226,9 @@
                         </th>  
                         
                         <th>
-                            项目日志
-                        </th>
-                        
+                            操作日志
+                        </th>  
+                                                
                         <th>
                             操作
                         </th>
@@ -275,9 +279,11 @@
                                      </a>
                                 </td>  
                                 
-                                <td>
-                                    1
-                                </td>                           
+                                <td class="operate">
+                                     <a title="点击查看项目的操作日志" onclick="javascript:SeeProjectDoActionLog(this);">
+                                        <asp:Label ID="Label1" runat="server"></asp:Label>
+                                     </a>
+                                </td>                         
                                                                 
                                 <td class="operate">
                                     <span class="select-box" id ="span1" runat="server">

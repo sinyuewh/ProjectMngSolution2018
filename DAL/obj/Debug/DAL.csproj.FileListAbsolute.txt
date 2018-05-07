@@ -178,3 +178,15 @@ E:\MyProject2018\ProjectMngSolution2018\DAL\bin\Debug\KORWeb.DataEntity.pdb
 E:\MyProject2018\ProjectMngSolution2018\DAL\obj\Debug\ResolveAssemblyReference.cache
 E:\MyProject2018\ProjectMngSolution2018\DAL\obj\Debug\KORWeb.DataAction.dll
 E:\MyProject2018\ProjectMngSolution2018\DAL\obj\Debug\KORWeb.DataAction.pdb
+E:\MyCurrentProject\ProjectMngSolution2018\DAL\bin\Debug\KORWeb.DataAction.dll
+E:\MyCurrentProject\ProjectMngSolution2018\DAL\bin\Debug\KORWeb.DataAction.pdb
+E:\MyCurrentProject\ProjectMngSolution2018\DAL\bin\Debug\FredCK.FCKeditorV2.dll
+E:\MyCurrentProject\ProjectMngSolution2018\DAL\bin\Debug\KORWeb.DataEntity.dll
+E:\MyCurrentProject\ProjectMngSolution2018\DAL\bin\Debug\WebFrame.dll
+E:\MyCurrentProject\ProjectMngSolution2018\DAL\bin\Debug\org.in2bits.MyXls.dll
+E:\MyCurrentProject\ProjectMngSolution2018\DAL\bin\Debug\AspNetPager.dll
+E:\MyCurrentProject\ProjectMngSolution2018\DAL\bin\Debug\WebFrame.pdb
+E:\MyCurrentProject\ProjectMngSolution2018\DAL\bin\Debug\KORWeb.DataEntity.pdb
+E:\MyCurrentProject\ProjectMngSolution2018\DAL\obj\Debug\ResolveAssemblyReference.cache
+E:\MyCurrentProject\ProjectMngSolution2018\DAL\obj\Debug\KORWeb.DataAction.dll
+E:\MyCurrentProject\ProjectMngSolution2018\DAL\obj\Debug\KORWeb.DataAction.pdb

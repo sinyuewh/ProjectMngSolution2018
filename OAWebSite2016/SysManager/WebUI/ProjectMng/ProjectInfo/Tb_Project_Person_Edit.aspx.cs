@@ -72,7 +72,7 @@ namespace OAWebSite2016.SysManager.WebUI.ProjectMng
                 try
                 {
                     Dictionary<String, object> dic1 = new Dictionary<string, object>();
-                    dic1["num"] = this.num.Text;
+                    
                     dic1["GuidID"] = this.GuidID.Text;
                     dic1["PrjRole"] = this.PrjRole.SelectedValue;
 

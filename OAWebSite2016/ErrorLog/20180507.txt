@@ -1,0 +1,12 @@
+2018/5/7 9:50:33
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2018/5/7 17:32:18
+System.NullReferenceException: 未将对象引用设置到对象的实例。
+   在 OAWebSite2016.SysManager.WebUI.ProjectMng.Tb_Project_Person_Edit.SaveData() 位置 E:\MyCurrentProject\ProjectMngSolution2018\OAWebSite2016\SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_Person_Edit.aspx.cs:行号 75
+----------------------------------------------------------------------------------------------------

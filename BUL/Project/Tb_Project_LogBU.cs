@@ -188,9 +188,21 @@ namespace KORWeb.BUL
         #endregion
         
         #region 实例方法
+        
         #endregion
 
         #region 静态方法
+        /// <summary>
+        /// 得到当前项目的日志数量
+        /// </summary>
+        /// <param name="projectGuidid"></param>
+        /// <returns></returns>
+        public static int GetProjectLogCount(String projectGuidid)
+        {
+            int count1 = 0;
+            return count1;
+        }
+
         /// <summary>
         /// 得到相关的附件列表
         /// </summary>

@@ -686,7 +686,7 @@
     <Content Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_Person_ADD.aspx" />
     <Content Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_delay.aspx" />
     <Content Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_Person_Edit.aspx" />
-    <Content Include="SysManager\WebUI\ProjectMng\Tb_Project_Log1.aspx" />
+    <Content Include="SysManager\WebUI\ProjectMng\ProjectInfo\Tb_Project_Log1.aspx" />
     <Content Include="SysManager\WebUI\ProjectMng\Tb_Project_Attachment1.aspx" />
     <Content Include="SysManager\WebUI\ProjectMng\Tb_Project_Attachment2.aspx" />
     <Content Include="SysManager\WebUI\SysMng\JItemMng\JItem_Detail.aspx" />

@@ -5,9 +5,17 @@
     <ChildMenu Caption="项目列表" url="/SysManager/WebUI/ProjectMng/ProjectInfo/Tb_Project_List1.aspx"></ChildMenu>
     
     
-    <ChildMenu Caption="项目日志" url="/SysManager/WebUI/ProjectMng/Tb_Project_Log1.aspx"></ChildMenu>
+    <!--<ChildMenu Caption="项目日志" url="/SysManager/WebUI/ProjectMng/Tb_Project_Log1.aspx"></ChildMenu>-->
+   
+    <ChildMenu Caption="问题日志" url="/SysManager/WebUI/ProjectMng/Tb_Project_Attachment1.aspx"></ChildMenu>
+    <ChildMenu Caption="会议记录" url="/SysManager/WebUI/ProjectMng/Tb_Project_Attachment1.aspx"></ChildMenu>
+    <ChildMenu Caption="项目支出" url="/SysManager/WebUI/ProjectMng/Tb_Project_Attachment1.aspx"></ChildMenu>
+    <ChildMenu Caption="加班请假" url="/SysManager/WebUI/ProjectMng/Tb_Project_Attachment1.aspx"></ChildMenu>
+
+    <ChildMenu Caption="项目备忘" url="/SysManager/WebUI/ProjectMng/Tb_Project_Attachment1.aspx"></ChildMenu>
     <ChildMenu Caption="项目文档" url="/SysManager/WebUI/ProjectMng/Tb_Project_Attachment1.aspx"></ChildMenu>
-    <ChildMenu Caption="项目模板" url="/SysManager/WebUI/ProjectMng/Tb_Project_Attachment2.aspx"></ChildMenu>
+    
+    <!--<ChildMenu Caption="项目模板" url="/SysManager/WebUI/ProjectMng/Tb_Project_Attachment2.aspx"></ChildMenu>-->
   </ChildModel>
 
   <ChildModel MenuID="15" Caption="计划管理" ClassName="dw">

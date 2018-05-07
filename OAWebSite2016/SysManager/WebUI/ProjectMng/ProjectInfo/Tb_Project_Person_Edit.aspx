@@ -14,22 +14,14 @@ MasterPageFile="~/SysManager/include/H-uiThird.Master"
 
     <!--定义数据豆-->
     <jasp:JDataBean ID="bean1" runat="server" TableName="Tb_Project_Person" PrimaryKeys="GuidID"
-         ControlList="num,UserID,PrjRole,Weight,GuidID,parentGuid" DataSourceID="data2"
+         ControlList="UserID,PrjRole,Weight,GuidID,parentGuid" DataSourceID="data2"
         IsAppendData="true" />
     <!--数据Form-->
     <div style="display: none">
         <jasp:JTextBox ID="GuidID" runat="server"></jasp:JTextBox>
         <jasp:JTextBox ID="parentGuid" runat="server"></jasp:JTextBox>
     </div>
-    <div class="row cl">
-        <label class="form-label col-3">
-            排序：</label>
-        <div class="formControls col-8">
-            <jasp:JTextBox class="input-text" AllowNullValue="false" ID="num" runat="server"
-                Caption="排序" DataType="Integer" mydatatype="n" />
-        </div>
-        
-    </div>
+    
     <div class="row cl">
         <label class="form-label col-3">
             用户：</label>
