@@ -557,6 +557,8 @@ namespace KORWeb.BUL
                     dic1["AddTime"] = DateTime.Now;
                     dic1["AddUserID"] = FrameLib.UserID;
                     dic1["AddUserName"] = FrameLib.UserName;
+                    dic1["kind"] = "0";
+
                     Tb_Project_LogDA da2 = new Tb_Project_LogDA();
                     da2.NewData(dic1);
                     succ = true;
@@ -606,6 +608,9 @@ namespace KORWeb.BUL
                     dic1["AddTime"] = DateTime.Now;
                     dic1["AddUserID"] = FrameLib.UserID;
                     dic1["AddUserName"] = FrameLib.UserName;
+                    dic1["kind"] = "0";
+
+
                     Tb_Project_LogDA da2 = new Tb_Project_LogDA();
                     da2.NewData(dic1);
                     succ = true;
@@ -655,6 +660,7 @@ namespace KORWeb.BUL
                     dic1["AddUserID"] = FrameLib.UserID;
                     dic1["AddUserName"] = FrameLib.UserName;
                     dic1["Content"] = Remark;
+                    dic1["kind"] = "0";
 
                     Tb_Project_LogDA da2 = new Tb_Project_LogDA();
                     da2.NewData(dic1);
@@ -706,6 +712,7 @@ namespace KORWeb.BUL
                     dic1["AddUserID"] = FrameLib.UserID;
                     dic1["AddUserName"] = FrameLib.UserName;
                     dic1["Content"] = Remark;
+                    dic1["kind"] = "0";
 
                     Tb_Project_LogDA da2 = new Tb_Project_LogDA();
                     da2.NewData(dic1);
@@ -759,6 +766,7 @@ namespace KORWeb.BUL
                     dic1["AddUserID"] = FrameLib.UserID;
                     dic1["AddUserName"] = FrameLib.UserName;
                     dic1["Content"] = Remark;
+                    dic1["kind"] = "0";
 
                     Tb_Project_LogDA da2 = new Tb_Project_LogDA();
                     da2.NewData(dic1);

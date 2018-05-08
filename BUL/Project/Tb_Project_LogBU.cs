@@ -193,13 +193,23 @@ namespace KORWeb.BUL
 
         #region 静态方法
         /// <summary>
-        /// 得到当前项目的日志数量
+        /// 得到当前项目的操作日志数量
         /// </summary>
         /// <param name="projectGuidid"></param>
         /// <returns></returns>
         public static int GetProjectLogCount(String projectGuidid)
         {
             int count1 = 0;
+            List<SearchField> condition = new List<SearchField>();
+            condition.Add(new SearchField("parentGuid", projectGuidid));
+            condition.Add(new SearchField("kind", "0"));
+
+            Tb_Project_LogDA da1 = new Tb_Project_LogDA();
+            DataRow dr1= da1.GetFirstDataRow(condition,"count(*) as count0");
+            if (dr1 != null)
+            {
+                int.TryParse(dr1[0].ToString(),out count1);
+            }
             return count1;
         }
 

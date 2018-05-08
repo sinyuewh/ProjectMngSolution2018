@@ -58,6 +58,17 @@ namespace KORWeb.BUL
 
                         if (isCanRead)
                         {
+                            if (item.Attribute("RoleID") != null
+                                && String.IsNullOrEmpty(item.Attribute("RoleID").Value) == false)
+                            {
+                                String RoleID = item.Attribute("RoleID").Value;
+                                isCanRead = WebFrame.Comm.JSecurity.HasRoles(RoleID);
+
+                            }
+                        }
+
+                        if (isCanRead)
+                        {
                             DataRow dr1 = dt1.NewRow();
                             dr1["Caption"] = item.Attribute("Caption").Value;
                             dr1["MenuID"] = item.Attribute("MenuID").Value;
@@ -129,6 +140,17 @@ namespace KORWeb.BUL
 
                         if (isCanRead)
                         {
+                            if (item.Attribute("RoleID") != null
+                                && String.IsNullOrEmpty(item.Attribute("RoleID").Value) == false)
+                            {
+                                String RoleID = item.Attribute("RoleID").Value;
+                                isCanRead = WebFrame.Comm.JSecurity.HasRoles(RoleID);
+
+                            }
+                        }
+
+                        if (isCanRead)
+                        {
                             DataRow dr1 = dt1.NewRow();
                             dr1["Caption"] = item.Attribute("Caption").Value;
 
@@ -191,6 +213,17 @@ namespace KORWeb.BUL
                             {
                                 String AuthorityID = item.Attribute("AuthorityID").Value;
                                 isCanRead = WebFrame.Comm.JAuthorityBU.HasSecurity(AuthorityID);
+                            }
+                        }
+
+                        if (isCanRead)
+                        {
+                            if (item.Attribute("RoleID") != null
+                                && String.IsNullOrEmpty(item.Attribute("RoleID").Value) == false)
+                            {
+                                String RoleID = item.Attribute("RoleID").Value;
+                                isCanRead = WebFrame.Comm.JSecurity.HasRoles(RoleID);
+
                             }
                         }
 

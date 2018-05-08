@@ -2,12 +2,9 @@
 
 <Menu>
   <ChildModel MenuID="10" Caption="项目管理" ClassName="zx">
-    <ChildMenu Caption="项目列表" url="/SysManager/WebUI/ProjectMng/ProjectInfo/Tb_Project_List1.aspx"></ChildMenu>
+    <ChildMenu Caption="项目列表" url="/SysManager/WebUI/ProjectMng/ProjectInfo/Tb_Project_List1.aspx"></ChildMenu>   
+    <ChildMenu Caption="问题日志" url="/SysManager/WebUI/ProjectMng/ProblemLog/ProblemLogList.aspx"></ChildMenu>
     
-    
-    <!--<ChildMenu Caption="项目日志" url="/SysManager/WebUI/ProjectMng/Tb_Project_Log1.aspx"></ChildMenu>-->
-   
-    <ChildMenu Caption="问题日志" url="/SysManager/WebUI/ProjectMng/Tb_Project_Attachment1.aspx"></ChildMenu>
     <ChildMenu Caption="会议记录" url="/SysManager/WebUI/ProjectMng/Tb_Project_Attachment1.aspx"></ChildMenu>
     <ChildMenu Caption="项目支出" url="/SysManager/WebUI/ProjectMng/Tb_Project_Attachment1.aspx"></ChildMenu>
     <ChildMenu Caption="加班请假" url="/SysManager/WebUI/ProjectMng/Tb_Project_Attachment1.aspx"></ChildMenu>
