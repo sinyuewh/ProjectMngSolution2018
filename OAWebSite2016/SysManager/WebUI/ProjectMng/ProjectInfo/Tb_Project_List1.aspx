@@ -238,15 +238,17 @@
                     <asp:Repeater ID="Repeater1" runat="server" DataSourceID="data1" EnableViewState="false">
                         <ItemTemplate>
                             <tr class="text-c">
-                                <td>
-                                    <%#Eval("departName")%>[<%#Eval("departNum")%>]
+                                <td class="operate">
+                                    <a onclick="javascript:EditData(this);" title="点击进入项目明细" href='#'>
+                                        <%#Eval("departName")%>[<%#Eval("departNum")%>]
+                                    </a>
                                 </td>
                                 
-                                <td class="operate">
+                                <td >
                                     <span class="projectGuidID" style="display: none"><%#Eval("GuidID")%></span>
                                     <span class="projectPrjNum" style="display: none"><%#Eval("PrjNum")%></span>
                                     <span class="projectName" style="display: none"> <%#Eval("prjName")%></span>
-                                     <a onclick="javascript:EditData(this);" title="点击进入项目明细" href='#'><%#Eval("prjNum") %></a>
+                                     <%#Eval("prjNum") %>
                                 </td>
                                 <td>
                                     <%#Eval("prjName") %>

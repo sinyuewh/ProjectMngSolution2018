@@ -247,12 +247,12 @@
     <Compile Include="SysManager\WebUI\ProjectMng\ProblemLog\ProblemLogAdd.aspx.designer.cs">
       <DependentUpon>ProblemLogAdd.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SysManager\WebUI\ProjectMng\ProblemLog\ProblemLogEdit.aspx.cs">
-      <DependentUpon>ProblemLogEdit.aspx</DependentUpon>
+    <Compile Include="SysManager\WebUI\ProjectMng\ProblemLog\ProblemLogDetail.aspx.cs">
+      <DependentUpon>ProblemLogDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SysManager\WebUI\ProjectMng\ProblemLog\ProblemLogEdit.aspx.designer.cs">
-      <DependentUpon>ProblemLogEdit.aspx</DependentUpon>
+    <Compile Include="SysManager\WebUI\ProjectMng\ProblemLog\ProblemLogDetail.aspx.designer.cs">
+      <DependentUpon>ProblemLogDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="SysManager\WebUI\ProjectMng\ProblemLog\ProblemLogList.aspx.cs">
       <DependentUpon>ProblemLogList.aspx</DependentUpon>
@@ -696,7 +696,7 @@
     <Content Include="SysManager\WebUI\CheckMng\Tjfx2.aspx" />
     <Content Include="SysManager\WebUI\ProjectMng\Handler\DoAction.aspx" />
     <Content Include="SysManager\WebUI\ProjectMng\ProblemLog\ProblemLogAdd.aspx" />
-    <Content Include="SysManager\WebUI\ProjectMng\ProblemLog\ProblemLogEdit.aspx" />
+    <Content Include="SysManager\WebUI\ProjectMng\ProblemLog\ProblemLogDetail.aspx" />
     <Content Include="SysManager\WebUI\ProjectMng\ProblemLog\ProblemLogList.aspx" />
     <Content Include="SysManager\WebUI\ProjectMng\ProjectInfo\SelectProjectPerson.aspx" />
     <Content Include="SysManager\WebUI\ProjectMng\Tb_Project_Attachment_ADD.aspx" />

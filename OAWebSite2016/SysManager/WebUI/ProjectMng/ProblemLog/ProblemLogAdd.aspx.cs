@@ -82,6 +82,8 @@ namespace OAWebSite2016.SysManager.WebUI.ProjectMng.ProblemLog
                     dic1["AddUserID"] = FrameLib.UserID;
                     dic1["AddUserName"] = FrameLib.UserName;
                     //dic1["Stitle"] = this.Stitle.Text;
+                    dic1["kind"] = "1";
+                    dic1["Degree"] = this.Degree.SelectedValue;
                     dic1["Content"] = this.Content.Text;
                     dic1["AddTime"] = DateTime.Now;
 

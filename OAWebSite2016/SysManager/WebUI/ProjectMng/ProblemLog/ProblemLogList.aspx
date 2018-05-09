@@ -16,11 +16,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--导航区设置-->
-    <span style="display:none">
-            <jasp:JTextBox ID="DepartNum" runat="server" />
-            <jasp:JTextBox ID="PersonID" runat="server" />
-            <jasp:JTextBox ID="Kind" runat="server" Text="1" /> 
-    </span>          
+    <span style="display: none">
+        <jasp:JTextBox ID="DepartNum" runat="server" />
+        <jasp:JTextBox ID="PersonID" runat="server" />
+        <jasp:JTextBox ID="Kind" runat="server" Text="1" />
+    </span>
     <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 项目管理 <span class="c-gray en">&gt;</span> 问题日志 <a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
     <div class="pd-20">
         <!--查询区设置-->
@@ -34,7 +34,6 @@
                     <asp:ListItem Text="--不限--" Value=""></asp:ListItem>
                     <asp:ListItem Text="未解决" Value="1"></asp:ListItem>
                     <asp:ListItem Text="已解决" Value="2"></asp:ListItem>
-                    
                 </jasp:JDropDownList>
             </span>&nbsp;&nbsp; 项目名称：<jasp:JTextBox ID="prjName" runat="server" class="input-text"
                 Style="width: 200px" placeholder="" />
@@ -61,10 +60,9 @@
                     SearchOperator="UserDefine" />
                 <jasp:ParameterItem ParaType="Control" ParaName="Time1" DataName="AddTime<=cdate('{0} 23:59:59')"
                     SearchOperator="UserDefine" />
-                    
-                <jasp:ParameterItem ParaType="Control" ParaName="Kind"  />
+                <jasp:ParameterItem ParaType="Control" ParaName="Kind" />
                 <jasp:ParameterItem ParaType="Control" ParaName="DepartNum" SearchOperator="RightContains" />
-                <jasp:ParameterItem ParaType="Control" ParaName="PersonID"  DataName="{0}" SearchOperator="UserDefine" />  
+                <jasp:ParameterItem ParaType="Control" ParaName="PersonID" DataName="{0}" SearchOperator="UserDefine" />
             </ParaItems>
         </jasp:JDataSource>
         <%-- <%=this.data1.CommandText  %>--%>
@@ -79,29 +77,26 @@
                         <th>
                             项目名称
                         </th>
-                        <th style="width:30%">
+                        <th style="width: 30%">
                             问题描述
                         </th>
                         <th>
                             严重程度
                         </th>
                         <th>
-                            完成时间
-                        </th>
-                       
-                        <th>
                             相关附件
                         </th>
-                        
-                        <th>
-                            关联工单
-                        </th>
-                        
                         <th>
                             登记人
                         </th>
                         <th>
                             登记时间
+                        </th>
+                        <th>
+                            关联工单
+                        </th>
+                        <th>
+                            完成时间
                         </th>
                         <th>
                             操作
@@ -112,8 +107,10 @@
                     <asp:Repeater ID="Repeater1" runat="server" DataSourceID="data1" EnableViewState="false">
                         <ItemTemplate>
                             <tr class="text-c">
-                                <td>
-                                    <%#Eval("prjNum")%>
+                                <td class="operate">
+                                    <a href="#" onclick ="javascript:ReadData('<%#Eval("GuidID")%>');" title="点击查看问题日志的明细">
+                                        <%#Eval("prjNum")%>
+                                    </a>
                                 </td>
                                 <td>
                                     <%#Eval("prjName")%>
@@ -124,23 +121,21 @@
                                 <td>
                                     <%#Eval("Degree")%>
                                 </td>
-                                <td>
-                                    <%#Eval("FinishTime","{0:yyyy-MM-dd}") %>
-                                </td>
-                                
                                 <td class="operate">
                                     <%#Eval("AttachFile") %>
                                 </td>
-                                
-                                <td class="operate">
-                                    <a href=""><%#Eval("Workorder").ToString() == "" ? "未派单" : Eval("Workorder").ToString()%></a>
-                                </td>
-                                
                                 <td>
                                     <%#Eval("AddUserName")%>
                                 </td>
                                 <td>
                                     <%#Eval("AddTime")%>
+                                </td>
+                                <td class="operate">
+                                    <a href="">
+                                        <%#Eval("Workorder").ToString() == "" ? "未派单" : Eval("Workorder").ToString()%></a>
+                                </td>
+                                <td>
+                                    <%#Eval("FinishTime","{0:yyyy-MM-dd}") %>
                                 </td>
                                 <td class="operate">
                                     <span class="select-box" id="span1" runat="server">
@@ -155,7 +150,7 @@
             </table>
         </div>
     </div>
-    
+
     <script type="text/javascript">
         $(function() {
             $('.table-sort').dataTable({
@@ -188,7 +183,13 @@
             var url = "ProblemLogAdd.aspx";
             layer_show(title, url, 800, 520);
         }
+
+        //2*--查看数据
+        function ReadData(dataid) {
+            var title = "问题日志的详细";
+            var url = "ProblemLogDetail.aspx?GuidID=" + dataid;
+            layer_show(title, url, 800, 520);
+        }
     </script>
+
 </asp:Content>
-
-
