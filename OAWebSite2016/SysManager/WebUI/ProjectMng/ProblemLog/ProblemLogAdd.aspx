@@ -22,7 +22,7 @@ Inherits="OAWebSite2016.SysManager.WebUI.ProjectMng.ProblemLog.ProblemLogAdd" %>
         <div class="formControls col-8">
             <span class="select-box">
                 <jasp:AppDropDownList ID="selecProject" runat="server"  CssClass="select"
-                   BlankValue="--请选择--" AllowNullValue="false"  Caption="选择项目" >
+                   AllowNullValue="false"  Caption="选择项目" >
                 </jasp:AppDropDownList>
             </span>
         </div>

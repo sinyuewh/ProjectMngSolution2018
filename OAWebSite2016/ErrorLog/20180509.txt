@@ -1,0 +1,32 @@
+2018/5/9 0:05:19
+System.Web.HttpException: 文件不存在。
+   在 System.Web.StaticFileHandler.GetFileInfo(String virtualPathWithPathInfo, String physicalPath, HttpResponse response)
+   在 System.Web.StaticFileHandler.ProcessRequestInternal(HttpContext context)
+   在 System.Web.DefaultHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object state)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
+2018/5/9 0:18:48
+System.Web.HttpUnhandledException: 引发类型为“System.Web.HttpUnhandledException”的异常。 ---> System.ArgumentOutOfRangeException: 索引超出范围。必须为非负值并小于集合大小。
+参数名: index
+   在 System.Collections.ArrayList.RemoveAt(Int32 index)
+   在 System.Web.UI.WebControls.ListItemCollection.RemoveAt(Int32 index)
+   在 OAWebSite2016.SysManager.WebUI.ProjectMng.ProblemLog.ProblemLogAdd.SetOperateProject() 位置 E:\MyProject2017\CurrentProject\ProjectMngSolution2018\OAWebSite2016\SysManager\WebUI\ProjectMng\ProblemLog\ProblemLogAdd.aspx.cs:行号 35
+   在 OAWebSite2016.SysManager.WebUI.ProjectMng.ProblemLog.ProblemLogAdd.Page_Load(Object sender, EventArgs e) 位置 E:\MyProject2017\CurrentProject\ProjectMngSolution2018\OAWebSite2016\SysManager\WebUI\ProjectMng\ProblemLog\ProblemLogAdd.aspx.cs:行号 18
+   在 System.Web.Util.CalliHelper.EventArgFunctionCaller(IntPtr fp, Object o, Object t, EventArgs e)
+   在 System.Web.Util.CalliEventHandlerDelegateProxy.Callback(Object sender, EventArgs e)
+   在 System.Web.UI.Control.OnLoad(EventArgs e)
+   在 System.Web.UI.Adapters.ControlAdapter.OnLoad(EventArgs e)
+   在 System.Web.UI.Control.LoadRecursive()
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 System.Web.UI.Page.HandleError(Exception e)
+   在 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   在 System.Web.UI.Page.ProcessRequest()
+   在 System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   在 System.Web.UI.Page.ProcessRequest(HttpContext context)
+   在 ASP.sysmanager_webui_projectmng_problemlog_problemlogadd_aspx.ProcessRequest(HttpContext context) 位置 c:\Users\asus\AppData\Local\Temp\Temporary ASP.NET Files\root\8cc2e5ac\8052d77a\App_Web_butcemab.0.cs:行号 0
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+----------------------------------------------------------------------------------------------------
